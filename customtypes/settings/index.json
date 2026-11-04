@@ -1,0 +1,420 @@
+{
+  "id": "settings",
+  "label": "Instellingen",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Algemeen": {
+      "site_name": {
+        "type": "Text",
+        "config": {
+          "label": "Naam van de site",
+          "placeholder": "BVB Automotive"
+        }
+      },
+      "tagline": {
+        "type": "Text",
+        "config": {
+          "label": "Slogan",
+          "placeholder": ""
+        }
+      },
+      "navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Menu",
+          "repeat": true,
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Tekst",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": false,
+                "repeat": false
+              }
+            },
+            "level": {
+              "type": "Select",
+              "config": {
+                "label": "Niveau",
+                "placeholder": "",
+                "options": [
+                  "Hoofdmenu",
+                  "Submenu"
+                ],
+                "default_value": "Hoofdmenu"
+              }
+            }
+          }
+        }
+      },
+      "header_cta": {
+        "type": "Link",
+        "config": {
+          "label": "Knop rechts in het menu",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      }
+    },
+    "Contact": {
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Hoofdnummer",
+          "placeholder": "+32 468 18 93 83"
+        }
+      },
+      "whatsapp": {
+        "type": "Text",
+        "config": {
+          "label": "WhatsApp-nummer",
+          "placeholder": "+32468189383"
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "E-mailadres",
+          "placeholder": ""
+        }
+      },
+      "contacts": {
+        "type": "Group",
+        "config": {
+          "label": "Contactpersonen",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Naam",
+                "placeholder": ""
+              }
+            },
+            "phone": {
+              "type": "Text",
+              "config": {
+                "label": "Telefoon",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "street": {
+        "type": "Text",
+        "config": {
+          "label": "Straat en nummer",
+          "placeholder": ""
+        }
+      },
+      "city": {
+        "type": "Text",
+        "config": {
+          "label": "Postcode en gemeente",
+          "placeholder": ""
+        }
+      },
+      "maps_link": {
+        "type": "Link",
+        "config": {
+          "label": "Link naar Google Maps",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      },
+      "opening_hours": {
+        "type": "Group",
+        "config": {
+          "label": "Openingsuren",
+          "repeat": true,
+          "fields": {
+            "days": {
+              "type": "Text",
+              "config": {
+                "label": "Dagen",
+                "placeholder": ""
+              }
+            },
+            "hours": {
+              "type": "Text",
+              "config": {
+                "label": "Uren",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "hours_note": {
+        "type": "Text",
+        "config": {
+          "label": "Opmerking openingsuren",
+          "placeholder": ""
+        }
+      },
+      "instagram": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      },
+      "facebook": {
+        "type": "Link",
+        "config": {
+          "label": "Facebook",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      },
+      "vat_number": {
+        "type": "Text",
+        "config": {
+          "label": "Ondernemingsnummer",
+          "placeholder": ""
+        }
+      }
+    },
+    "Reviews": {
+      "rating": {
+        "type": "Text",
+        "config": {
+          "label": "Score",
+          "placeholder": "4,94"
+        }
+      },
+      "rating_source": {
+        "type": "Text",
+        "config": {
+          "label": "Bron",
+          "placeholder": "AutoScout24"
+        }
+      },
+      "reviews_link": {
+        "type": "Link",
+        "config": {
+          "label": "Link naar alle reviews",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      },
+      "reviews": {
+        "type": "Group",
+        "config": {
+          "label": "Reviews",
+          "repeat": true,
+          "fields": {
+            "quote": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Review",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph"
+              }
+            },
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Naam",
+                "placeholder": ""
+              }
+            },
+            "date": {
+              "type": "Date",
+              "config": {
+                "label": "Datum",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "Wagens": {
+      "car_promise": {
+        "type": "Group",
+        "config": {
+          "label": "Inbegrepen bij elke wagen",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Select",
+              "config": {
+                "label": "Icoon",
+                "placeholder": "",
+                "options": [
+                  "Geen",
+                  "Vinkje",
+                  "Schild",
+                  "Sleutel",
+                  "Werktuig",
+                  "Glans",
+                  "Persoon",
+                  "Wagen",
+                  "Zoeken",
+                  "Kalender",
+                  "Telefoon",
+                  "Euro",
+                  "Transport",
+                  "Klok",
+                  "Ster",
+                  "Meter",
+                  "Document",
+                  "Locatie",
+                  "Kruis"
+                ],
+                "default_value": "Vinkje"
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Titel",
+                "placeholder": ""
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "Tekst",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "car_cta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Titel oproep op wagenpagina",
+          "placeholder": ""
+        }
+      },
+      "car_cta_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Tekst oproep op wagenpagina",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink"
+        }
+      },
+      "finance_rate": {
+        "type": "Number",
+        "config": {
+          "label": "Financiering: jaarlijkse rente (%)",
+          "placeholder": "6,5"
+        }
+      },
+      "finance_months": {
+        "type": "Number",
+        "config": {
+          "label": "Financiering: looptijd (maanden)",
+          "placeholder": "60"
+        }
+      },
+      "finance_down": {
+        "type": "Number",
+        "config": {
+          "label": "Financiering: aanbetaling (%)",
+          "placeholder": "20"
+        }
+      },
+      "finance_link": {
+        "type": "Link",
+        "config": {
+          "label": "Link naar de financieringspagina",
+          "select": "document",
+          "customtypes": [
+            "page"
+          ]
+        }
+      }
+    },
+    "Footer": {
+      "footer_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Tekst in de footer",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink"
+        }
+      },
+      "footer_links": {
+        "type": "Group",
+        "config": {
+          "label": "Extra links",
+          "repeat": true,
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Tekst",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": false,
+                "repeat": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Standaard meta-beschrijving",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Standaard deelafbeelding",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5555 @@
+[
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-pano-hk-acc-dcc-camera",
+  "wp_id": 4225,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "PANO | H&K | ACC | DCC | CAMERA",
+  "status": "Beschikbaar",
+  "price": 33950,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": true,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "06/2022",
+  "mileage": 42000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Dolphin Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07630.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07657.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07640.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07650.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07671.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07674.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07687.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07680.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07683.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07685.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07709.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07706.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07655.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC02773.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07733.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07715.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07745.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07747.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07711.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07741.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07740.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07742.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07720.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07723.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07731.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07748.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07749.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07750.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-5-gte-pano-acc-360-camera-hud",
+  "wp_id": 4121,
+  "brand": "Volkswagen",
+  "model": "Golf 8.5 GTE",
+  "highlights": "PANO | ACC | 360 CAMERA | HUD",
+  "status": "Beschikbaar",
+  "price": 36950,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": true,
+  "premium": false,
+  "year": 2025,
+  "first_registration": "11/2024",
+  "mileage": 12000,
+  "fuel": "Plug-in hybride",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 272,
+  "power_kw": 200,
+  "engine_cc": 1498,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6EA",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "360°-camera",
+   "Drive Mode Select",
+   "Panoramisch schuifdak",
+   "Head-up display",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07223.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07252.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07215.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07243.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07228.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07230.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07268.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07256.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07284.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07296.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07298.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07287.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07286.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07290.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07288.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07300.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07270.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07327.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07328.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07313.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07323.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07317.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07316.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07322.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07276.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07320.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07319.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07314.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07315.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07272.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07275.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07281.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07279.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07308.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07306.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07303.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-pano-hk-acc-hud-camera",
+  "wp_id": 3704,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "PANO | H&K | ACC | HUD | CAMERA",
+  "status": "Beschikbaar",
+  "price": 35950,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": true,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "01/2024",
+  "mileage": 33000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "LED Matrix IQ voor & achter"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06579.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06624.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06588.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06615.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06606.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06627.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06639.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06669.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06676.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06646.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06662.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06657.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06607.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06690.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06694.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06686.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06687.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06703.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06678.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06727.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06725.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06716.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06720.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06712.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06713.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06704.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06710.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06708.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC06697.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-akra-pano-hk-acc-dcc-camera-2",
+  "wp_id": 3701,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "AKRAPOVIČ | PANO | H&K | ACC | DCC | CAMERA",
+  "status": "Beschikbaar",
+  "price": 36550,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": true,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "07/2023",
+  "mileage": 24000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Scottsdale-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_5.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_6.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_3.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_7.jpg",
+    "size": [
+     1919,
+     1279
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_8.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_12.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_13.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_9.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05414.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_11.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_10.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_4.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_14.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_18.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_16.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_17.jpg",
+    "size": [
+     1919,
+     1279
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_20.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_15.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_28.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_27.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_24.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_23.jpg",
+    "size": [
+     1919,
+     1279
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_26.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_25.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_21.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_22.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/BVB_Volkswagen_Golf_GTI_19.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-5-gte-pano-acc-camera-hud",
+  "wp_id": 4159,
+  "brand": "Volkswagen",
+  "model": "Golf 8.5 GTE",
+  "highlights": "PANO | ACC | CAMERA | HUD",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2025,
+  "first_registration": "11/2025",
+  "mileage": 7500,
+  "fuel": "Plug-in hybride",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 272,
+  "power_kw": 200,
+  "engine_cc": 1498,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6EA",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Panoramisch schuifdak",
+   "Head-up display",
+   "Actief infodisplay (digitaal)",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07451.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07484.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07460.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07465.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07481.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07498.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07508.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/10/DSC07523.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-r-20-jahre-akra-pano-hk-dcc-hud-drift-mode",
+  "wp_id": 4120,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 20 Jahre",
+  "highlights": "AKRAPOVIČ | PANO | H&K | DCC | HUD | DRIFT MODE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "10/2023",
+  "mileage": 6000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 333,
+  "power_kw": 245,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Volleder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Head-up display",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming en ventilatie voorin",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "Carbon sierlijsten"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06881.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06881.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06921.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06887.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06925.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06898.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06931.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06967.jpg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-akra-pano-hk-acc-dcc-camera-kopie",
+  "wp_id": 4051,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "AKRAPOVIČ | PANO | H&K | ACC | CAMERA",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "06/2024",
+  "mileage": 22500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Scottsdale-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06750.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06767.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06736.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06763.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06755.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06788.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06795.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/08/DSC06831.jpeg",
+    "size": [
+     1620,
+     1080
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-r-20-jahre-akra-pano-hk-dcc-drift-mode-2",
+  "wp_id": 3706,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 20 Jahre",
+  "highlights": "AKRAPOVIČ | PANO | H&K | DCC | DRIFT MODE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "08/2023",
+  "mileage": 19000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 333,
+  "power_kw": 245,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_2-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_5-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_1-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_6-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_3-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_7-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_8-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/bvb_volkswagen_golf_20_years_10-2.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-akra-pano-hk-acc-dcc-camera",
+  "wp_id": 2659,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "AKRAPOVIČ | PANO | H&K | ACC | DCC | CAMERA",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "08/2024",
+  "mileage": 19500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Head-up display",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Adelaide-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05495.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05486.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05497.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05503.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05510.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05520.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05529.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05536.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-pano-hk-acc-camera",
+  "wp_id": 2660,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "PANO | H&K | ACC | CAMERA",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "03/2024",
+  "mileage": 28000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05655.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05643.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05661.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05675.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05668.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05682.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05685.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05693.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "x3m-competition-pano-hk-360-camera-hud-carbon",
+  "wp_id": 2658,
+  "brand": "BMW",
+  "model": "X3 M Competition",
+  "highlights": "PANO | H&K | 360° CAMERA | HUD | CARBON",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "01/2024",
+  "mileage": 22500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "ZF 8-traps",
+  "power_hp": 510,
+  "power_kw": 375,
+  "engine_cc": 2993,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6e",
+  "color": "Grijs (Brooklyn Grau metallic)",
+  "interior": "Leder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Drive Mode Select",
+   "ZF Sport aut. transmissie",
+   "BMW LM-velg V-spaak",
+   "BMW Laserlicht",
+   "M veiligheidsgordels",
+   "M leerstuurwiel",
+   "M sportuitlaatsysteem",
+   "M aerodynamiek-kit",
+   "M Compound-remmen",
+   "M Competition-pakket",
+   "M Drivers Package",
+   "Interieursierlijst Carbon Fibre",
+   "Hoogglans Shadow line",
+   "Actieve voetgangersbescherming",
+   "Actieve ventilatie voorin",
+   "Stoelverwarming voor en achter",
+   "Stuurverwarming",
+   "Dakhemel antraciet",
+   "Panoramisch schuifdak",
+   "Harman & Kardon",
+   "Head-Up Display",
+   "360°-camera",
+   "Parkeersensoren voor + achter",
+   "Trekhaak",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "DAB+",
+   "Verkeersbordherkenning",
+   "Adaptive Cruise Control (ACC)",
+   "Geluidsisolerende ruiten",
+   "Driving Assistant Professional"
+  ],
+  "extras": [
+   "Ombouw naar lichte vracht is mogelijk."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05745.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05742.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05767.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05782.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05790.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05792.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05750.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05748.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "rs3-8v-sportback-pano-bo-acc-rs-seats-matrix",
+  "wp_id": 658,
+  "brand": "Audi",
+  "model": "RS3 8V Sportback",
+  "highlights": "PANO | B&O | ACC | RS SEATS | MATRIX",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2019,
+  "first_registration": "10/2019",
+  "mileage": 76000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "S tronic 7-traps",
+  "power_hp": 400,
+  "power_kw": 294,
+  "engine_cc": 2480,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6b",
+  "color": "Blauw (Ara Blau Pearl metallic)",
+  "interior": "Leder en Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "RS-uitvoering",
+   "RS sportuitlaat",
+   "RS sportstoelen in leder",
+   "Elektrisch verstelbare lendensteun",
+   "Verwarmde voorzetels",
+   "Lederen multifunctioneel sportstuur met schakelpaddles",
+   "Comfort Key (keyless entry)",
+   "Climatronic automatische airco",
+   "Sfeerverlichting interieur",
+   "Verlichte dorpellijsten",
+   "MMI Navigatie Plus (High)",
+   "Audi Virtual Cockpit / boordcomputer",
+   "Audi Connect",
+   "Premium audiosysteem (B&O)",
+   "Comfort telefonie (Bluetooth)",
+   "Achteruitrijcamera",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Front Assist met City Emergency Braking",
+   "Lane Assist voorbereiding",
+   "Bandenspanningscontrole",
+   "Anti-diefstalalarm met interieurbewaking",
+   "Matrix LED-koplampen",
+   "LED achterlichten",
+   "Zwarte optiek pakket (Optiekpakket zwart)",
+   "19” Audi Sport lichtmetalen velgen",
+   "Privacy glass achteraan",
+   "Elektrisch inklapbare, verwarmde & zelfdimmende spiegels",
+   "Dakspoiler & sportieve RS-styling"
+  ],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03972.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03975.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03981.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03974.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03978.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03980.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03988.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03999.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-akra-pano-dcc-hk-acc-camera-hud",
+  "wp_id": 666,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "AKRAPOVIČ | PANO | DCC | H&K | ACC | CAMERA | HUD",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2024,
+  "first_registration": "01/2024",
+  "mileage": 22500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05350.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05344.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05353.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05355.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05357.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05367.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05370.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05379.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "x3m-competition-pano-hk-camera-hud-carbon",
+  "wp_id": 667,
+  "brand": "BMW",
+  "model": "X3 M Competition",
+  "highlights": "PANO | H&K | CAMERA | HUD | CARBON",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": true,
+  "year": 2022,
+  "first_registration": "03/2022",
+  "mileage": 53500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "ZF 8-traps",
+  "power_hp": 510,
+  "power_kw": 375,
+  "engine_cc": 2998,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6e",
+  "color": "Grijs (Sophistograu metallic)",
+  "interior": "Leder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Drive Mode Select",
+   "ZF Sport aut. transmissie",
+   "BMW LM-velg M dubbele spaak",
+   "BMW Laserlicht",
+   "M veiligheidsgordels",
+   "M leerstuurwiel",
+   "M sportuitlaatsysteem",
+   "M aerodynamiek-kit",
+   "M Compound-rem, rood hoogglans",
+   "M Competition-pakket",
+   "Interieursierlijst Carbon Fibre",
+   "Hoogglans Shadow line",
+   "Stoelverwarming en actieve ventilatie voorin",
+   "Stuurverwarming",
+   "Dakhemel antraciet",
+   "Panoramisch schuifdak",
+   "Harman & Kardon",
+   "Head-Up Display",
+   "Achteruitrijcamera",
+   "Parkeersensoren voor + achter",
+   "Trekhaak",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "DAB+",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Ombouw naar lichte vracht is mogelijk."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05043.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05040.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05052.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05059.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05087.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05089.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05092.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC05093.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-7-5-gti-tcr-pano-dcc-acc",
+  "wp_id": 663,
+  "brand": "Volkswagen",
+  "model": "Golf 7.5 GTI TCR",
+  "highlights": "PANO | DCC | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2019,
+  "first_registration": "06/2019",
+  "mileage": 54215,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 290,
+  "power_kw": 213,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Pure Grey)",
+  "interior": "Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Panoramisch schuifdak",
+   "Dual led koplampen (adaptive)",
+   "CarPlay & Android Auto",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Achteruitrijcamera",
+   "Lane assist",
+   "Blindspot detectie",
+   "Dynamic Chassis Control (DCC)",
+   "Adaptive Cruise Control (ACC)",
+   "Discover Pro navigatiesysteem",
+   "19 Inch originele Reifnitz velgen",
+   "Jonge tweedehands wagens in top conditie!",
+   "Reinigen, polieren & coaten van personenwagens"
+  ],
+  "extras": [
+   "De stickers kunnen op aanvraag verwijderd worden."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04473.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04478.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04477.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04480.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04482.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04484.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04488.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04511.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-pano-hk-iq-acc",
+  "wp_id": 649,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 25000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Urano Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Adelaide-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04125.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04114.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04128.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04119.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04123.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04130.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04133.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04152.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-pano-hh-acc-camera-hud",
+  "wp_id": 664,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "PANO | H&K | ACC | CAMERA | HUD",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "11/2023",
+  "mileage": 22500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "Head-up display"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04375.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04377.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04376.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04385.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04396.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04402.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04408.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04466.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-r-20-jahre",
+  "wp_id": 665,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 20 Jahre",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "12/2022",
+  "mileage": 11500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 333,
+  "power_kw": 245,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04628.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04631.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04626.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04636.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04638.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04633.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04644.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04654.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "audi-rs3-sportback-pano-bo-acc-rs-seats-matrix",
+  "wp_id": 661,
+  "brand": "Audi",
+  "model": "RS3 Sportback",
+  "highlights": "PANO | B&O | ACC | RS SEATS | MATRIX",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2020,
+  "first_registration": "09/2020",
+  "mileage": 56297,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "S tronic 7-traps",
+  "power_hp": 400,
+  "power_kw": 294,
+  "engine_cc": 2480,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6b",
+  "color": "Blauw (Ara Blau Pearl metallic)",
+  "interior": "Leder en Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "RS-uitvoering",
+   "RS sportuitlaat",
+   "RS sportstoelen in leder",
+   "Elektrisch verstelbare lendensteun",
+   "Verwarmde voorzetels",
+   "Lederen multifunctioneel sportstuur met schakelpaddles",
+   "Comfort Key (keyless entry)",
+   "Climatronic automatische airco",
+   "Sfeerverlichting interieur",
+   "Verlichte dorpellijsten",
+   "MMI Navigatie Plus (High)",
+   "Audi Virtual Cockpit / boordcomputer",
+   "Audi Connect",
+   "Premium audiosysteem (B&O)",
+   "Comfort telefonie (Bluetooth)",
+   "Achteruitrijcamera",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Front Assist met City Emergency Braking",
+   "Lane Assist voorbereiding",
+   "Bandenspanningscontrole",
+   "Anti-diefstalalarm met interieurbewaking",
+   "Matrix LED-koplampen",
+   "LED achterlichten",
+   "Zwarte optiek pakket (Optiekpakket zwart)",
+   "19” Audi Sport lichtmetalen velgen",
+   "Privacy glass achteraan",
+   "Elektrisch inklapbare, verwarmde & zelfdimmende spiegels",
+   "Dakspoiler & sportieve RS-styling",
+   "Dodehoek assistent",
+   "Apple CarPlay"
+  ],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04189.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04196.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04187.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04190.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04197.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04194.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04250.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04222.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-r-20-jahre-akra-pano-hk-dcc-drift-mode",
+  "wp_id": 662,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 20 Jahre",
+  "highlights": "AKRAPOVIČ | PANO | H&K | DCC | DRIFT MODE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "12/2023",
+  "mileage": 23000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 333,
+  "power_kw": 245,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Volleder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming en ventilatie voorin",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "Carbon sierlijsten"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04266.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04293.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04272.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04296.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04275.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04278.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04303.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC04329.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-7-5-gti-performance",
+  "wp_id": 660,
+  "brand": "Volkswagen",
+  "model": "Golf 7.5 GTI Performance",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2018,
+  "first_registration": "08/2018",
+  "mileage": 83968,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 245,
+  "power_kw": 180,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Atlantic Blue)",
+  "interior": "Stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Dual led koplampen (adaptive)",
+   "CarPlay & Android Auto",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Achteruitrijcamera",
+   "Lane assist",
+   "Blindspot detectie",
+   "Adaptive Cruise Control (ACC)",
+   "18 inch originele Milton velgen",
+   "Jonge tweedehands wagens in top conditie!",
+   "Reinigen, polieren & coaten van personenwagens"
+  ],
+  "extras": [
+   "Origineel Alcantara Clubsport-stuur.",
+   "Originele Alcantara Clubsport-pookknop en -hoes (DSG)."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2657.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2647.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2659.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2648.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2652.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2645.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2662.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/IMG_2653.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-r-4-motion-akra-pano-hk-dcc-drift-mode",
+  "wp_id": 659,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 4MOTION",
+  "highlights": "AKRAPOVIČ | PANO | H&K | DCC | DRIFT MODE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "02/2023",
+  "mileage": 7900,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 320,
+  "power_kw": 235,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Alcantara en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Head-up display",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming en ventilatie voorin",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Verlengde fabrieksgarantie tot en met 02/2028.",
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03895.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03896.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03894.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03897.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03903.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03900.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03905.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03918.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "audi-rs3-8v-pano-bo-magnetic-ride",
+  "wp_id": 657,
+  "brand": "Audi",
+  "model": "RS3 8V",
+  "highlights": "PANO | B&O | MAGNETIC RIDE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": null,
+  "first_registration": null,
+  "mileage": null,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": null,
+  "power_hp": 400,
+  "power_kw": 294,
+  "engine_cc": 2480,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": null,
+  "color": null,
+  "interior": null,
+  "doors": null,
+  "seats": null,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-502986A1-432B-4FD8-B6E0-2BD15C8AC05C.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-C285AB21-5329-4467-90B6-EB75D1B6CF80.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-8DC66441-DFE5-4038-B2C5-ACD6BB3D88D8.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-3EBC64B7-DDFA-4A10-934F-A0DE341106B1.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-DAAC4985-8CC7-4A54-B361-91449E4DEA16.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-BE4897C1-358C-4EDC-B68C-BA8A83F0D412.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-A5A56D68-20D9-4C5D-8BBA-5FCC1FB9CD44.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/processed-96210F5E-5394-4210-AB60-C2109138CEC8.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-r-4motion-akra-pano-hk-dcc-drift-mode",
+  "wp_id": 656,
+  "brand": "Volkswagen",
+  "model": "Golf 8 R 4MOTION",
+  "highlights": "AKRAPOVIČ | PANO | H&K | DCC | DRIFT MODE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 11500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 320,
+  "power_kw": 235,
+  "engine_cc": 1984,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Lapiz Blau metallic)",
+  "interior": "Leder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Nürburgring mode",
+   "Drift mode",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming en ventilatie voorin",
+   "Memory functie",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Verlengde fabrieksgarantie tot en met 05/2027.",
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03741-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03750-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03740-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03737-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03743-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03744-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03768-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03763-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-5",
+  "wp_id": 655,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "06/2023",
+  "mileage": 21000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Dolphin Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Diamond Cut Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03572-e1760815947497.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03579.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03565-e1760816000957.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03589.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03603.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03593.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03604.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03591.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-4",
+  "wp_id": 654,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 21000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03666-e1760815213319.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03675.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03655-e1760815417541.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03696-e1760815343897.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03702.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03694-e1760815373916.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03697.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03699.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport-45-jahre-edition-oryx-akra-pano-dcc-hk",
+  "wp_id": 652,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport 45 Jahre Edition",
+  "highlights": "ORYX | AKRAPOVIČ | PANO | DCC | H&K",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "02/2022",
+  "mileage": 38000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Wit (Oryx White Pearl metallic)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "Akrapovič (titanium)",
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Automatische inparkeerhulp",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Alle kunststof sierstukken zijn gespoten in pianozwart.",
+   "Verlengde fabrieksgarantie tot en met 02/2027.",
+   "De gemonteerde originele 19\" Scottsdale-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03468-e1758882984251.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03477-e1758883037709.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03467-e1758882948577.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03494-e1758883388758.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03507.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03499.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03505.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03535.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "bmw-m140i-xdrive-pano-hk-camera-navpro-shadowline",
+  "wp_id": 653,
+  "brand": "BMW",
+  "model": "M140i xDrive",
+  "highlights": "PANO | H&K | CAMERA | NAVPRO | SHADOWLINE",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2019,
+  "first_registration": "07/2019",
+  "mileage": 65000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "ZF 8-traps",
+  "power_hp": 340,
+  "power_kw": 250,
+  "engine_cc": 2998,
+  "drivetrain": "Vierwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Mineralgrau metallic)",
+  "interior": "Leder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "ZF Sport aut. transmissie",
+   "BMW LM-velg M dubbele spaak",
+   "M leerstuurwiel",
+   "M aerodynamiek-kit",
+   "Hoogglans Shadow line",
+   "Dakhemel antraciet",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Parkeersensoren voor + achter",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Stoelverwarming voorin",
+   "DAB+",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Gemonteerde KW V3 Clubsport schroefset is optioneel verkrijgbaar voor € 1.500 meerprijs; standaard rijdt de wagen op de originele ophanging."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03395-e1758883962551.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03403-e1758884017147.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03396-e1758883984670.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03399.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03419-e1758884111496.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03424-e1758884135210.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03409.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03412.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc",
+  "wp_id": 648,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 20000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Adelaide-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03155-e1755253289383.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03170.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03153-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03195.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03199.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03191.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03158.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03157.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-7",
+  "wp_id": 3394,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 20000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Adelaide-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03155-e1755253289383.jpg",
+    "size": [
+     1453,
+     964
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03170.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03153-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03195.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03199.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03191.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03158.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03157.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-2",
+  "wp_id": 650,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "06/2023",
+  "mileage": 18000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03281-e1755254598903.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03252.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03257.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03251.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03226.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03228.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03222.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03227.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-3",
+  "wp_id": 651,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "05/2023",
+  "mileage": 24000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 950 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03371-e1755255695131.jpg",
+    "size": [
+     1453,
+     966
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03380.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03370.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03356.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03359.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03352.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03348.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/06/DSC03366.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq-acc-6",
+  "wp_id": 3393,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT | ACC",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2023,
+  "first_registration": "06/2023",
+  "mileage": 23000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Zwart (Deep Black Pearl-effect)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Estoril-velgen zijn optioneel verkrijgbaar voor € 1.000 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03042-e1753548779300.jpg",
+    "size": [
+     1453,
+     964
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03026.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03039.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03056.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03061.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03053.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03028.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC03027.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-hk-iq-pano",
+  "wp_id": 3392,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | H&K | IQ LIGHT | PANO",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "10/2022",
+  "mileage": 38000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Dolphin Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Gemonteerde 19\" velgen zijn optioneel verkrijgbaar voor € 1.250 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02871.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02875.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02867.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02886.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02892.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02885.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02900.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02893.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-nurburgring-pano-hk-dcc-acc-iq",
+  "wp_id": 3391,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport Nürburgring",
+  "highlights": "PANO | H&K | DCC | ACC | IQ LIGHT",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "12/2022",
+  "mileage": 28500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Urano Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Nürburgring",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Automatische inparkeerhulp",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "De gemonteerde originele 19\" Adelaide-velgen zijn optioneel verkrijgbaar voor € 1.250 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02781.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02806.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02792.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02833.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02811.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02823.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02820.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC02815.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-nurburgring-pano-hk-iq",
+  "wp_id": 3390,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport Nürburgring",
+  "highlights": "PANO | H&K | IQ LIGHT",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "06/2022",
+  "mileage": 28000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Dolphin Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Nürburgring",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Verlengde fabrieksgarantie tot en met 06/2027.",
+   "Gemonteerde 19\" velgen zijn optioneel verkrijgbaar voor € 1.000 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5198-e1755261695827.jpg",
+    "size": [
+     1453,
+     964
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5201-e1745851432484.jpg",
+    "size": [
+     1690,
+     1268
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5197-e1745851266626.jpg",
+    "size": [
+     1632,
+     1224
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5190-e1745851217118.jpg",
+    "size": [
+     1517,
+     1097
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5195.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5189-e1745851166752.jpg",
+    "size": [
+     1616,
+     1282
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5194.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5191.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-head-up-pano-hk-iq",
+  "wp_id": 3389,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "HUD | PANO | H&K | IQ LIGHT",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "11/2022",
+  "mileage": 22000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw (Atlantic Blue)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Head-up display",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Gemonteerde 19\" velgen zijn optioneel verkrijgbaar voor € 1.350 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4027.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4028.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4038.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4031.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4027.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4035.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4037.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_4032.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport-nurburgring",
+  "wp_id": 3388,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport Nürburgring",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "08/2022",
+  "mileage": 28000,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Dolphin Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Nürburgring",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Dynamic Chassis Control (DCC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning"
+  ],
+  "extras": [
+   "Gemonteerde 19\" velgen zijn optioneel verkrijgbaar voor € 1.350 meerprijs; standaard rijdt de wagen op 18\" velgen."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3771.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3774.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3770.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3779.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3775.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3780.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3773.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3776.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "bmw-118i-automaat",
+  "wp_id": 3387,
+  "brand": "BMW",
+  "model": "118i Automaat",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2020,
+  "first_registration": "07/2020",
+  "mileage": 44910,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "Steptronic 7-traps",
+  "power_hp": 140,
+  "power_kw": 103,
+  "engine_cc": 1499,
+  "drivetrain": "Achterwielaandrijving",
+  "euronorm": "6d",
+  "color": "Blauw",
+  "interior": "Stof en leder",
+  "doors": 5,
+  "seats": 5,
+  "warranty": null,
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "Head-up display",
+   "Actief infodisplay (digitaal)",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming"
+  ],
+  "extras": [
+   "Deze wagen verkopen wij in opdracht van een klant."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3787-2.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3785.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3786.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3790.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3791.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3784.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3788.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3789.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "golf-8-gti-clubsport",
+  "wp_id": 3386,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "10/2022",
+  "mileage": 17500,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs (Moonstone Grey)",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Achteruitrijcamera",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "Jaarlijkse verkeersbelasting € 437,62",
+   "Belasting op inverkeerstelling € 527,54"
+  ],
+  "extras": [
+   "Gemonteerde 19\" velgen zijn optioneel verkrijgbaar voor € 1.350 meerprijs; standaard rijdt de wagen op 18\" velgen.",
+   "Jaarlijkse verkeersbelasting € 437,62 (Vlaanderen).",
+   "Belasting op inverkeerstelling € 527,54 (Vlaanderen)."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3001.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2999.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3004.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2997.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2995.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2996.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_3006.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2998.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-7-5-gti-tcr",
+  "wp_id": 3383,
+  "brand": "Volkswagen",
+  "model": "Golf 7.5 GTI TCR",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": null,
+  "first_registration": null,
+  "mileage": null,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": null,
+  "power_hp": 290,
+  "power_kw": 213,
+  "engine_cc": 1998,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": null,
+  "color": null,
+  "interior": null,
+  "doors": null,
+  "seats": null,
+  "warranty": null,
+  "accident_free": false,
+  "first_owner": false,
+  "options": [],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_1527-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_1489-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_1508-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "mini-john-cooper-works",
+  "wp_id": 3382,
+  "brand": "Mini",
+  "model": "John Cooper Works",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2018,
+  "first_registration": "01/2018",
+  "mileage": 73300,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "Steptronic 8-traps",
+  "power_hp": 231,
+  "power_kw": 170,
+  "engine_cc": 1998,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6",
+  "color": "Zwart",
+  "interior": "Leder en Alcantara",
+  "doors": 3,
+  "seats": 4,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "Harman & Kardon",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Achteruitrijcamera",
+   "Cruise Control",
+   "LED-koplampen",
+   "Navigatie",
+   "Bluetooth",
+   "Regen- en lichtsensor"
+  ],
+  "extras": [],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5931-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5932-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5933-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5941-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5942-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5943-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5944-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_5939-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-7-5-gti-tcr-2",
+  "wp_id": 3385,
+  "brand": "Volkswagen",
+  "model": "Golf 7.5 GTI TCR",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "Marge (btw niet aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2019,
+  "first_registration": "07/2019",
+  "mileage": 48200,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 290,
+  "power_kw": 213,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": null,
+  "color": "Grijs (Pure Grey)",
+  "interior": "Alcantara",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": true,
+  "first_owner": true,
+  "options": [
+   "Akrapovič (titanium)",
+   "Dynaudio",
+   "Panoramisch schuifdak",
+   "Dual led koplampen (adaptive)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Achteruitrijcamera",
+   "Lane assist",
+   "Blindspot detectie",
+   "DCC – Dynamic ChassisControl",
+   "Adaptive Cruise Control (ACC)",
+   "19 inch Pretoria velgen"
+  ],
+  "extras": [
+   "De stickers kunnen op aanvraag verwijderd worden."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_9171.jpg",
+    "size": [
+     1320,
+     889
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-6FD9A8D6-2BD2-4DB5-B1AC-A1ECA5E0C52B.jpeg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-8A996EB2-C481-40B7-82BB-65BDC1E39884.jpeg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-01CCA9EF-E124-44F0-B85D-AA7F6ECBE00A-scaled-1.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-D208C5F4-8865-459E-BBCA-60B4652B6950.jpeg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-DDECA960-846C-4D49-9659-42D3CC9D970D.jpeg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/processed-E222DE86-B4DB-4D86-BCBC-49272643A64A-scaled-1.jpeg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/IMG_2204-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ },
+ {
+  "uid": "volkswagen-golf-8-gti-clubsport",
+  "wp_id": 3384,
+  "brand": "Volkswagen",
+  "model": "Golf 8 GTI Clubsport",
+  "highlights": "",
+  "status": "Verkocht",
+  "price": null,
+  "vat": "BTW-wagen (btw aftrekbaar)",
+  "featured": false,
+  "premium": false,
+  "year": 2022,
+  "first_registration": "06/2022",
+  "mileage": 30300,
+  "fuel": "Benzine",
+  "transmission": "Automaat",
+  "gearbox": "DSG 7-traps",
+  "power_hp": 300,
+  "power_kw": 221,
+  "engine_cc": 1984,
+  "drivetrain": "Voorwielaandrijving",
+  "euronorm": "6d",
+  "color": "Grijs",
+  "interior": "Alcantara, leder en stof",
+  "doors": 5,
+  "seats": 5,
+  "warranty": "12 maanden",
+  "accident_free": false,
+  "first_owner": false,
+  "options": [
+   "LED Matrix IQ voor & achter",
+   "Drive Mode Select",
+   "Harman & Kardon",
+   "Panoramisch schuifdak",
+   "Actief infodisplay (digitaal)",
+   "Keyless entry",
+   "Parkeersensoren voor + achter",
+   "Adaptive Cruise Control (ACC)",
+   "Navigatie",
+   "CarPlay & Android Auto",
+   "Noodrem assistent",
+   "Dodehoek assistent",
+   "Stoelverwarming voorin",
+   "Stuurverwarming",
+   "DAB+",
+   "IQ Drive",
+   "Verkeersbordherkenning",
+   "Jaarlijkse verkeersbelasting € 838,97",
+   "Belasting op inverkeerstelling € 527,54"
+  ],
+  "extras": [
+   "Jaarlijkse verkeersbelasting € 838,97 (Vlaanderen).",
+   "Belasting op inverkeerstelling € 527,54 (Vlaanderen)."
+  ],
+  "images": [
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01757-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01755-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01757-1-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01749-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01750-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01768-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01763-scaled-1.jpg",
+    "size": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "url": "https://bvbautomotive.be/wp-content/uploads/2026/07/DSC01741-scaled-1.jpg",
+    "size": [
+     1920,
+     1280
+    ]
+   }
+  ],
+  "date": null
+ }
+]

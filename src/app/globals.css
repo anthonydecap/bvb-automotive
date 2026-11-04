@@ -1,0 +1,389 @@
+@import "tailwindcss";
+
+/*
+ * BVB Automotive.
+ * Ink and the monogram's gold, on a neutral ground. Cars are mounted on fields of their own
+ * factory paint (src/lib/paint.ts). One face, General Sans, in five sizes.
+ * No lines, no shadows at rest, no gradients: surfaces differ by a step in tone.
+ */
+
+@theme {
+  --color-ink: #111214;
+  --color-carbon: #1b1c1f;
+  --color-graphite: #26282c;
+  --color-steel: #3a3d42;
+  --color-mist: #a6aaaf;
+  --color-fog: #d5d7da;
+  --color-paper: #ebebea;
+  --color-bone: #dcdcda;
+  --color-chalk: #f6f6f5;
+  --color-stone: #54575b;
+  --color-gold: #cfae57;
+  --color-gold-bright: #ddc27e;
+  --color-gold-deep: #6f541a;
+  --color-available: #2f8f57;
+  --color-reserved: #b7791f;
+  --color-sold: #b4372c;
+
+  --font-sans: var(--font-general), ui-sans-serif, system-ui, sans-serif;
+
+  /* The five sizes. Nothing else is used for running text or headings. */
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.45;
+  --text-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --text-body--line-height: 1.5;
+  --text-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --text-lead--line-height: 1.3;
+  --text-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --text-head--line-height: 0.98;
+  --text-display: clamp(2.25rem, 1rem + 5.6vw, 7.5rem);
+  --text-display--line-height: 0.9;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root {
+    --margin: clamp(1rem, 2.2vw, 2rem);
+    --gap: clamp(0.5rem, 0.8vw, 0.75rem);
+    --section: clamp(5rem, 9vw, 8.5rem);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 6rem;
+    background: var(--color-paper);
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* One frame for the whole site: equal outer margins at every width. */
+  .frame {
+    width: 100%;
+    max-width: 110rem;
+    margin-inline: auto;
+    padding-inline: var(--margin);
+  }
+
+  .section {
+    padding-block: var(--section);
+  }
+
+  .display {
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+  }
+  .heading {
+    font-size: var(--text-head);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+  }
+  /* Headline fields may carry an italic span from the CMS; it is set like the rest. */
+  .display em,
+  .heading em {
+    font-style: normal;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Buttons: flat, square, one fill. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    min-height: 3.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.1;
+    white-space: nowrap;
+    transition:
+      background-color 0.25s,
+      color 0.25s,
+      transform 0.35s var(--ease-out-expo);
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+  .btn svg {
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+  .btn:hover svg.arrow {
+    transform: translateX(4px);
+  }
+  .btn-gold {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+  .btn-gold:hover {
+    background: var(--color-gold-bright);
+  }
+  .btn-ink {
+    background: var(--color-ink);
+    color: var(--color-chalk);
+  }
+  .btn-ink:hover {
+    background: var(--color-graphite);
+  }
+  /* A step in tone from whatever ground it sits on. */
+  .btn-ghost {
+    background: color-mix(in oklab, currentColor 11%, transparent);
+    color: inherit;
+  }
+  .btn-ghost:hover {
+    background: color-mix(in oklab, currentColor 19%, transparent);
+  }
+  /* Kept for old class names in CMS-driven buttons. */
+  .btn-dark {
+    background: var(--color-ink);
+    color: var(--color-chalk);
+  }
+  .btn-whatsapp {
+    background: color-mix(in oklab, currentColor 11%, transparent);
+    color: inherit;
+  }
+  .btn-whatsapp:hover {
+    background: color-mix(in oklab, currentColor 19%, transparent);
+  }
+
+  /* Text link: underline that thickens. */
+  .link {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-thickness 0.2s, color 0.2s;
+  }
+  .link:hover {
+    text-decoration-thickness: 3px;
+  }
+
+  /* Long-form text */
+  .prose-bvb {
+    max-width: 66ch;
+  }
+  .prose-bvb > * + * {
+    margin-top: 1em;
+  }
+  .prose-bvb h2,
+  .prose-bvb h3 {
+    font-size: var(--text-lead);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-top: 1.6em;
+  }
+  .prose-bvb strong {
+    font-weight: 600;
+  }
+  .prose-bvb a {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.2em;
+  }
+  .prose-bvb a:hover {
+    text-decoration-thickness: 3px;
+  }
+  .prose-bvb ul,
+  .prose-bvb ol {
+    display: grid;
+    gap: 0.5em;
+  }
+  .prose-bvb ul > li {
+    position: relative;
+    padding-left: 1.25em;
+  }
+  .prose-bvb ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.4em;
+    height: 0.4em;
+    background: currentColor;
+  }
+  .prose-bvb ol {
+    list-style: decimal;
+    padding-left: 1.25em;
+  }
+
+  /* Form fields: filled, no outline at rest. */
+  .field {
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 1.5rem 1rem 0.5rem;
+    background: color-mix(in oklab, currentColor 8%, transparent);
+    color: inherit;
+    font-size: 1.0625rem;
+    transition: background-color 0.2s;
+  }
+  .field:hover {
+    background: color-mix(in oklab, currentColor 12%, transparent);
+  }
+  .field:focus {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 0;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Specimen tile: a car photographed on the lot, mounted on its own paint. */
+  .specimen {
+    position: relative;
+    background: var(--paint, var(--color-graphite));
+    padding: 9%;
+    overflow: hidden;
+  }
+  .specimen-photo {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: var(--color-graphite);
+  }
+  .specimen-photo img {
+    transition: transform 0.9s var(--ease-out-expo);
+  }
+  a:hover .specimen-photo img,
+  a:focus-visible .specimen-photo img {
+    transform: scale(1.045);
+  }
+
+  /* Paper slip with torn top and bottom edges (reviews). */
+  .slip {
+    --tooth: 10px;
+    clip-path: polygon(
+      0 var(--tooth), 5% 0, 10% var(--tooth), 15% 0, 20% var(--tooth), 25% 0, 30% var(--tooth), 35% 0,
+      40% var(--tooth), 45% 0, 50% var(--tooth), 55% 0, 60% var(--tooth), 65% 0, 70% var(--tooth), 75% 0,
+      80% var(--tooth), 85% 0, 90% var(--tooth), 95% 0, 100% var(--tooth),
+      100% calc(100% - var(--tooth)), 95% 100%, 90% calc(100% - var(--tooth)), 85% 100%, 80% calc(100% - var(--tooth)),
+      75% 100%, 70% calc(100% - var(--tooth)), 65% 100%, 60% calc(100% - var(--tooth)), 55% 100%, 50% calc(100% - var(--tooth)),
+      45% 100%, 40% calc(100% - var(--tooth)), 35% 100%, 30% calc(100% - var(--tooth)), 25% 100%, 20% calc(100% - var(--tooth)),
+      15% 100%, 10% calc(100% - var(--tooth)), 5% 100%, 0 calc(100% - var(--tooth))
+    );
+  }
+
+  /* Drifting strip of photographs */
+  .drift {
+    display: flex;
+    width: max-content;
+    gap: var(--gap);
+  }
+}
+
+/*
+ * Entrances. Hidden starting states exist only when script runs and motion is welcome,
+ * so the page is complete without either. The children of a [data-reveal] block rise in turn.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html[data-js] [data-reveal] > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.8s var(--ease-out-expo),
+      transform 0.9s var(--ease-out-expo);
+  }
+  html[data-js] [data-reveal="visible"] > * {
+    opacity: 1;
+    transform: none;
+  }
+  html[data-js] [data-reveal] > :nth-child(2) {
+    transition-delay: 75ms;
+  }
+  html[data-js] [data-reveal] > :nth-child(3) {
+    transition-delay: 150ms;
+  }
+  html[data-js] [data-reveal] > :nth-child(4) {
+    transition-delay: 225ms;
+  }
+  html[data-js] [data-reveal] > :nth-child(5) {
+    transition-delay: 300ms;
+  }
+  html[data-js] [data-reveal] > :nth-child(n + 6) {
+    transition-delay: 360ms;
+  }
+
+  .drift {
+    animation: drift 90s linear infinite;
+  }
+  .drift:hover {
+    animation-play-state: paused;
+  }
+
+  .slow-zoom {
+    animation: slow-zoom 24s var(--ease-out-expo) both;
+  }
+}
+
+@keyframes drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Room for the sticky contact bar on car pages (small screens). */
+@media (max-width: 1023px) {
+  body:has([data-sticky-bar]) {
+    padding-bottom: 4.75rem;
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contactgegevens, openingsuren en formulier",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Volledig",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Contactopties, adres, openingsuren en formulier",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "show_form": {
+          "type": "Boolean",
+          "config": {
+            "label": "Contactformulier tonen",
+            "default_value": true,
+            "placeholder_true": "Ja",
+            "placeholder_false": "Nee"
+          }
+        },
+        "form_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titel formulier",
+            "placeholder": ""
+          }
+        },
+        "default_subject": {
+          "type": "Select",
+          "config": {
+            "label": "Standaardonderwerp formulier",
+            "placeholder": "",
+            "options": [
+              "Informatie over een wagen",
+              "Import op aanvraag",
+              "Inruil of verkoop van mijn wagen",
+              "Detailing",
+              "Service & herstelling",
+              "Uitlaatsystemen",
+              "Schroefsets & verlaging",
+              "Financiering",
+              "Autotransport",
+              "Andere"
+            ],
+            "default_value": "Informatie over een wagen"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "form",
+      "name": "Alleen formulier",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Enkel het contactformulier",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "show_form": {
+          "type": "Boolean",
+          "config": {
+            "label": "Contactformulier tonen",
+            "default_value": true,
+            "placeholder_true": "Ja",
+            "placeholder_false": "Nee"
+          }
+        },
+        "form_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titel formulier",
+            "placeholder": ""
+          }
+        },
+        "default_subject": {
+          "type": "Select",
+          "config": {
+            "label": "Standaardonderwerp formulier",
+            "placeholder": "",
+            "options": [
+              "Informatie over een wagen",
+              "Import op aanvraag",
+              "Inruil of verkoop van mijn wagen",
+              "Detailing",
+              "Service & herstelling",
+              "Uitlaatsystemen",
+              "Schroefsets & verlaging",
+              "Financiering",
+              "Autotransport",
+              "Andere"
+            ],
+            "default_value": "Informatie over een wagen"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

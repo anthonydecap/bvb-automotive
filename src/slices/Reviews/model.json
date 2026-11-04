@@ -1,0 +1,94 @@
+{
+  "id": "reviews",
+  "type": "SharedSlice",
+  "name": "Reviews",
+  "description": "Klantenreviews (standaard uit Instellingen)",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Klantenreviews (standaard uit Instellingen)",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Knoptekst",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Knoplink",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": false,
+            "repeat": false
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Eigen reviews (optioneel, anders die uit Instellingen)",
+            "repeat": true,
+            "fields": {
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Review",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph"
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Naam",
+                  "placeholder": ""
+                }
+              },
+              "date": {
+                "type": "Date",
+                "config": {
+                  "label": "Datum",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

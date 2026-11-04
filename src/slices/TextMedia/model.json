@@ -1,0 +1,124 @@
+{
+  "id": "text_media",
+  "type": "SharedSlice",
+  "name": "Tekst & beeld",
+  "description": "Tekst naast een foto",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Tekst naast een foto",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tekst",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Foto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_position": {
+          "type": "Select",
+          "config": {
+            "label": "Foto",
+            "placeholder": "",
+            "options": [
+              "Rechts",
+              "Links"
+            ],
+            "default_value": "Rechts"
+          }
+        },
+        "tone": {
+          "type": "Select",
+          "config": {
+            "label": "Achtergrond",
+            "placeholder": "",
+            "options": [
+              "Licht",
+              "Donker"
+            ],
+            "default_value": "Licht"
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Knoppen",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              },
+              "style": {
+                "type": "Select",
+                "config": {
+                  "label": "Stijl",
+                  "placeholder": "",
+                  "options": [
+                    "Primair",
+                    "Secundair"
+                  ],
+                  "default_value": "Primair"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

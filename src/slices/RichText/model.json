@@ -1,0 +1,28 @@
+{
+  "id": "rich_text",
+  "type": "SharedSlice",
+  "name": "Tekst",
+  "description": "Vrije tekst",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Vrije tekst",
+      "imageUrl": "",
+      "primary": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tekst",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "stats",
+  "type": "SharedSlice",
+  "name": "Kerncijfers",
+  "description": "Rij met cijfers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Rij met cijfers",
+      "imageUrl": "",
+      "primary": {
+        "tone": {
+          "type": "Select",
+          "config": {
+            "label": "Achtergrond",
+            "placeholder": "",
+            "options": [
+              "Licht",
+              "Donker"
+            ],
+            "default_value": "Licht"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Cijfers",
+            "repeat": true,
+            "fields": {
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Waarde",
+                  "placeholder": ""
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

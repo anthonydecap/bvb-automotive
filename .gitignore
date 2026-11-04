@@ -147,3 +147,9 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# slice machine
+.slicemachine/
+
+# taste-skill working files
+.taste-skill/

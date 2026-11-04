@@ -1,0 +1,47 @@
+{
+  "id": "quote",
+  "type": "SharedSlice",
+  "name": "Citaat",
+  "description": "Groot citaat",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Groot citaat",
+      "imageUrl": "",
+      "primary": {
+        "quote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Citaat",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "author": {
+          "type": "Text",
+          "config": {
+            "label": "Auteur",
+            "placeholder": ""
+          }
+        },
+        "tone": {
+          "type": "Select",
+          "config": {
+            "label": "Achtergrond",
+            "placeholder": "",
+            "options": [
+              "Licht",
+              "Donker"
+            ],
+            "default_value": "Licht"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

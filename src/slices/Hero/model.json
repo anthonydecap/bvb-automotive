@@ -1,0 +1,220 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Grote openingsbanner met foto",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Groot",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Volledige foto, voor de homepage",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Achtergrondfoto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Knoppen",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              },
+              "style": {
+                "type": "Select",
+                "config": {
+                  "label": "Stijl",
+                  "placeholder": "",
+                  "options": [
+                    "Primair",
+                    "Secundair"
+                  ],
+                  "default_value": "Primair"
+                }
+              }
+            }
+          }
+        },
+        "stats": {
+          "type": "Group",
+          "config": {
+            "label": "Kerncijfers",
+            "repeat": true,
+            "fields": {
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Waarde",
+                  "placeholder": "4,94/5"
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": "op AutoScout24"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "page",
+      "name": "Paginakop",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Kleinere kop voor binnenpagina's",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Achtergrondfoto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Knoppen",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              },
+              "style": {
+                "type": "Select",
+                "config": {
+                  "label": "Stijl",
+                  "placeholder": "",
+                  "options": [
+                    "Primair",
+                    "Secundair"
+                  ],
+                  "default_value": "Primair"
+                }
+              }
+            }
+          }
+        },
+        "stats": {
+          "type": "Group",
+          "config": {
+            "label": "Kerncijfers",
+            "repeat": true,
+            "fields": {
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Waarde",
+                  "placeholder": "4,94/5"
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": "op AutoScout24"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

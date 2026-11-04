@@ -1,0 +1,1 @@
+Installed from https://github.com/Leonxlnx/taste-skill @ 12af471 (MIT)

@@ -1,0 +1,100 @@
+{
+  "id": "cta_banner",
+  "type": "SharedSlice",
+  "name": "Oproep",
+  "description": "Opvallende oproep tot actie",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Opvallende oproep tot actie",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Achtergrondfoto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Knoppen",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              },
+              "style": {
+                "type": "Select",
+                "config": {
+                  "label": "Stijl",
+                  "placeholder": "",
+                  "options": [
+                    "Primair",
+                    "Secundair"
+                  ],
+                  "default_value": "Primair"
+                }
+              }
+            }
+          }
+        },
+        "show_contact": {
+          "type": "Boolean",
+          "config": {
+            "label": "Bel- en WhatsApp-knop tonen",
+            "default_value": true,
+            "placeholder_true": "Ja",
+            "placeholder_false": "Nee"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "id": "car",
+  "label": "Wagen",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Wagen": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "URL-slug",
+          "placeholder": ""
+        }
+      },
+      "brand": {
+        "type": "Select",
+        "config": {
+          "label": "Merk",
+          "placeholder": "",
+          "options": [
+            "Volkswagen",
+            "Audi",
+            "Cupra",
+            "Seat",
+            "Škoda",
+            "BMW",
+            "Mini",
+            "Porsche",
+            "Mercedes-Benz",
+            "Andere"
+          ],
+          "default_value": "Volkswagen"
+        }
+      },
+      "model": {
+        "type": "Text",
+        "config": {
+          "label": "Model en uitvoering",
+          "placeholder": "Golf 8 GTI Clubsport"
+        }
+      },
+      "highlights": {
+        "type": "Text",
+        "config": {
+          "label": "Belangrijkste opties (kort)",
+          "placeholder": "PANO | H&K | ACC | DCC | CAMERA"
+        }
+      },
+      "status": {
+        "type": "Select",
+        "config": {
+          "label": "Status",
+          "placeholder": "",
+          "options": [
+            "Beschikbaar",
+            "Gereserveerd",
+            "Verkocht"
+          ],
+          "default_value": "Beschikbaar"
+        }
+      },
+      "price": {
+        "type": "Number",
+        "config": {
+          "label": "Prijs in euro (incl. btw)",
+          "placeholder": "33950"
+        }
+      },
+      "vat": {
+        "type": "Select",
+        "config": {
+          "label": "Btw",
+          "placeholder": "",
+          "options": [
+            "BTW-wagen (btw aftrekbaar)",
+            "Marge (btw niet aftrekbaar)"
+          ],
+          "default_value": "BTW-wagen (btw aftrekbaar)"
+        }
+      },
+      "featured": {
+        "type": "Boolean",
+        "config": {
+          "label": "Uitlichten op de homepage",
+          "default_value": false,
+          "placeholder_true": "Ja",
+          "placeholder_false": "Nee"
+        }
+      },
+      "premium": {
+        "type": "Boolean",
+        "config": {
+          "label": "Ook tonen in Premium & Performance",
+          "default_value": false,
+          "placeholder_true": "Ja",
+          "placeholder_false": "Nee"
+        }
+      },
+      "gallery": {
+        "type": "Group",
+        "config": {
+          "label": "Foto's (de eerste foto is de hoofdfoto)",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Foto",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Beschrijving",
+          "placeholder": "Wat maakt deze wagen bijzonder?",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+        }
+      }
+    },
+    "Specificaties": {
+      "year": {
+        "type": "Number",
+        "config": {
+          "label": "Bouwjaar",
+          "placeholder": "2022"
+        }
+      },
+      "first_registration": {
+        "type": "Text",
+        "config": {
+          "label": "Eerste inschrijving",
+          "placeholder": "06/2022"
+        }
+      },
+      "mileage": {
+        "type": "Number",
+        "config": {
+          "label": "Kilometerstand",
+          "placeholder": "42000"
+        }
+      },
+      "fuel": {
+        "type": "Select",
+        "config": {
+          "label": "Brandstof",
+          "placeholder": "",
+          "options": [
+            "Benzine",
+            "Diesel",
+            "Hybride",
+            "Plug-in hybride",
+            "Elektrisch"
+          ],
+          "default_value": "Benzine"
+        }
+      },
+      "transmission": {
+        "type": "Select",
+        "config": {
+          "label": "Transmissie",
+          "placeholder": "",
+          "options": [
+            "Automaat",
+            "Manueel"
+          ],
+          "default_value": "Automaat"
+        }
+      },
+      "gearbox": {
+        "type": "Text",
+        "config": {
+          "label": "Versnellingsbak",
+          "placeholder": "DSG 7-traps"
+        }
+      },
+      "power_hp": {
+        "type": "Number",
+        "config": {
+          "label": "Vermogen (pk)",
+          "placeholder": "300"
+        }
+      },
+      "power_kw": {
+        "type": "Number",
+        "config": {
+          "label": "Vermogen (kW)",
+          "placeholder": "221"
+        }
+      },
+      "engine_cc": {
+        "type": "Number",
+        "config": {
+          "label": "Cilinderinhoud (cc)",
+          "placeholder": "1984"
+        }
+      },
+      "drivetrain": {
+        "type": "Select",
+        "config": {
+          "label": "Aandrijving",
+          "placeholder": "",
+          "options": [
+            "Voorwielaandrijving",
+            "Achterwielaandrijving",
+            "Vierwielaandrijving"
+          ]
+        }
+      },
+      "euronorm": {
+        "type": "Text",
+        "config": {
+          "label": "Euronorm",
+          "placeholder": "6d"
+        }
+      },
+      "color": {
+        "type": "Text",
+        "config": {
+          "label": "Kleur",
+          "placeholder": "Dolphin Grey"
+        }
+      },
+      "interior": {
+        "type": "Text",
+        "config": {
+          "label": "Interieur",
+          "placeholder": "Alcantara, leder en stof"
+        }
+      },
+      "doors": {
+        "type": "Number",
+        "config": {
+          "label": "Aantal deuren",
+          "placeholder": "5"
+        }
+      },
+      "seats": {
+        "type": "Number",
+        "config": {
+          "label": "Aantal zitplaatsen",
+          "placeholder": "5"
+        }
+      },
+      "warranty": {
+        "type": "Text",
+        "config": {
+          "label": "Garantie",
+          "placeholder": "12 maanden"
+        }
+      },
+      "accident_free": {
+        "type": "Boolean",
+        "config": {
+          "label": "Ongevalvrij",
+          "default_value": true,
+          "placeholder_true": "Ja",
+          "placeholder_false": "Nee"
+        }
+      },
+      "first_owner": {
+        "type": "Boolean",
+        "config": {
+          "label": "Eerste eigenaar",
+          "default_value": false,
+          "placeholder_true": "Ja",
+          "placeholder_false": "Nee"
+        }
+      },
+      "carpass": {
+        "type": "Boolean",
+        "config": {
+          "label": "Car-Pass aanwezig",
+          "default_value": true,
+          "placeholder_true": "Ja",
+          "placeholder_false": "Nee"
+        }
+      }
+    },
+    "Uitrusting": {
+      "options": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Opties (één optie per regel)",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "list-item,paragraph"
+        }
+      },
+      "extras": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Goed om te weten",
+          "placeholder": "Bv. velgen optioneel, verlengde fabrieksgarantie",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink,list-item"
+        }
+      },
+      "autoscout_url": {
+        "type": "Link",
+        "config": {
+          "label": "Advertentie op AutoScout24",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta-titel",
+          "placeholder": "Titel in Google (laat leeg voor de standaardtitel)"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta-beschrijving",
+          "placeholder": "Korte omschrijving voor Google, ± 155 tekens"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Deelafbeelding",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

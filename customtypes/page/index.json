@@ -1,0 +1,115 @@
+{
+  "id": "page",
+  "label": "Pagina",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Pagina": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "URL-slug",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Titel",
+          "placeholder": "Naam van de pagina"
+        }
+      },
+      "parent": {
+        "type": "Link",
+        "config": {
+          "label": "Bovenliggende pagina (optioneel, bv. Werkplaats)",
+          "select": "document",
+          "customtypes": [
+            "page"
+          ]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "car_grid": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            },
+            "steps": {
+              "type": "SharedSlice"
+            },
+            "text_media": {
+              "type": "SharedSlice"
+            },
+            "reviews": {
+              "type": "SharedSlice"
+            },
+            "cta_banner": {
+              "type": "SharedSlice"
+            },
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "logo_strip": {
+              "type": "SharedSlice"
+            },
+            "gallery": {
+              "type": "SharedSlice"
+            },
+            "finance_table": {
+              "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "location": {
+              "type": "SharedSlice"
+            },
+            "quote": {
+              "type": "SharedSlice"
+            },
+            "stats": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta-titel",
+          "placeholder": "Titel in Google (laat leeg voor de standaardtitel)"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta-beschrijving",
+          "placeholder": "Korte omschrijving voor Google, ± 155 tekens"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Deelafbeelding",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "features",
+  "type": "SharedSlice",
+  "name": "Kenmerken",
+  "description": "Blokken met icoon, titel en tekst",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Blokken met icoon, titel en tekst",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "layout": {
+          "type": "Select",
+          "config": {
+            "label": "Weergave",
+            "placeholder": "",
+            "options": [
+              "Kaarten",
+              "Lijst",
+              "Genummerd"
+            ],
+            "default_value": "Kaarten"
+          }
+        },
+        "columns": {
+          "type": "Select",
+          "config": {
+            "label": "Kolommen",
+            "placeholder": "",
+            "options": [
+              "2",
+              "3",
+              "4"
+            ],
+            "default_value": "4"
+          }
+        },
+        "tone": {
+          "type": "Select",
+          "config": {
+            "label": "Achtergrond",
+            "placeholder": "",
+            "options": [
+              "Licht",
+              "Donker"
+            ],
+            "default_value": "Licht"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Blokken",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Select",
+                "config": {
+                  "label": "Icoon",
+                  "placeholder": "",
+                  "options": [
+                    "Geen",
+                    "Vinkje",
+                    "Schild",
+                    "Sleutel",
+                    "Werktuig",
+                    "Glans",
+                    "Persoon",
+                    "Wagen",
+                    "Zoeken",
+                    "Kalender",
+                    "Telefoon",
+                    "Euro",
+                    "Transport",
+                    "Klok",
+                    "Ster",
+                    "Meter",
+                    "Document",
+                    "Locatie",
+                    "Kruis"
+                  ],
+                  "default_value": "Geen"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Titel",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,hyperlink,list-item"
+                }
+              },
+              "link_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Linktekst",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

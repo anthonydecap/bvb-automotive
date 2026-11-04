@@ -1,0 +1,69 @@
+{
+  "id": "faq",
+  "type": "SharedSlice",
+  "name": "Veelgestelde vragen",
+  "description": "Vragen en antwoorden",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Vragen en antwoorden",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Bovenschrift",
+            "placeholder": "Kort label boven de titel"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "Gebruik cursief voor het goudkleurige accent",
+            "allowTargetBlank": false,
+            "single": "heading2,strong,em"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Vragen",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "Text",
+                "config": {
+                  "label": "Vraag",
+                  "placeholder": ""
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Antwoord",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

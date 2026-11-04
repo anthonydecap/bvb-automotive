@@ -1,0 +1,39 @@
+{
+  "name": "bvb-automotive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "slicemachine": "start-slicemachine",
+    "types": "prismic-ts-codegen",
+    "push:models": "tsx scripts/push-models.ts",
+    "seed:prismic": "tsx scripts/seed-prismic.ts"
+  },
+  "dependencies": {
+    "@prismicio/client": "^7.23.0",
+    "@prismicio/next": "^2.3.4",
+    "@prismicio/react": "^3.5.1",
+    "next": "16.4.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.100",
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.4",
+    "prettier": "^3.9.10",
+    "prismic-ts-codegen": "^0.1.31",
+    "sharp": "^0.35.5",
+    "slice-machine-ui": "^2.21.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}
