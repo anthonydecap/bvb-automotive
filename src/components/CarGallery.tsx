@@ -71,14 +71,14 @@ export function CarGallery({ images, title }: CarGalleryProps) {
     scrollTo(track.current, index, false);
   };
 
-  if (!count) return <div className="aspect-[3/2] rounded-md bg-graphite" />;
+  if (!count) return <div className="aspect-[3/2] bg-graphite" />;
 
   const arrow =
-    "grid size-11 place-items-center rounded-full bg-ink/70 text-white backdrop-blur transition-colors hover:bg-gold hover:text-ink";
+    "grid size-12 place-items-center bg-ink text-chalk transition-colors hover:bg-gold hover:text-ink";
 
   return (
     <div>
-      <div className="group relative overflow-hidden rounded-md bg-graphite">
+      <div className="group relative overflow-hidden bg-graphite">
         <div
           ref={track}
           onScroll={() => onScroll(track.current)}
@@ -107,22 +107,32 @@ export function CarGallery({ images, title }: CarGalleryProps) {
         </div>
         {count > 1 && (
           <>
-            <button type="button" onClick={() => go(index - 1)} className={`${arrow} absolute top-1/2 left-3 -translate-y-1/2`} aria-label="Vorige foto">
+            <button
+              type="button"
+              onClick={() => go(index - 1)}
+              className={`${arrow} absolute top-1/2 left-3 -translate-y-1/2`}
+              aria-label="Vorige foto"
+            >
               <ChevronLeft size={20} />
             </button>
-            <button type="button" onClick={() => go(index + 1)} className={`${arrow} absolute top-1/2 right-3 -translate-y-1/2`} aria-label="Volgende foto">
+            <button
+              type="button"
+              onClick={() => go(index + 1)}
+              className={`${arrow} absolute top-1/2 right-3 -translate-y-1/2`}
+              aria-label="Volgende foto"
+            >
               <ChevronRight size={20} />
             </button>
           </>
         )}
         <div className="pointer-events-none absolute right-3 bottom-3 left-3 flex items-center justify-between">
-          <span className="spec-label tabular rounded-sm bg-ink/75 px-2.5 py-1.5 text-white backdrop-blur">
+          <span className="tabular bg-ink px-3 py-1.5 text-small text-chalk">
             {index + 1} / {count}
           </span>
           <button
             type="button"
             onClick={open}
-            className="spec-label pointer-events-auto flex items-center gap-2 rounded-sm bg-ink/75 px-2.5 py-1.5 text-white backdrop-blur transition-colors hover:bg-gold hover:text-ink"
+            className="pointer-events-auto flex items-center gap-2 bg-ink px-3 py-1.5 text-small text-chalk transition-colors hover:bg-gold hover:text-ink"
           >
             <Expand size={14} /> Alle foto&rsquo;s
           </button>
@@ -136,8 +146,10 @@ export function CarGallery({ images, title }: CarGalleryProps) {
               key={i}
               type="button"
               onClick={() => go(i)}
-              className={`relative aspect-[3/2] w-24 shrink-0 overflow-hidden rounded-sm transition-opacity sm:w-28 ${
-                i === index ? "opacity-100 ring-2 ring-gold ring-offset-2 ring-offset-ink" : "opacity-50 hover:opacity-90"
+              className={`relative aspect-[3/2] w-24 shrink-0 overflow-hidden transition-[opacity,outline-color] sm:w-28 ${
+                i === index
+                  ? "opacity-100 outline-2 outline-offset-2 outline-gold"
+                  : "opacity-60 hover:opacity-100"
               }`}
               aria-label={`Toon foto ${i + 1}`}
               aria-current={i === index}
@@ -151,12 +163,12 @@ export function CarGallery({ images, title }: CarGalleryProps) {
       <dialog
         ref={dialog}
         onClose={onClose}
-        className="m-0 h-dvh max-h-none w-screen max-w-none bg-ink/97 p-0 text-white backdrop:bg-ink/90"
+        className="m-0 h-dvh max-h-none w-screen max-w-none bg-ink p-0 text-chalk backdrop:bg-ink"
         aria-label={`Foto's van de ${title}`}
       >
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between px-4 py-3 sm:px-6">
-            <p className="spec-label tabular text-mist">
+            <p className="tabular text-small text-fog">
               {index + 1} / {count}
             </p>
             <p className="hidden truncate px-6 font-semibold sm:block">{title}</p>
@@ -173,15 +185,31 @@ export function CarGallery({ images, title }: CarGalleryProps) {
               {images.map((image, i) => (
                 <div key={i} className="relative h-full w-full shrink-0 snap-center">
                   {lightbox && Math.abs(i - index) <= 2 && (
-                    <Img field={image} fill sizes="100vw" className="object-contain" alt={image.alt || `${title}, foto ${i + 1}`} />
+                    <Img
+                      field={image}
+                      fill
+                      sizes="100vw"
+                      className="object-contain"
+                      alt={image.alt || `${title}, foto ${i + 1}`}
+                    />
                   )}
                 </div>
               ))}
             </div>
-            <button type="button" onClick={() => go(index - 1)} className={`${arrow} absolute top-1/2 left-4 -translate-y-1/2`} aria-label="Vorige foto">
+            <button
+              type="button"
+              onClick={() => go(index - 1)}
+              className={`${arrow} absolute top-1/2 left-4 -translate-y-1/2`}
+              aria-label="Vorige foto"
+            >
               <ChevronLeft size={22} />
             </button>
-            <button type="button" onClick={() => go(index + 1)} className={`${arrow} absolute top-1/2 right-4 -translate-y-1/2`} aria-label="Volgende foto">
+            <button
+              type="button"
+              onClick={() => go(index + 1)}
+              className={`${arrow} absolute top-1/2 right-4 -translate-y-1/2`}
+              aria-label="Volgende foto"
+            >
               <ChevronRight size={22} />
             </button>
           </div>

@@ -21,17 +21,24 @@ export function Reveal({ as: Tag = "div", className, style, id, children }: Reve
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          node.dataset.reveal = "visible";
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -10% 0px" },
-    );
+    const reveal = () => {
+      node.dataset.reveal = "visible";
+      observer.disconnect();
+      window.removeEventListener("scroll", check);
+    };
+    // A jump from below a block to above it never intersects, so scrolling checks the position too.
+    const check = () => {
+      if (node.getBoundingClientRect().top < window.innerHeight * 0.9) reveal();
+    };
+    const observer = new IntersectionObserver(([entry]) => entry.isIntersecting && reveal(), {
+      rootMargin: "0px 0px -10% 0px",
+    });
     observer.observe(node);
-    return () => observer.disconnect();
+    window.addEventListener("scroll", check, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", check);
+    };
   }, []);
 
   return (

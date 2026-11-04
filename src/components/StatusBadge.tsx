@@ -4,12 +4,11 @@ const styles = {
   Verkocht: "bg-sold",
 } as const;
 
+/** The car's status in plain words, with a small square in its colour. */
 export function StatusBadge({ status, className = "" }: { status: keyof typeof styles; className?: string }) {
   return (
-    <span
-      className={`spec-label inline-flex items-center gap-2 rounded-sm bg-ink/85 px-2.5 py-1.5 text-white backdrop-blur ${className}`}
-    >
-      <span className={`size-1.5 rounded-full ${styles[status]}`} aria-hidden="true" />
+    <span className={`inline-flex items-center gap-2 text-body font-medium ${className}`}>
+      <span className={`size-2.5 ${styles[status]}`} aria-hidden="true" />
       {status}
     </span>
   );

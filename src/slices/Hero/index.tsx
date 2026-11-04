@@ -23,36 +23,18 @@ const Hero = async ({ slice, index }: HeroProps) => {
       return (
         <HeroLineup
           cars={stock}
-          intro={
+          title={<Title field={p.title} as={Heading} className="display max-w-[15ch] text-display" />}
+          lead={
             <>
-              <Title
-                field={p.title}
-                as={Heading}
-                className="display max-w-[15ch] text-display"
-              />
               {isFilled.richText(p.intro) && (
-                <div className="mt-8 max-w-[44ch] text-lead">
+                <div className="text-body">
                   <InlineRichText field={p.intro} />
                 </div>
               )}
-              <ButtonRow buttons={p.buttons} className="mt-8" />
+              <ButtonRow buttons={p.buttons} className="mt-6" />
             </>
           }
-          aside={
-            p.stats.length > 0 && (
-              <dl className="grid gap-5 pt-3">
-                {p.stats.map((stat, i) => (
-                  <div key={i}>
-                    <dt className="sr-only">{stat.label}</dt>
-                    <dd>
-                      <span className="block text-lead font-semibold">{stat.value}</span>
-                      <span className="block text-small">{stat.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            )
-          }
+          facts={p.stats.filter((s) => s.value && s.label).map((s) => ({ value: s.value!, label: s.label! }))}
         />
       );
     }
@@ -66,29 +48,48 @@ const Hero = async ({ slice, index }: HeroProps) => {
       data-slice-variation={slice.variation}
       className={`relative bg-ink text-chalk ${first ? "pt-28 lg:pt-32" : "pt-[var(--section)]"} pb-[var(--margin)]`}
     >
-      <div className={`frame grid gap-10 lg:grid-cols-12 lg:gap-8 ${hasImage ? "lg:min-h-[calc(100svh-9rem)]" : "pb-[var(--section)]"}`}>
-        <Reveal className={`flex flex-col ${hasImage ? "lg:col-span-6 lg:pb-8" : "lg:col-span-10"} pt-6 lg:pt-10`}>
-          <Title field={p.title} as={Heading} className="display max-w-[14ch] text-display" />
-          {isFilled.richText(p.intro) && (
-            <div className="mt-8 max-w-[46ch] space-y-4 text-body text-fog lg:text-lead lg:text-fog">
-              <InlineRichText field={p.intro} />
-            </div>
-          )}
-          <ButtonRow buttons={p.buttons} className="mt-10" />
-          {p.stats.length > 0 && (
-            <dl className="mt-auto grid grid-cols-2 gap-x-8 gap-y-5 pt-12 sm:grid-cols-4 lg:grid-cols-2">
-              {p.stats.map((stat, i) => (
-                <div key={i}>
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd>
-                    <span className="block text-lead font-semibold text-gold">{stat.value}</span>
-                    <span className="block text-small text-fog">{stat.label}</span>
-                  </dd>
+      <div
+        className={`frame grid gap-10 lg:grid-cols-12 lg:gap-8 ${hasImage ? "lg:min-h-[calc(100svh-9rem)]" : "pb-[var(--section)]"}`}
+      >
+        {!hasImage && (
+          <>
+            <Reveal className="pt-6 lg:col-span-7 lg:pt-10">
+              <Title field={p.title} as={Heading} className="display max-w-[14ch] text-display" />
+            </Reveal>
+            <Reveal className="space-y-6 lg:col-span-4 lg:col-start-9 lg:self-end">
+              {isFilled.richText(p.intro) && (
+                <div className="space-y-4 text-body text-fog">
+                  <InlineRichText field={p.intro} />
                 </div>
-              ))}
-            </dl>
-          )}
-        </Reveal>
+              )}
+              <ButtonRow buttons={p.buttons} />
+            </Reveal>
+          </>
+        )}
+        {hasImage && (
+          <Reveal className="flex flex-col pt-6 lg:col-span-6 lg:pb-8 lg:pt-10">
+            <Title field={p.title} as={Heading} className="display max-w-[14ch] text-display" />
+            {isFilled.richText(p.intro) && (
+              <div className="mt-8 max-w-[46ch] space-y-4 text-body text-fog lg:text-lead lg:text-fog">
+                <InlineRichText field={p.intro} />
+              </div>
+            )}
+            <ButtonRow buttons={p.buttons} className="mt-10" />
+            {p.stats.length > 0 && (
+              <dl className="mt-auto grid grid-cols-2 gap-x-8 gap-y-5 pt-12 sm:grid-cols-4 lg:grid-cols-2">
+                {p.stats.map((stat, i) => (
+                  <div key={i}>
+                    <dt className="sr-only">{stat.label}</dt>
+                    <dd>
+                      <span className="block text-lead font-semibold text-gold">{stat.value}</span>
+                      <span className="block text-small text-fog">{stat.label}</span>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+          </Reveal>
+        )}
         {hasImage && (
           <div className="relative aspect-[4/3] overflow-hidden bg-graphite lg:col-span-6 lg:aspect-auto">
             <Img

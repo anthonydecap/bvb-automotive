@@ -16,7 +16,11 @@ type CarCardProps = {
 
 /** The facts under a tile: year, kilometres and the paint the car is mounted on. */
 export function carFacts(car: CarSummary) {
-  return [car.year ? String(car.year) : null, car.mileage ? formatKm(car.mileage) : null, car.paint.name || null]
+  return [
+    car.year ? String(car.year) : null,
+    car.mileage ? formatKm(car.mileage) : null,
+    car.paint.name || null,
+  ]
     .filter(Boolean)
     .join(", ");
 }
@@ -31,7 +35,7 @@ export function CarCard({ car, dark, priority, large }: CarCardProps) {
   const price = sold ? "Verkocht" : car.price ? formatPrice(car.price) : "Op aanvraag";
 
   return (
-    <Link href={car.href} className="group block">
+    <Link href={car.href} className="group relative block">
       <div className="specimen" style={{ "--paint": car.paint.hex } as CSSProperties}>
         <div className="specimen-photo">
           <Img
@@ -39,7 +43,11 @@ export function CarCard({ car, dark, priority, large }: CarCardProps) {
             alt={car.title}
             fill
             priority={priority}
-            sizes={large ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"}
+            sizes={
+              large
+                ? "(min-width: 1024px) 50vw, 100vw"
+                : "(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+            }
             className={`object-cover ${sold ? "grayscale-[0.5]" : ""}`}
           />
         </div>
@@ -49,7 +57,9 @@ export function CarCard({ car, dark, priority, large }: CarCardProps) {
           <span className="sr-only">{car.brand} </span>
           {car.model}
         </h3>
-        <p className={`tabular shrink-0 ${large ? "text-lead" : "text-body"} font-semibold ${sold ? muted : ""}`}>
+        <p
+          className={`tabular shrink-0 ${large ? "text-lead" : "text-body"} font-semibold ${sold ? muted : ""}`}
+        >
           {price}
         </p>
       </div>

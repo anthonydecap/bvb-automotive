@@ -2,49 +2,84 @@ import type { Content } from "@prismicio/client";
 import { isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 
-import { ButtonRow } from "@/components/ButtonLink";
-import { ContactButtons } from "@/components/ContactButtons";
-import { Img } from "@/components/Img";
+import { PhotoStrip } from "@/components/PhotoStrip";
+import { PrismicLink } from "@/components/PrismicLink";
+import { Reveal } from "@/components/Reveal";
 import { InlineRichText, Title } from "@/components/RichText";
+import { mainImage } from "@/lib/cars";
+import { getCars } from "@/lib/content";
+import { telHref, whatsappHref } from "@/lib/format";
 import type { SliceContext } from "@/lib/slice-context";
 import { siteInfo } from "@/lib/site";
 
 export type CtaBannerProps = SliceComponentProps<Content.CtaBannerSlice, SliceContext>;
 
-const CtaBanner = ({ slice, context }: CtaBannerProps) => {
+const cell =
+  "flex min-h-16 flex-col items-center justify-center px-4 py-3 text-center text-lead font-semibold transition-colors sm:min-h-24";
+
+/**
+ * The close of a page: every car that stood on the lot drifts past on a field of monogram gold,
+ * and the ways to reach BVB sit underneath as three cells of one bar.
+ */
+const CtaBanner = async ({ slice, context }: CtaBannerProps) => {
   const p = slice.primary;
   const site = siteInfo(context.settings);
-  const hasImage = isFilled.image(p.image);
+  const images = (await getCars()).map(mainImage).filter((i) => i?.url);
+  const primary = p.buttons.find((b) => isFilled.link(b.link));
+
+  const cells = [
+    p.show_contact && site.phone && (
+      <a key="tel" href={telHref(site.phone)} className={`${cell} bg-black/10 hover:bg-black/20`}>
+        Bel {site.phone}
+      </a>
+    ),
+    p.show_contact && site.whatsapp && (
+      <a
+        key="wa"
+        href={whatsappHref(site.whatsapp)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${cell} bg-black/10 hover:bg-black/20`}
+      >
+        Stuur een WhatsApp
+      </a>
+    ),
+    primary && (
+      <PrismicLink
+        key="primary"
+        field={primary.link}
+        className={`${cell} bg-ink text-chalk hover:bg-graphite`}
+      >
+        {primary.label || primary.link.text}
+      </PrismicLink>
+    ),
+    !primary && site.email && (
+      <a key="mail" href={`mailto:${site.email}`} className={`${cell} bg-ink text-chalk hover:bg-graphite`}>
+        Mail ons
+      </a>
+    ),
+  ].filter(Boolean);
 
   return (
     <section
       data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-      className="relative isolate overflow-hidden bg-ink py-24 text-white lg:py-32"
+      className="overflow-hidden bg-gold pt-12 pb-[var(--section)] text-ink"
     >
-      {hasImage ? (
-        <>
-          <Img field={p.image} fill sizes="100vw" className="-z-20 object-cover opacity-60" />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/85 to-ink/40" aria-hidden="true" />
-        </>
-      ) : (
-        <div className="grid-texture absolute inset-0 -z-10" aria-hidden="true" />
-      )}
-      <div className="container-x">
-        <div className="max-w-3xl">
-          {p.eyebrow && <p className="eyebrow mb-5 text-gold">{p.eyebrow}</p>}
-          <Title field={p.title} className="text-[2rem] sm:text-5xl lg:text-6xl" />
-          {isFilled.richText(p.intro) && (
-            <div className="mt-6 max-w-2xl text-lg leading-relaxed text-fog">
-              <InlineRichText field={p.intro} />
-            </div>
-          )}
-          <div className="mt-10 flex flex-wrap gap-3">
-            <ButtonRow buttons={p.buttons} />
-            {p.show_contact && <ContactButtons site={site} />}
+      <PhotoStrip images={images} />
+      <Reveal className="frame mt-16 lg:mt-20">
+        <Title field={p.title} className="heading max-w-[24ch]" />
+        {isFilled.richText(p.intro) && (
+          <div className="mt-6 max-w-[52ch] text-body">
+            <InlineRichText field={p.intro} />
           </div>
+        )}
+        <div
+          className={`mt-10 grid gap-2 ${cells.length === 3 ? "sm:grid-cols-3" : cells.length === 2 ? "sm:grid-cols-2" : ""}`}
+        >
+          {cells}
         </div>
-      </div>
+        {site.hoursNote && <p className="mt-4 text-small">{site.hoursNote}</p>}
+      </Reveal>
     </section>
   );
 };

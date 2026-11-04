@@ -11,9 +11,14 @@ type ContactButtonsProps = {
 };
 
 /** "Bel" and "WhatsApp" buttons with the numbers from Settings. */
-export function ContactButtons({ site, message, className = "", phoneClassName = "btn-ghost" }: ContactButtonsProps) {
+export function ContactButtons({
+  site,
+  message,
+  className = "",
+  phoneClassName = "btn-ghost",
+}: ContactButtonsProps) {
   return (
-    <div className={`flex flex-wrap gap-3 ${className}`}>
+    <div className={`flex flex-wrap gap-2 ${className}`}>
       {site.phone && (
         <a href={telHref(site.phone)} className={`btn ${phoneClassName}`}>
           <Phone size={18} />
@@ -23,7 +28,7 @@ export function ContactButtons({ site, message, className = "", phoneClassName =
       {site.whatsapp && (
         <a
           href={whatsappHref(site.whatsapp, message)}
-          className="btn btn-whatsapp"
+          className="btn btn-ghost"
           target="_blank"
           rel="noopener noreferrer"
         >

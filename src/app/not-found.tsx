@@ -1,30 +1,33 @@
 import Link from "next/link";
 
 import { ArrowRight } from "@/components/Icons";
+import { PhotoStrip } from "@/components/PhotoStrip";
+import { Reveal } from "@/components/Reveal";
 import { Shell } from "@/components/Shell";
+import { mainImage } from "@/lib/cars";
+import { getCars } from "@/lib/content";
 
-export default function NotFound() {
+export default async function NotFound() {
+  const stock = (await getCars()).map(mainImage).filter((i) => i?.url);
   return (
     <Shell>
-      <section className="relative flex min-h-[80svh] items-center overflow-hidden bg-ink pt-32 pb-20 text-white">
-        <div className="grid-texture pointer-events-none absolute inset-0" aria-hidden="true" />
-        <div className="container-x relative">
-          <p className="eyebrow text-gold">Fout 404</p>
-          <h1 className="display mt-6 max-w-3xl text-5xl sm:text-7xl">
-            Deze pagina is <em>van de baan</em>
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-fog">
-            De pagina die u zoekt, bestaat niet of is verhuisd. Misschien is de wagen die u zocht ondertussen verkocht.
+      <section className="bg-ink pt-32 pb-[var(--section)] text-chalk lg:pt-40">
+        <Reveal className="frame">
+          <h1 className="display max-w-[14ch] text-display">Deze pagina is van de baan</h1>
+          <p className="mt-8 max-w-[46ch] text-lead">
+            Ze bestaat niet of is verhuisd. Misschien is de wagen die u zocht ondertussen verkocht.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link href="/aanbod" className="btn btn-gold">
-              Bekijk het aanbod <ArrowRight size={18} />
+              Bekijk het aanbod <ArrowRight size={18} className="arrow" />
             </Link>
-            <Link href="/" className="btn btn-ghost">
+            <Link href="/" className="link font-medium">
               Naar de homepagina
             </Link>
           </div>
-        </div>
+        </Reveal>
+        <h2 className="frame mt-[var(--section)] text-lead font-semibold">Misschien staat hij er nog</h2>
+        <PhotoStrip images={stock} className="mt-6" />
       </section>
     </Shell>
   );

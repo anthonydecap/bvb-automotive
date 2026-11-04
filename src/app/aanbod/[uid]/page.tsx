@@ -7,28 +7,18 @@ import { CarCard } from "@/components/CarCard";
 import { CarGallery } from "@/components/CarGallery";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ContactForm } from "@/components/ContactForm";
-import {
-  ArrowRight,
-  Bolt,
-  Calendar,
-  Check,
-  ChevronRight,
-  Fuel,
-  Gauge,
-  Gearbox,
-  NamedIcon,
-  Phone,
-  Road,
-  WhatsApp,
-} from "@/components/Icons";
+import { ArrowRight, Check, ChevronRight, Phone, WhatsApp } from "@/components/Icons";
 import { InlineRichText, RichText } from "@/components/RichText";
+import { Reveal } from "@/components/Reveal";
 import { Shell } from "@/components/Shell";
+import { StickyBar } from "@/components/StickyBar";
 import { StatusBadge } from "@/components/StatusBadge";
 import { carCollections, carTitle, isSold, mainImage, monthlyPayment, summarize } from "@/lib/cars";
 import { getCar, getCars, getSettings } from "@/lib/content";
 import { formatKm, formatNumber, formatPrice, telHref, whatsappHref } from "@/lib/format";
 import { buildMetadata, imageUrl, siteUrl } from "@/lib/metadata";
 import { carPath } from "@/lib/routes";
+import { paintOf } from "@/lib/paint";
 import { href, siteInfo } from "@/lib/site";
 
 export async function generateStaticParams() {
@@ -42,7 +32,12 @@ export async function generateMetadata({ params }: PageProps<"/aanbod/[uid]">): 
   if (!car) return {};
   const d = car.data;
   const title = carTitle(car);
-  const facts = [d.year, d.mileage ? formatKm(d.mileage) : null, d.power_hp ? `${d.power_hp} pk` : null, d.transmission]
+  const facts = [
+    d.year,
+    d.mileage ? formatKm(d.mileage) : null,
+    d.power_hp ? `${d.power_hp} pk` : null,
+    d.transmission,
+  ]
     .filter(Boolean)
     .join(", ");
   const price = isSold(car) ? "Verkocht" : d.price ? formatPrice(d.price) : "Prijs op aanvraag";
@@ -76,23 +71,33 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
   const images = d.gallery.map((g) => g.image).filter((i) => i?.url);
   const collection = carCollections(car)[0];
   const collectionPage = collection ? collectionPages[collection] : undefined;
-  const highlights = (d.highlights ?? "").split("|").map((h) => h.trim()).filter(Boolean);
+  const highlights = (d.highlights ?? "")
+    .split("|")
+    .map((h) => h.trim())
+    .filter(Boolean);
   const url = `${siteUrl}${carPath(car.uid)}`;
   const message = `Hallo, ik heb interesse in de ${title}${d.year ? ` (${d.year})` : ""}: ${url}`;
 
   const finance =
     !sold && d.price && s.finance_rate !== null && s.finance_months
-      ? monthlyPayment(d.price, { rate: s.finance_rate, months: s.finance_months, downPercent: s.finance_down ?? 0 })
+      ? monthlyPayment(d.price, {
+          rate: s.finance_rate,
+          months: s.finance_months,
+          downPercent: s.finance_down ?? 0,
+        })
       : undefined;
   const financeHref = href(s.finance_link) ?? "/financiering";
 
   const keySpecs = [
-    { icon: Calendar, label: "Bouwjaar", value: d.first_registration || d.year },
-    { icon: Road, label: "Kilometerstand", value: d.mileage ? formatKm(d.mileage) : null },
-    { icon: Bolt, label: "Vermogen", value: d.power_hp ? `${d.power_hp} pk${d.power_kw ? ` · ${d.power_kw} kW` : ""}` : null },
-    { icon: Gearbox, label: "Transmissie", value: d.gearbox || d.transmission },
-    { icon: Fuel, label: "Brandstof", value: d.fuel },
-    { icon: Gauge, label: "Aandrijving", value: d.drivetrain },
+    { label: "Bouwjaar", value: d.first_registration || d.year },
+    { label: "Kilometerstand", value: d.mileage ? formatKm(d.mileage) : null },
+    {
+      label: "Vermogen",
+      value: d.power_hp ? `${d.power_hp} pk${d.power_kw ? `, ${d.power_kw} kW` : ""}` : null,
+    },
+    { label: "Transmissie", value: d.gearbox || d.transmission },
+    { label: "Brandstof", value: d.fuel },
+    { label: "Aandrijving", value: d.drivetrain },
   ].filter((spec) => spec.value);
 
   const specs: [string, string | number | null | undefined][] = [
@@ -121,16 +126,12 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
     d.warranty && `${d.warranty} garantie`,
   ].filter(Boolean) as string[];
 
-  const options = d.options
-    .map((node) => ("text" in node ? node.text.trim() : ""))
-    .filter(Boolean);
+  const options = d.options.map((node) => ("text" in node ? node.text.trim() : "")).filter(Boolean);
 
   const similar = all
     .filter((c) => c.uid !== car.uid && !isSold(c) && (!collection || carCollections(c).includes(collection)))
     .slice(0, 4);
-  const more = similar.length
-    ? similar
-    : all.filter((c) => c.uid !== car.uid && !isSold(c)).slice(0, 4);
+  const more = similar.length ? similar : all.filter((c) => c.uid !== car.uid && !isSold(c)).slice(0, 4);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -139,7 +140,9 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
     brand: { "@type": "Brand", name: d.brand },
     model: d.model,
     vehicleModelDate: d.year ? String(d.year) : undefined,
-    mileageFromOdometer: d.mileage ? { "@type": "QuantitativeValue", value: d.mileage, unitCode: "KMT" } : undefined,
+    mileageFromOdometer: d.mileage
+      ? { "@type": "QuantitativeValue", value: d.mileage, unitCode: "KMT" }
+      : undefined,
     fuelType: d.fuel,
     vehicleTransmission: d.transmission,
     color: d.color,
@@ -156,101 +159,89 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
     },
   };
 
+  const paint = paintOf(d.color);
+  const onPaint = paint.light ? "text-ink" : "text-chalk";
+  const softOnPaint = paint.light ? "text-ink" : "text-fog";
+
   return (
     <Shell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="relative bg-ink pt-28 pb-16 text-white lg:pt-36 lg:pb-24">
-        <div className="grid-texture pointer-events-none absolute inset-0" aria-hidden="true" />
-        <div className="container-x relative">
-          <nav aria-label="Kruimelpad" className="mb-8 text-sm text-mist">
+      {/* The car on a field of its own paint. */}
+      <section
+        className={`pt-28 pb-[var(--section)] lg:pt-32 ${onPaint}`}
+        style={{ backgroundColor: paint.hex }}
+      >
+        <div className="frame">
+          <nav aria-label="Kruimelpad" className={`mb-8 text-small ${softOnPaint}`}>
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-white">
+                <Link href="/" className="link">
                   Home
                 </Link>
               </li>
-              <ChevronRight size={14} className="text-steel" />
+              <ChevronRight size={14} aria-hidden="true" />
               <li>
-                <Link href="/aanbod" className="hover:text-white">
+                <Link href="/aanbod" className="link">
                   Aanbod
                 </Link>
               </li>
               {collectionPage && (
                 <>
-                  <ChevronRight size={14} className="text-steel" />
+                  <ChevronRight size={14} aria-hidden="true" />
                   <li>
-                    <Link href={collectionPage.href} className="hover:text-white">
+                    <Link href={collectionPage.href} className="link">
                       {collectionPage.label}
                     </Link>
                   </li>
                 </>
               )}
-              <ChevronRight size={14} className="text-steel" />
-              <li aria-current="page" className="text-white/90">
-                {d.model}
-              </li>
+              <ChevronRight size={14} aria-hidden="true" />
+              <li aria-current="page">{d.model}</li>
             </ol>
           </nav>
 
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="min-w-0 lg:col-span-7 xl:col-span-8">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="min-w-0 lg:col-span-8">
               <CarGallery images={images} title={title} />
             </div>
 
-            <aside className="min-w-0 lg:col-span-5 xl:col-span-4">
-              <div className="lg:sticky lg:top-28">
-                <div className="flex items-center gap-3">
-                  <StatusBadge status={d.status ?? "Beschikbaar"} className="!bg-white/10" />
-                  <p className="spec-label text-gold">{d.brand}</p>
-                </div>
-                <h1 className="display mt-5 text-4xl sm:text-5xl">{d.model}</h1>
-                {highlights.length > 0 && (
-                  <ul className="mt-5 flex flex-wrap gap-1.5">
-                    {highlights.map((h) => (
-                      <li key={h} className="spec-label rounded-sm border border-white/15 px-2 py-1 text-fog">
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+            <aside className="min-w-0 lg:col-span-4">
+              <div>
+                <h1 className="heading">
+                  <span className="sr-only">{d.brand} </span>
+                  {d.model}
+                </h1>
+                <p className={`mt-4 text-body ${softOnPaint}`}>
+                  <StatusBadge status={d.status ?? "Beschikbaar"} className="mr-3 align-baseline" />
+                  {[d.brand, paint.name].filter(Boolean).join(", ")}
+                  {highlights.length > 0 && <>. {highlights.join(", ")}</>}
+                </p>
 
-                <div className="mt-8 rounded-md border border-white/10 bg-carbon p-6">
+                <div id="prijs" className="mt-8">
                   {sold ? (
                     <>
-                      <p className="display text-3xl text-mist">Verkocht</p>
-                      <p className="mt-2 text-fog">
-                        Deze wagen heeft een nieuwe eigenaar gevonden. Zoekt u iets gelijkaardigs? We gaan graag voor
-                        u op zoek.
+                      <p className="heading">Verkocht</p>
+                      <p className="mt-3 text-body">
+                        Deze wagen heeft een nieuwe eigenaar gevonden. Zoekt u iets gelijkaardigs? We gaan
+                        graag voor u op zoek.
                       </p>
                     </>
                   ) : (
                     <>
-                      <p className="tabular display text-4xl sm:text-5xl">
+                      <p className="heading tabular">
                         {d.price ? formatPrice(d.price) : "Prijs op aanvraag"}
                       </p>
-                      <p className="mt-2 text-sm text-mist">
+                      <p className={`mt-2 text-small ${softOnPaint}`}>
                         {d.vat?.startsWith("BTW")
-                          ? "Incl. btw · btw-wagen, btw aftrekbaar"
+                          ? "Incl. btw, btw-wagen: btw aftrekbaar"
                           : d.vat
-                            ? "Margewagen · btw niet aftrekbaar"
+                            ? "Margewagen, btw niet aftrekbaar"
                             : "Incl. btw"}
                       </p>
                       {finance && (
-                        <Link
-                          href={financeHref}
-                          className="group mt-5 flex items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm"
-                        >
-                          <span>
-                            Financieren vanaf{" "}
-                            <strong className="tabular text-base text-gold">
-                              ± {formatPrice(finance.monthly)}/maand
-                            </strong>
-                            <span className="block text-xs text-mist">
-                              Indicatief, {s.finance_months} maanden, {s.finance_down}% aanbetaling
-                            </span>
-                          </span>
-                          <ArrowRight size={17} className="shrink-0 text-gold transition-transform group-hover:translate-x-1" />
+                        <Link href={financeHref} className="link mt-4 inline-block text-body font-medium">
+                          Financieren vanaf ± {formatPrice(finance.monthly)} per maand
                         </Link>
                       )}
                     </>
@@ -258,32 +249,34 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 </div>
 
                 {keySpecs.length > 0 && (
-                  <dl className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-white/10 bg-white/10">
+                  <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
                     {keySpecs.map((spec) => (
-                      <div key={spec.label} className="flex gap-3 bg-ink p-4">
-                        <spec.icon size={19} className="mt-0.5 shrink-0 text-gold" />
-                        <div className="min-w-0">
-                          <dt className="spec-label text-mist">{spec.label}</dt>
-                          <dd className="tabular mt-1 text-[0.9375rem] font-semibold hyphens-auto">{spec.value}</dd>
-                        </div>
+                      <div key={spec.label}>
+                        <dt className={`text-small ${softOnPaint}`}>{spec.label}</dt>
+                        <dd className="tabular text-body font-semibold">{spec.value}</dd>
                       </div>
                     ))}
                   </dl>
                 )}
 
-                <div className="mt-6 grid gap-3">
+                <div className="mt-8 grid gap-2">
                   <a href="#interesse" className="btn btn-gold w-full">
                     {sold ? "Laat ons een gelijkaardige wagen zoeken" : "Plan een bezichtiging of proefrit"}
-                    <ArrowRight size={18} />
+                    <ArrowRight size={18} className="arrow" />
                   </a>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-2">
                     {site.phone && (
                       <a href={telHref(site.phone)} className="btn btn-ghost">
                         <Phone size={18} /> Bellen
                       </a>
                     )}
                     {site.whatsapp && (
-                      <a href={whatsappHref(site.whatsapp, message)} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                      <a
+                        href={whatsappHref(site.whatsapp, message)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-ghost"
+                      >
                         <WhatsApp size={18} /> WhatsApp
                       </a>
                     )}
@@ -291,10 +284,10 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 </div>
 
                 {badges.length > 0 && (
-                  <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-fog">
+                  <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-small">
                     {badges.map((b) => (
                       <li key={b} className="flex items-center gap-2">
-                        <Check size={16} className="shrink-0 text-gold" /> {b}
+                        <Check size={16} className="shrink-0" /> {b}
                       </li>
                     ))}
                   </ul>
@@ -305,62 +298,59 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
         </div>
       </section>
 
-      <section className="on-light bg-paper py-20 lg:py-28">
-        <div className="container-x grid gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <p className="eyebrow flex items-center gap-3 text-gold-deep">
-              <span className="h-px w-8 bg-current" aria-hidden="true" />
-              Over deze wagen
-            </p>
-            <h2 className="display mt-5 text-3xl sm:text-4xl">{title}</h2>
-            <RichText field={d.description} className="prose-bvb mt-6 text-lg leading-relaxed text-ink/80" />
+      <section className="section bg-paper">
+        <div className="frame grid gap-16 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-7">
+            <h2 className="heading">Over deze wagen</h2>
+            <RichText field={d.description} className="prose-bvb mt-8 text-body" />
 
             {isFilled.richText(d.extras) && (
-              <div className="mt-10 rounded-md border-l-2 border-gold bg-white p-6">
-                <p className="spec-label text-gold-deep">Goed om te weten</p>
-                <RichText field={d.extras} className="prose-bvb mt-3 text-ink/80" />
+              <div className="mt-10 bg-chalk p-6 sm:p-8">
+                <h3 className="text-lead font-semibold">Goed om te weten</h3>
+                <RichText field={d.extras} className="prose-bvb mt-3 text-body" />
               </div>
             )}
 
             {options.length > 0 && (
               <div className="mt-16">
-                <div className="flex items-end justify-between gap-4 border-b border-bone pb-4">
-                  <h2 className="display text-2xl sm:text-3xl">Uitrusting</h2>
-                  <p className="tabular text-sm text-stone">{options.length} opties</p>
-                </div>
-                <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                <h2 className="text-lead font-semibold">
+                  Uitrusting <span className="tabular text-stone">({options.length})</span>
+                </h2>
+                <ul className="prose-bvb mt-6 grid max-w-none gap-x-8 gap-y-2 text-body sm:grid-cols-2 [&>*+*]:mt-0">
                   {options.map((o) => (
-                    <li key={o} className="flex gap-3 text-[0.9875rem]">
-                      <Check size={18} className="mt-0.5 shrink-0 text-gold-deep" />
-                      {o}
-                    </li>
+                    <li key={o}>{o}</li>
                   ))}
                 </ul>
               </div>
             )}
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4 lg:col-start-9">
             <div className="lg:sticky lg:top-28">
-              <h2 className="display text-2xl sm:text-3xl">Specificaties</h2>
-              <dl className="mt-6 divide-y divide-bone border-y border-bone">
-                {specs
-                  .filter(([, v]) => v !== null && v !== undefined && v !== "")
-                  .map(([label, value]) => (
-                    <div key={label} className="flex justify-between gap-6 py-3.5 text-[0.9375rem]">
-                      <dt className="text-stone">{label}</dt>
-                      <dd className="tabular text-right font-semibold">{value}</dd>
-                    </div>
-                  ))}
-              </dl>
+              <h2 className="text-lead font-semibold">Specificaties</h2>
+              <table className="tabular mt-6 w-full text-body">
+                <caption className="sr-only">Specificaties van de {title}</caption>
+                <tbody className="divide-y divide-bone" /* taste-skill-ignore: rows of a real table */>
+                  {specs
+                    .filter(([, v]) => v !== null && v !== undefined && v !== "")
+                    .map(([label, value]) => (
+                      <tr key={label}>
+                        <th scope="row" className="py-3 pr-6 text-left font-normal text-stone">
+                          {label}
+                        </th>
+                        <td className="py-3 text-right font-semibold">{value}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
               {isFilled.link(d.autoscout_url) && (
                 <a
                   href={href(d.autoscout_url)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-deep"
+                  className="link mt-6 inline-block font-medium"
                 >
-                  Bekijk deze wagen op AutoScout24 <ArrowRight size={15} />
+                  Bekijk deze wagen op AutoScout24
                 </a>
               )}
             </div>
@@ -369,91 +359,82 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
       </section>
 
       {s.car_promise.length > 0 && (
-        <section className="bg-carbon py-14 text-white">
-          <ul className="container-x grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {s.car_promise.map((item, i) => (
-              <li key={i} className="flex gap-4">
-                <span className="grid size-11 shrink-0 place-items-center rounded bg-gold/10 text-gold">
-                  <NamedIcon name={item.icon} size={22} />
-                </span>
-                <span>
-                  <span className="block font-semibold">{item.title}</span>
-                  <span className="mt-1 block text-sm text-mist">{item.text}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
+        <section className="section bg-ink text-chalk">
+          <div className="frame grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <h2 className="heading lg:col-span-4">Bij elke wagen</h2>
+            <Reveal as="ul" className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-7 lg:col-start-6">
+              {s.car_promise.map((item, i) => (
+                <li key={i}>
+                  <h3 className="text-lead font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-body text-fog">{item.text}</p>
+                </li>
+              ))}
+            </Reveal>
+          </div>
         </section>
       )}
 
-      <section id="interesse" className="on-light scroll-mt-24 bg-white py-20 lg:py-28">
-        <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <p className="eyebrow flex items-center gap-3 text-gold-deep">
-              <span className="h-px w-8 bg-current" aria-hidden="true" />
-              {sold ? "Op zoek naar iets gelijkaardigs?" : "Bezichtiging en proefrit"}
-            </p>
-            <h2 className="display mt-5 text-3xl sm:text-5xl">
-              {sold ? "We zoeken graag met u mee" : s.car_cta_title || "Interesse in deze wagen?"}
+      <section id="interesse" className="section scroll-mt-24 bg-paper">
+        <div className="frame grid gap-12 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-5">
+            <h2 className="heading">
+              {sold ? "We zoeken graag mee" : s.car_cta_title || "Interesse in deze wagen?"}
             </h2>
-            <div className="mt-6 space-y-4 text-lg leading-relaxed text-stone">
+            <div className="mt-6 max-w-[46ch] space-y-4 text-body">
               {sold ? (
                 <p>
-                  Deze {title} is verkocht, maar er komen elke week nieuwe wagens binnen. Laat weten wat u zoekt, dan
-                  houden we u op de hoogte of importeren we op aanvraag.
+                  Deze {title} is verkocht, maar er komen elke week nieuwe wagens binnen. Laat weten wat u
+                  zoekt, dan houden we u op de hoogte of importeren we op aanvraag.
                 </p>
               ) : (
                 <InlineRichText field={s.car_cta_text} />
               )}
             </div>
-            <ContactButtons site={site} message={message} className="mt-8" phoneClassName="btn-dark" />
-          </div>
-          <div className="lg:col-span-7">
-            <div className="rounded-md border border-bone bg-paper p-6 sm:p-10">
-              <ContactForm site={site} car={`${title}${d.year ? ` (${d.year})` : ""}`} />
-            </div>
+            <ContactButtons site={site} message={message} className="mt-8" phoneClassName="btn-ink" />
+          </Reveal>
+          <div className="bg-chalk p-6 sm:p-10 lg:col-span-7">
+            <ContactForm site={site} car={`${title}${d.year ? ` (${d.year})` : ""}`} />
           </div>
         </div>
       </section>
 
       {more.length > 0 && (
-        <section className="on-light bg-paper py-20 lg:py-28">
-          <div className="container-x">
-            <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="eyebrow flex items-center gap-3 text-gold-deep">
-                  <span className="h-px w-8 bg-current" aria-hidden="true" />
-                  Ook in de showroom
-                </p>
-                <h2 className="display mt-5 text-3xl sm:text-4xl">
-                  Meer uit {collectionPage && similar.length ? <em>{collectionPage.label}</em> : <em>ons aanbod</em>}
-                </h2>
-              </div>
-              <Link href={collectionPage && similar.length ? collectionPage.href : "/aanbod"} className="btn btn-dark self-start">
-                Bekijk alles <ArrowRight size={18} />
+        <section className="section bg-paper pt-0">
+          <div className="frame">
+            <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <h2 className="heading">Ook in de showroom</h2>
+              <Link
+                href={collectionPage && similar.length ? collectionPage.href : "/aanbod"}
+                className="link font-medium"
+              >
+                Bekijk {collectionPage && similar.length ? collectionPage.label : "het volledige aanbod"}
               </Link>
             </div>
-            <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <Reveal as="ul" className="grid gap-x-[var(--gap)] gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
               {more.map((c) => (
                 <li key={c.uid}>
                   <CarCard car={summarize(c)} />
                 </li>
               ))}
-            </ul>
+            </Reveal>
           </div>
         </section>
       )}
 
       {/* Sticky contact bar on small screens */}
       {!sold && (
-        <div data-sticky-bar className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-ink/95 px-4 py-3 text-white backdrop-blur lg:hidden">
-          <div className="flex items-center gap-3">
+        <StickyBar after="#prijs" until="#interesse">
+          <div className="flex items-center gap-2">
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm text-mist">{d.model}</p>
-              <p className="tabular font-bold">{d.price ? formatPrice(d.price) : "Prijs op aanvraag"}</p>
+              <p className="truncate text-small text-fog">{d.model}</p>
+              <p className="tabular font-semibold">{d.price ? formatPrice(d.price) : "Prijs op aanvraag"}</p>
             </div>
             {site.phone && (
-              <a href={telHref(site.phone)} className="grid size-11 place-items-center rounded border border-white/20" aria-label="Bellen">
+              <a
+                href={telHref(site.phone)}
+                className="grid size-12 place-items-center bg-graphite"
+                aria-label="Bellen"
+              >
                 <Phone size={19} />
               </a>
             )}
@@ -462,13 +443,13 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 href={whatsappHref(site.whatsapp, message)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp min-h-11 px-4"
+                className="btn btn-gold px-4"
               >
                 <WhatsApp size={18} /> WhatsApp
               </a>
             )}
           </div>
-        </div>
+        </StickyBar>
       )}
     </Shell>
   );

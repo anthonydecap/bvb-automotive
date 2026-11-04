@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+/* General Sans by Indian Type Foundry (Fontshare, ITF Free Font License), self-hosted. */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
  * BVB Automotive.
  * Ink and the monogram's gold, on a neutral ground. Cars are mounted on fields of their own
@@ -25,7 +55,7 @@
   --color-reserved: #b7791f;
   --color-sold: #b4372c;
 
-  --font-sans: var(--font-general), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "General Sans", ui-sans-serif, system-ui, sans-serif;
 
   /* The five sizes. Nothing else is used for running text or headings. */
   --text-small: 0.875rem;
@@ -312,6 +342,21 @@
   }
 }
 
+/* Two sections on the same ground share one gap instead of stacking two. Unlayered, so it wins. */
+[data-tone="dark"] + [data-tone="dark"],
+[data-tone="light"] + [data-tone="light"],
+[data-tone="white"] + [data-tone="white"] {
+  padding-top: 0;
+}
+
+/* Two closing banners in a row: the second keeps its words, not a second strip. */
+[data-slice-type="cta_banner"] + [data-slice-type="cta_banner"] {
+  padding-top: 0;
+}
+[data-slice-type="cta_banner"] + [data-slice-type="cta_banner"] .photo-strip {
+  display: none;
+}
+
 /*
  * Entrances. Hidden starting states exist only when script runs and motion is welcome,
  * so the page is complete without either. The children of a [data-reveal] block rise in turn.
@@ -351,6 +396,10 @@
     animation-play-state: paused;
   }
 
+  .menu-drop {
+    animation: drop 0.3s var(--ease-out-expo);
+  }
+
   .slow-zoom {
     animation: slow-zoom 24s var(--ease-out-expo) both;
   }
@@ -359,6 +408,13 @@
 @keyframes drift {
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
   }
 }
 

@@ -19,7 +19,7 @@ export function Section({ tone = "Licht", className = "", id, slice, style, chil
       id={id}
       data-slice-type={slice?.slice_type}
       data-slice-variation={slice?.variation}
-      data-tone={tone === "Donker" ? "dark" : "light"}
+      data-tone={tone === "Donker" ? "dark" : tone === "Wit" ? "white" : "light"}
       className={`${toneClass(tone)} section relative ${className}`}
       style={style}
     >

@@ -78,6 +78,16 @@ Without a key, the form shows the phone number, WhatsApp and e-mail address inst
 
 ## Design
 
-Typography: Archivo (variable width) for display and text, JetBrains Mono for labels and specs.
-Palette: graphite and warm off-white, with the champagne gold of the BVB monogram as accent.
-Colors and components are defined in `src/app/globals.css`.
+The idea: every car is mounted on a field of its own factory paint. The colour in a car's
+**Kleur** field ("Grijs (Moonstone Grey)") is mapped to a tone in `src/lib/paint.ts`; car tiles, the
+first screen of the home page (which takes the paint of the car in front) and each car page use it.
+Add a paint there when a new colour arrives; unknown names fall back on the base colour word.
+
+Typography: General Sans (Fontshare, self-hosted in `public/fonts`), one face in five sizes.
+Palette: ink and a neutral ground, the gold of the BVB monogram for the main action and one field,
+plus the paint chart. No lines, shadows or gradients: surfaces differ by a step in tone.
+Tokens and components are defined in `src/app/globals.css`.
+
+Headlines are titles: keep them to about 30 characters so they stay on two lines on a phone.
+Italic spans in Prismic headings are no longer shown in gold, and the small "eyebrow" fields are no
+longer displayed.

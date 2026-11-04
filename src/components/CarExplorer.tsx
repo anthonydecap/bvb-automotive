@@ -49,7 +49,13 @@ function sortBy(cars: CarSummary[], sort: string) {
 }
 
 /** Car grid with optional filters. Filter state is kept in the URL so results can be shared. */
-export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "/contact" }: CarExplorerProps) {
+export function CarExplorer({
+  cars,
+  showFilters,
+  showSold,
+  dark,
+  contactHref = "/contact",
+}: CarExplorerProps) {
   const [filters, setFilters] = useState<Filters>(empty);
   const [panelOpen, setPanelOpen] = useState(false);
 
@@ -67,7 +73,8 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
     const next = { ...filters, ...patch };
     setFilters(next);
     const params = new URLSearchParams();
-    for (const [key, value] of Object.entries(next)) if (value && value !== empty[key as keyof Filters]) params.set(key, value);
+    for (const [key, value] of Object.entries(next))
+      if (value && value !== empty[key as keyof Filters]) params.set(key, value);
     const query = params.toString();
     window.history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
   };
@@ -97,7 +104,9 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
     filters.sorteer,
   );
   const sold = showSold ? filtered.filter((c) => c.status === "Verkocht") : [];
-  const active = (Object.keys(empty) as (keyof Filters)[]).filter((k) => k !== "sorteer" && filters[k]).length;
+  const active = (Object.keys(empty) as (keyof Filters)[]).filter(
+    (k) => k !== "sorteer" && filters[k],
+  ).length;
 
   const select = "field h-14 appearance-none bg-no-repeat pt-5 pr-10 font-medium";
   const chevron = {
@@ -115,7 +124,9 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
           <div className="no-scrollbar -mx-[var(--margin)] flex gap-2 overflow-x-auto px-[var(--margin)] sm:mx-0 sm:flex-wrap sm:px-0">
             {["", ...options.merk].map((brand) => {
               const on = filters.merk === brand;
-              const count = cars.filter((c) => (!brand || c.brand === brand) && c.status !== "Verkocht").length;
+              const count = cars.filter(
+                (c) => (!brand || c.brand === brand) && c.status !== "Verkocht",
+              ).length;
               return (
                 <button
                   key={brand || "alle"}
@@ -148,10 +159,18 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
             </p>
           </div>
 
-          <div id="car-filters" className={`mt-4 gap-2 sm:grid-cols-2 lg:grid lg:grid-cols-5 ${panelOpen ? "grid" : "hidden"}`}>
+          <div
+            id="car-filters"
+            className={`mt-4 gap-2 sm:grid-cols-2 lg:grid lg:grid-cols-5 ${panelOpen ? "grid" : "hidden"}`}
+          >
             <label className="relative block">
               <span className={label}>Prijs</span>
-              <select className={select} style={chevron} value={filters.prijs} onChange={(e) => update({ prijs: e.target.value })}>
+              <select
+                className={select}
+                style={chevron}
+                value={filters.prijs}
+                onChange={(e) => update({ prijs: e.target.value })}
+              >
                 <option value="">Alle prijzen</option>
                 {priceRanges.map((r) => (
                   <option key={r.id} value={r.id}>
@@ -162,7 +181,12 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
             </label>
             <label className="relative block">
               <span className={label}>Brandstof</span>
-              <select className={select} style={chevron} value={filters.brandstof} onChange={(e) => update({ brandstof: e.target.value })}>
+              <select
+                className={select}
+                style={chevron}
+                value={filters.brandstof}
+                onChange={(e) => update({ brandstof: e.target.value })}
+              >
                 <option value="">Alle brandstoffen</option>
                 {options.brandstof.map((v) => (
                   <option key={v}>{v}</option>
@@ -171,7 +195,12 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
             </label>
             <label className="relative block">
               <span className={label}>Transmissie</span>
-              <select className={select} style={chevron} value={filters.transmissie} onChange={(e) => update({ transmissie: e.target.value })}>
+              <select
+                className={select}
+                style={chevron}
+                value={filters.transmissie}
+                onChange={(e) => update({ transmissie: e.target.value })}
+              >
                 <option value="">Automaat en manueel</option>
                 {options.transmissie.map((v) => (
                   <option key={v}>{v}</option>
@@ -180,7 +209,12 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
             </label>
             <label className="relative block">
               <span className={label}>Sorteren</span>
-              <select className={select} style={chevron} value={filters.sorteer} onChange={(e) => update({ sorteer: e.target.value })}>
+              <select
+                className={select}
+                style={chevron}
+                value={filters.sorteer}
+                onChange={(e) => update({ sorteer: e.target.value })}
+              >
                 {sorts.map((s) => (
                   <option key={s.id} value={s.id}>
                     {s.label}
@@ -206,9 +240,19 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
       )}
 
       {forSale.length > 0 ? (
-        <ul className="grid grid-flow-dense gap-x-[var(--gap)] gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
+        <ul
+          className={
+            showFilters
+              ? "grid grid-flow-dense gap-x-[var(--gap)] gap-y-12 sm:grid-cols-2 xl:grid-cols-4"
+              : // Without filters, a phone gets the stock as a row to drag, ending at the page margin; larger screens get the grid.
+                "no-scrollbar flex snap-x snap-mandatory gap-[var(--gap)] overflow-x-auto sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-x-[var(--gap)] sm:gap-y-12 sm:overflow-visible xl:grid-cols-4"
+          }
+        >
           {forSale.map((car, i) => (
-            <li key={car.uid} className={isLarge(i) ? "sm:col-span-2 sm:row-span-2" : ""}>
+            <li
+              key={car.uid}
+              className={`${showFilters ? "" : "w-[78vw] shrink-0 snap-start sm:w-auto"} ${isLarge(i) ? "sm:col-span-2 sm:row-span-2" : ""}`}
+            >
               <CarCard car={car} dark={dark} priority={i < 2} large={isLarge(i)} />
             </li>
           ))}
@@ -216,11 +260,13 @@ export function CarExplorer({ cars, showFilters, showSold, dark, contactHref = "
       ) : (
         <div className={`p-8 sm:p-12 ${dark ? "bg-carbon" : "bg-bone"}`}>
           <p className="text-lead font-semibold">
-            {active ? "Geen beschikbare wagens met deze filters." : "Alle wagens uit deze selectie zijn verkocht."}
+            {active
+              ? "Geen beschikbare wagens met deze filters."
+              : "Alle wagens uit deze selectie zijn verkocht."}
           </p>
           <p className={`mt-3 max-w-xl ${dark ? "text-fog" : "text-stone"}`}>
-            Elke week komen er nieuwe wagens binnen. Zoekt u iets specifieks, dan gaan we ook op zoek of importeren we
-            op aanvraag.
+            Elke week komen er nieuwe wagens binnen. Zoekt u iets specifieks, dan gaan we ook op zoek of
+            importeren we op aanvraag.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link href={contactHref} className="btn btn-gold">

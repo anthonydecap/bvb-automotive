@@ -7,22 +7,20 @@ import { Section } from "@/components/Section";
 
 export type QuoteProps = SliceComponentProps<Content.QuoteSlice>;
 
+/** One statement, at statement size, set left on the grid. */
 const Quote = ({ slice }: QuoteProps) => {
   const p = slice.primary;
   const dark = p.tone === "Donker";
 
   return (
-    <Section slice={slice} tone={p.tone} className="!py-20 lg:!py-28">
-      <Reveal className="container-x">
-        <figure className="mx-auto max-w-5xl text-center">
-          <span className={`display block text-7xl leading-none ${dark ? "text-gold" : "text-gold-deep"}`} aria-hidden="true">
-            &ldquo;
-          </span>
-          <blockquote className="display mt-2 text-[1.75rem] !leading-[1.2] font-semibold sm:text-4xl lg:text-5xl">
+    <Section slice={slice} tone={p.tone} className="py-[calc(var(--section)*0.8)]">
+      <Reveal className="frame grid lg:grid-cols-12">
+        <figure className="lg:col-span-9 lg:col-start-3">
+          <blockquote className="text-[clamp(1.5rem,1.1rem+1.4vw,2.25rem)] leading-[1.2] font-medium tracking-[-0.015em]">
             <InlineRichText field={p.quote} />
           </blockquote>
           {p.author && (
-            <figcaption className={`eyebrow mt-8 ${dark ? "text-mist" : "text-stone"}`}>{p.author}</figcaption>
+            <figcaption className={`mt-6 text-body ${dark ? "text-fog" : ""}`}>{p.author}</figcaption>
           )}
         </figure>
       </Reveal>

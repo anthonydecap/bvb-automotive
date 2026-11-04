@@ -4,49 +4,54 @@ import type { SliceComponentProps } from "@prismicio/react";
 
 import { Img } from "@/components/Img";
 import { PrismicLink } from "@/components/PrismicLink";
+import { Reveal } from "@/components/Reveal";
+import { InlineRichText, Title } from "@/components/RichText";
 import { Section } from "@/components/Section";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export type LogoStripProps = SliceComponentProps<Content.LogoStripSlice>;
 
+/** Certifications and the brands worked with: a heading, then the marks on one row, no boxes. */
 const LogoStrip = ({ slice }: LogoStripProps) => {
   const p = slice.primary;
   const dark = p.tone === "Donker";
 
   return (
-    <Section slice={slice} tone={p.tone} className="!py-16 lg:!py-20">
-      <div className="container-x">
-        <SectionHeading eyebrow={p.eyebrow} title={p.title} intro={p.intro} dark={dark} align="split" />
-        <ul
-          className={`mt-12 grid grid-cols-2 border-t border-l sm:grid-cols-3 ${
-            ({ 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" } as Record<number, string>)[p.items.length] ??
-            (p.items.length > 5 ? "lg:grid-cols-6" : "lg:grid-cols-3")
-          } ${dark ? "border-white/10" : "border-ink/10"}`}
+    <Section slice={slice} tone={p.tone} className="py-[calc(var(--section)*0.75)]">
+      <div className="frame grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
+        <Reveal className="lg:col-span-4">
+          <Title field={p.title} className="text-lead font-semibold tracking-[-0.01em]" />
+          {isFilled.richText(p.intro) && (
+            <div className={`mt-3 text-body ${dark ? "text-fog" : ""}`}>
+              <InlineRichText field={p.intro} />
+            </div>
+          )}
+        </Reveal>
+        <Reveal
+          as="ul"
+          className="grid grid-cols-3 items-center gap-x-8 gap-y-10 sm:grid-cols-6 lg:col-span-8"
         >
           {p.items.map((item, i) => {
             const logo = (
               <Img
                 field={item.logo}
                 alt={item.name ?? ""}
-                sizes="200px"
-                className={`max-h-12 w-auto max-w-[70%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                  dark ? "brightness-0 invert" : "brightness-0"
-                }`}
+                sizes="160px"
+                className={`h-auto max-h-11 w-auto max-w-full object-contain ${dark ? "brightness-0 invert" : "brightness-0"}`}
               />
             );
             return (
-              <li key={i} className={`group border-r border-b ${dark ? "border-white/10" : "border-ink/10"}`}>
+              <li key={i} className="flex justify-center">
                 {isFilled.link(item.link) ? (
-                  <PrismicLink field={item.link} className="flex h-32 items-center justify-center px-6">
+                  <PrismicLink field={item.link} className="opacity-80 transition-opacity hover:opacity-100">
                     {logo}
                   </PrismicLink>
                 ) : (
-                  <div className="flex h-32 items-center justify-center px-6">{logo}</div>
+                  logo
                 )}
               </li>
             );
           })}
-        </ul>
+        </Reveal>
       </div>
     </Section>
   );

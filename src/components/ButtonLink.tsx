@@ -10,7 +10,15 @@ type Button = { label?: string | null; link: LinkField; style?: string | null };
  * Buttons from a Prismic "Knoppen" group. The first primary is the gold button; a secondary
  * becomes a plain underlined link, so a screen never carries two filled actions side by side.
  */
-export function ButtonRow({ buttons, className = "", primary = "btn-gold" }: { buttons: Button[]; className?: string; primary?: string }) {
+export function ButtonRow({
+  buttons,
+  className = "",
+  primary = "btn-gold",
+}: {
+  buttons: Button[];
+  className?: string;
+  primary?: string;
+}) {
   const filled = buttons.filter((b) => isFilled.link(b.link));
   if (!filled.length) return null;
   return (

@@ -181,7 +181,7 @@ const logoStrip = (title: string | null, items: ReturnType<typeof logo>[], intro
 
 const location = slice("location", {
   eyebrow: "Ligging",
-  title: h("Centraal in de Kempen, *vlot bereikbaar*"),
+  title: h("Vijf minuten van de E313"),
   intro: rt(
     "Onze showroom ligt op vijf minuten van de E313, afrit Geel-West. Ook vanuit Herentals, Mol, Westerlo, Turnhout, Olen en Kasterlee bent u snel bij ons.",
     "Bezichtigingen gebeuren op afspraak, ook 's avonds voor wie pas na het werk kan langskomen.",
@@ -330,9 +330,9 @@ const home = page(
   [
     hero(
       "VAG- en BMW-specialist in Geel",
-      "Sportieve occasies, *tot in de puntjes* verzorgd",
+      "Sportieve occasies uit Geel",
       [
-        "Bij BVB Automotive vindt u een kleine, scherp geselecteerde voorraad VAG- en BMW-modellen. Elke wagen wordt in onze eigen werkplaats nagekeken, krijgt een Car-Pass en verlaat de showroom pas na een volledige detailing.",
+        "Een kleine voorraad Golf GTI's, R's, RS3's en BMW M's. Elke wagen nagekeken in onze eigen werkplaats, met Car-Pass en volledige detailing.",
       ],
       images.golfR,
       buttons(["Bekijk het aanbod", "aanbod"], ["Plan een bezichtiging", "contact"]),
@@ -348,7 +348,7 @@ const home = page(
       "Uitgelicht",
       {
         eyebrow: "Nu in de showroom",
-        title: "Uitgelicht uit *onze voorraad*",
+        title: "Nu in de showroom",
         intro: [
           "Een greep uit wat er vandaag klaarstaat. Elke week vertrekken er twee à drie wagens, dus wacht niet te lang als er iets voor u tussen zit.",
         ],
@@ -356,7 +356,7 @@ const home = page(
       { limit: 4, button: ["Bekijk het volledige aanbod", "aanbod"] },
     ),
     features(
-      { eyebrow: "Waarom BVB", title: "Waarom klanten uit heel Vlaanderen *naar Geel rijden*" },
+      { eyebrow: "Waarom BVB", title: "Waarom men naar Geel rijdt" },
       [
         {
           icon: "Zoeken",
@@ -382,7 +382,7 @@ const home = page(
       { tone: "Donker" },
     ),
     steps(
-      { eyebrow: "Zo werkt het", title: "Van eerste klik tot *sleutels in de hand*" },
+      { eyebrow: "Zo werkt het", title: "Zo koopt u bij ons" },
       [
         [
           "Wij selecteren",
@@ -403,8 +403,9 @@ const home = page(
       ],
     ),
     reviews(),
+    carGrid("Recent verkocht", { title: "Al vertrokken" }),
     textMedia(
-      { eyebrow: "Verkoop uw wagen", title: "Uw huidige wagen verkopen? *Wij doen een bod.*" },
+      { eyebrow: "Verkoop uw wagen", title: "Wij kopen uw wagen" },
       [
         "We kopen regelmatig sportieve VAG- en BMW-modellen in voor ons aanbod. Stuur ons enkele foto's, de kilometerstand en wat onderhoudsinfo.",
         "Binnen 48 uur krijgt u een concreet bod: één bedrag, geen vork. Koopt u tegelijk een wagen bij ons, dan zetten we de inruilwaarde meteen in mindering.",
@@ -422,7 +423,7 @@ const home = page(
     ]),
     location,
     cta(
-      "Interesse in een wagen uit *onze voorraad*?",
+      "Bel even voor u komt",
       "Bijna elke week verdwijnen er twee à drie wagens uit het aanbod. Bel of stuur een WhatsApp om zeker te zijn dat uw wagen nog beschikbaar is.",
       { image: images.golfBlack },
     ),
@@ -434,7 +435,7 @@ const home = page(
   },
 );
 
-const included = (title = "Wat u van *elke wagen* mag verwachten", tone: "Licht" | "Donker" = "Donker") =>
+const included = (title = "Bij elke wagen inbegrepen", tone: "Licht" | "Donker" = "Donker") =>
   features(
     { eyebrow: "Altijd inbegrepen", title },
     [
@@ -468,7 +469,7 @@ const aanbod = page(
   [
     hero(
       "Aanbod",
-      "Ons aanbod *tweedehandswagens*",
+      "Ons volledige aanbod",
       [
         "Alle wagens uit onze showroom op één plek: VAG-modellen, BMW's en een selecte groep premium- en performancewagens. Elke wagen is technisch nagekeken en heeft een Car-Pass.",
       ],
@@ -495,7 +496,7 @@ const vag = page(
   [
     hero(
       "VAG Specialist Selectie",
-      "Audi, Volkswagen, Cupra, Seat en Škoda, *door specialisten gekozen*",
+      "VAG Specialist Selectie",
       [
         "VAG is onze specialiteit. Niet omdat het in de mode is, maar omdat we deze wagens van binnen en van buiten kennen. Van de MQB-platformen tot de eigenaardigheden per modeljaar: we weten precies waar ze slijten en waar ze sterk in zijn.",
       ],
@@ -504,7 +505,7 @@ const vag = page(
     ),
     carGrid("VAG", { eyebrow: "Voorraad", title: "VAG-wagens *in de showroom*" }, { sold: true }),
     textMedia(
-      { title: "VAG klinkt uniform, maar elk model heeft *zijn eigen achilleshiel*" },
+      { title: "Elk model, zijn zwakke plek" },
       [
         "Een DSG-bak in een Golf 7 GTI vraagt ander onderhoud dan die in een Audi RS3. Een 2.0 TFSI uit 2014 heeft andere aandachtspunten dan dezelfde motor uit 2019. Een verkoper die 'alles' verkoopt, controleert die details niet. Een specialist wel.",
         "Onze monteurs kennen de eigenaardigheden van elk VAG-modeljaar. We lezen uit met VAG-specifieke software die veel verder gaat dan een generieke scan. En omdat we de reële marktprijs per model kennen, kopen we alleen aan wanneer de prijs past bij de staat.",
@@ -551,7 +552,7 @@ const bmw = page(
   [
     hero(
       "BMW & Mini",
-      "Tweedehands BMW's, *nagekeken en showroomklaar*",
+      "Tweedehands BMW en Mini",
       [
         "BMW is ons tweede grote merkenhuis. Van 1-reeks tot M-modellen, van 3 Touring tot X-SUV. We kopen BMW's aan met dezelfde criteria als onze VAG-voorraad: onderhoudshistoriek, schadeverleden, kilometerstand en marktprijs moeten kloppen.",
       ],
@@ -560,7 +561,7 @@ const bmw = page(
     ),
     carGrid("BMW & Mini", { eyebrow: "Voorraad", title: "BMW's en Mini's *in de showroom*" }, { sold: true }),
     textMedia(
-      { title: "Een BMW verkoopt zichzelf. *Wat erna komt, maakt het verschil.*" },
+      { title: "Wat na de aankoop komt" },
       [
         "Of een BMW een goede koop was, merkt u pas na de eerste maanden. Oudere BMW's hebben hun eigen aandachtspunten, zoals de distributieketting bij bepaalde motoren of de koppeling bij handgeschakelde sportmodellen. Wie dat niet weet, ontdekt het bij de eerste werkplaatsbeurt.",
         "Onze monteurs kennen die eigenaardigheden. Voor elke BMW in ons aanbod gaat de controle verder dan een standaard tweedehandskeuring: we lezen de motorhistoriek uit tot op servicepoortniveau en coderen waar nodig.",
@@ -579,7 +580,7 @@ const bmw = page(
       { layout: "Lijst" },
     ),
     features(
-      { eyebrow: "BMW bij BVB", title: "Een BMW vraagt voorzorg. *Daar zorgen wij voor.*" },
+      { eyebrow: "BMW bij BVB", title: "Een BMW vraagt voorzorg" },
       [
         { icon: "Werktuig", title: "Eigen werkplaats", text: "Onderhoud en herstellingen in huis: sneller en betrouwbaarder." },
         { icon: "Meter", title: "BMW-specifieke uitlezing", text: "Voor aankoop en voor aflevering lezen we de wagen uit met BMW-software." },
@@ -595,7 +596,7 @@ const bmw = page(
       "Licht",
     ),
     cta(
-      "BMW's verlaten onze showroom gemiddeld *binnen drie weken*",
+      "Binnen drie weken verkocht",
       "Staat er iets tussen dat u bevalt? Bel of stuur een WhatsApp, zodat uw favoriete wagen volgende week niet bij iemand anders op de oprit staat.",
       { image: images.x3mBlack },
     ),
@@ -613,7 +614,7 @@ const premium = page(
   [
     hero(
       "Premium & Performance",
-      "De *topmodellen* uit onze voorraad",
+      "Premium & Performance",
       [
         "Wagens die boven de gewone tweedehandsmarkt uitsteken: sterke motoren, rijke uitrusting en opties die nieuw flink wat kostten. Elke wagen in deze selectie is persoonlijk door ons aangekocht, door onze monteurs nagekeken en door onze detailers showroomklaar gemaakt.",
       ],
@@ -621,7 +622,7 @@ const premium = page(
       buttons(["Plan een privébezichtiging", "contact"]),
     ),
     textMedia(
-      { eyebrow: "Wat u hier vindt", title: "De afschrijving is al gebeurd, *het rijplezier niet*" },
+      { eyebrow: "Wat u hier vindt", title: "Afgeschreven, niet uitgereden" },
       [
         "In deze selectie staan wagens met een nieuwprijs van gemiddeld meer dan € 60.000. Meestal meer dan 250 pk, een uitgebreide uitrusting en optiepakketten die nieuw allesbehalve goedkoop waren.",
         "Wat u hier niet vindt: instapmodellen, kilometervreters of wagens over wier staat we twijfelen. De lat ligt hier bewust hoger dan in de rest van onze voorraad. Alleen wagens die ook onze eigen eerste keuze zouden zijn, komen erin.",
@@ -629,7 +630,7 @@ const premium = page(
     ),
     carGrid("Premium & Performance", { eyebrow: "Voorraad", title: "Premiumwagens *in de showroom*" }, { sold: true }),
     features(
-      { eyebrow: "Waarom bij ons", title: "Een premiumwagen verdient *een premium aflevering*" },
+      { eyebrow: "Waarom bij ons", title: "Een premium aflevering" },
       [
         { icon: "Glans", title: "Gyeon Certified Studio", text: "Onze detailers maken elke wagen klaar tot op het niveau dat u van een wagen in deze klasse verwacht." },
         { icon: "Werktuig", title: "Eigen werkplaats in Geel", text: "Geen doorverwijzing als er iets moet gebeuren. Eén aanspreekpunt voor aankoop, onderhoud en herstelling." },
@@ -639,7 +640,7 @@ const premium = page(
       { tone: "Donker" },
     ),
     textMedia(
-      { title: "Een performancewagen koopt u *niet op prijs alleen*" },
+      { title: "Niet op prijs alleen" },
       [
         "Grote dealers in Brussel of Antwerpen verkopen ook zulke modellen, maar vaak in een proces dat onpersoonlijk aanvoelt. De wagen staat er, u komt, u vertrekt. Wat ertussen zit, is administratie.",
         "Bij ons werkt het andersom. We bespreken eerst wat u zoekt, nog voor u naar Geel rijdt. We reserveren genoeg tijd voor een echte proefrit van minstens twintig minuten. En we bekijken in hetzelfde gesprek uw toekomstige onderhoud, zodat u na de aankoop geen nieuw aanspreekpunt hoeft te zoeken.",
@@ -649,12 +650,12 @@ const premium = page(
     ),
     quote("Een luxewagen kopen zonder luxe koopervaring is als een maatpak kopen in de solden."),
     cta(
-      "Uw huidige *premiumwagen* verkopen?",
+      "Uw premiumwagen verkopen?",
       "We kopen regelmatig performance- en premiummodellen in. Stuur foto's, de kilometerstand en onderhoudsinfo, en binnen 48 uur weet u wat we bieden.",
       { btns: buttons(["Vraag een waardebepaling", "verkoop-uw-wagen"]), contact: false },
     ),
     cta(
-      "Premiumwagens vertrekken gemiddeld *binnen vier weken*",
+      "Binnen vier weken verkocht",
       "Voor dit segment raden we een privébezichtiging aan. Bel of stuur een WhatsApp en we plannen een moment dat u past.",
     ),
   ],
@@ -671,7 +672,7 @@ const werkplaats = page(
   [
     hero(
       "Werkplaats",
-      "Onze werkplaats in Geel: *alles onder één dak*",
+      "Onze werkplaats",
       [
         "De werkplaats naast onze showroom doet meer dan ons eigen aanbod voorbereiden. Of u nu bij ons kocht of op zoek bent naar een Gyeon-detailing, een onderhoudsbeurt, een uitlaatsysteem of een schroefset: dezelfde mensen staan klaar, met hetzelfde kwaliteitsniveau.",
       ],
@@ -766,7 +767,7 @@ const coating = page(
   [
     hero(
       "Detailing · Gyeon Certified Studio",
-      "Keramische coating in Geel, *volgens het boekje van Gyeon*",
+      "Keramische coating in Geel",
       [
         "Een keramische coating is een harde, transparante laag die zich aan uw lak hecht. Ze beschermt tegen vuil, uv-licht en strooizout, en uw wagen wordt veel makkelijker om te wassen. Als één van de weinige Gyeon Certified Studios in België werken we met coatings en protocollen die buiten het netwerk niet verkrijgbaar zijn.",
       ],
@@ -774,7 +775,7 @@ const coating = page(
       buttons(["Vraag een offerte", "contact"]),
     ),
     textMedia(
-      { eyebrow: "Het probleem", title: "Wat er vaak *misgaat* met coatings" },
+      { eyebrow: "Het probleem", title: "Waar coatings misgaan" },
       [
         "Het woord 'coating' wordt ruim gebruikt. Een carwash verkoopt een keramische spray. Een poetsdienst aan huis brengt een sealant aan en noemt het een coating. U betaalt voor jaren bescherming en krijgt er een paar maanden.",
         "We zien ook vaak coatings die op vuile of ongepoetste lak zijn aangebracht, of die buiten moesten uitharden in regen en stof. Het ligt zelden aan de goede bedoelingen, wel aan een gebrek aan opleiding en vakkennis.",
@@ -785,7 +786,7 @@ const coating = page(
       images.polishing,
     ),
     textMedia(
-      { eyebrow: "Onze aanpak", title: "Gecertificeerd, en dat *elke twee jaar opnieuw*" },
+      { eyebrow: "Onze aanpak", title: "Elke twee jaar opnieuw gekeurd" },
       [
         "Gyeon Certified Studio word je niet door een formulier in te vullen. Je moet een fysieke audit doorstaan, je mensen laten opleiden en minstens één behandeling onder toezicht uitvoeren.",
         "Wij hebben dat traject doorlopen, en Gyeon controleert onze certificering elke twee jaar opnieuw. Onze werkplaats en onze mensen voldoen dus aan de standaard van Gyeon zelf, niet aan een standaard die we zelf bedacht hebben.",
@@ -794,7 +795,7 @@ const coating = page(
       { position: "Links", tone: "Donker" },
     ),
     steps(
-      { eyebrow: "De procedure", title: "Elke coating volgt *dezelfde zes stappen*" },
+      { eyebrow: "De procedure", title: "Zes stappen, elke keer" },
       [
         ["Lakinspectie en offerte", "Samen bekijken we de lak onder professionele verlichting en bepalen we wat nodig is. U krijgt een eerlijke offerte voor we beginnen."],
         ["Wassen en decontamineren", "Een wasbeurt in twee stappen, daarna halen we vliegroest, teer en vastzittend vuil van de lak. Een coating hecht alleen goed op een volledig schone ondergrond."],
@@ -829,7 +830,7 @@ const coating = page(
         date: null,
       },
     ]),
-    faq("Veelgestelde vragen", "Vragen over *keramische coating*", [
+    faq("Veelgestelde vragen", "Vragen over coating", [
       [
         "Wat is het verschil tussen een coating, een wax en een sealant?",
         [
@@ -908,7 +909,7 @@ const service = page(
   [
     hero(
       "Service & herstelling",
-      "Onderhoud en herstelling, *gespecialiseerd in VAG en BMW*",
+      "Onderhoud en herstelling",
       [
         "Onze werkplaats doet onderhoud en herstellingen voor VAG-modellen (Audi, Volkswagen, Cupra, Seat en Škoda) en BMW's. Dealerkennis zonder dealertarief, en vakkennis die u merkt bij de eerste diagnose.",
       ],
@@ -916,7 +917,7 @@ const service = page(
       buttons(["Plan onderhoud", "contact"]),
     ),
     textMedia(
-      { eyebrow: "Herkenbaar?", title: "De afspraak waar *niemand naar uitkijkt*" },
+      { eyebrow: "Herkenbaar?", title: "De afspraak die niemand wil" },
       [
         "Periodiek onderhoud is zelden een afspraak waar iemand naar uitkijkt. Tussen de dealer en de garage om de hoek kiest u meestal de minst slechte optie, en vaak zonder genoeg informatie om dat met vertrouwen te doen.",
         "- Onvoorspelbare kosten",
@@ -927,7 +928,7 @@ const service = page(
       images.bmwWheel,
     ),
     features(
-      { eyebrow: "Onze aanpak", title: "Vier dingen die *het verschil maken*" },
+      { eyebrow: "Onze aanpak", title: "Vier dingen die verschillen" },
       [
         {
           title: "Uitlezing per merk",
@@ -949,7 +950,7 @@ const service = page(
       { layout: "Genummerd", tone: "Donker" },
     ),
     textMedia(
-      { eyebrow: "Duitse topkwaliteit", title: "Waarom we met *ROWE-motorolie* werken" },
+      { eyebrow: "Duitse topkwaliteit", title: "Waarom ROWE-motorolie" },
       [
         "De gezondheid van uw motor staat voorop. Daarom werken we resoluut met ROWE-motorolie. Dit Duitse merk staat wereldwijd bekend om zijn compromisloze kwaliteit, zijn innovatieve technologie en zijn uitstekende smeereigenschappen.",
       ],
@@ -995,7 +996,7 @@ const uitlaat = page(
   [
     hero(
       "Uitlaatsystemen",
-      "Performance-uitlaatsystemen: *advies en montage*",
+      "Uitlaatsystemen op maat",
       [
         "Een uitlaatsysteem kiest u niet alleen op geluid. Het bepaalt mee hoe uw wagen aanvoelt tussen 3.000 en 6.000 toeren, hoe hij klinkt bij een koude start en of hij door de technische keuring raakt. Wij adviseren, monteren en stellen af, met focus op VAG-sport en de BMW M-reeks.",
       ],
@@ -1003,7 +1004,7 @@ const uitlaat = page(
       buttons(["Vraag advies", "contact"]),
     ),
     textMedia(
-      { eyebrow: "Het probleem", title: "Waar het misgaat met *aftermarket-uitlaten*" },
+      { eyebrow: "Het probleem", title: "Waar aftermarket misgaat" },
       [
         "Online vindt u honderden uitlaatsystemen voor elke populaire sportwagen. De foto's zien er allemaal goed uit en elk geluidsfragment klinkt 'agressief'.",
         "Toch eindigen veel eigenaars met een systeem dat dreunt op de autostrade, resonanties geeft die er op de dag van de montage nog niet waren, of dat de wagen laat afkeuren omdat de geluidsgrens overschreden is.",
@@ -1014,7 +1015,7 @@ const uitlaat = page(
     features(
       {
         eyebrow: "Onze aanpak",
-        title: "Van de juiste keuze tot *een vakkundige montage*",
+        title: "Van keuze tot montage",
         intro: ["Dankzij onze ervaring met performante VAG- en BMW-modellen begeleiden we u van de productkeuze tot de installatie, afgestemd op uw rijstijl en verwachtingen."],
       },
       [
@@ -1056,7 +1057,7 @@ const schroefsets = page(
   [
     hero(
       "Schroefsets & verlaging",
-      "Schroefsets, *correct gemonteerd en uitgelijnd*",
+      "Schroefsets en verlaging",
       [
         "Een schroefset kiest u niet alleen op uitzicht. Hij bepaalt mee hoe uw wagen op de weg ligt, hoe uw banden slijten en hoe hij zich gedraagt in een bochtige rit. Wij monteren en lijnen schroefsets uit voor wie wil verlagen zonder aan rijkwaliteit in te boeten.",
       ],
@@ -1110,7 +1111,7 @@ const transport = page(
   [
     hero(
       "Autotransport België",
-      "Autotransport, *met zorg van A naar B*",
+      "Autotransport in België",
       [
         "Op zoek naar betrouwbaar autotransport in België? BVB Automotive vervoert personenwagens met onze eigen Iveco Daily-autotransporter of autotrailer, voor particulieren en voor professionele klanten.",
       ],
@@ -1118,7 +1119,7 @@ const transport = page(
       buttons(["Vraag uw transport aan", "contact"]),
     ),
     textMedia(
-      { eyebrow: "Wat we doen", title: "Uw wagen, ons transport. *Zorgvuldig geregeld.*" },
+      { eyebrow: "Wat we doen", title: "Uw wagen, ons transport" },
       [
         "Een pas gekochte wagen, een voertuig dat naar de garage moet of een auto die ergens anders afgeleverd moet worden: vanuit Geel rijden we door heel België. Dankzij onze ervaring in de autosector weten we wat er bij het vervoer van een wagen komt kijken, en behandelen we elke wagen met de nodige zorg.",
         "### Geschikt voor onder meer",
@@ -1131,7 +1132,7 @@ const transport = page(
       images.golfGti,
     ),
     features(
-      { eyebrow: "Waarom BVB", title: "Waarom u voor *BVB Automotive* kiest" },
+      { eyebrow: "Waarom BVB", title: "Waarom BVB Automotive" },
       [
         { icon: "Wagen", title: "Kennis van wagens", text: "We werken elke dag in de autosector en weten hoe belangrijk een correcte behandeling van een wagen is." },
         { icon: "Persoon", title: "Rechtstreeks contact", text: "U weet met wie u zaken doet. We bespreken het transport vooraf en maken duidelijke afspraken over ophaling, bestemming en timing." },
@@ -1160,7 +1161,7 @@ const about = page(
   [
     hero(
       "Over ons",
-      "Van privégarage *tot VAG- en BMW-specialist*",
+      "Begonnen met één Golf GTI",
       ["Hoe een privégarage in de Kempen uitgroeide tot een adres voor sportieve VAG- en BMW-wagens."],
       images.firstGolf,
     ),
@@ -1195,7 +1196,7 @@ const about = page(
       "Licht",
     ),
     textMedia(
-      { eyebrow: "Detailing", title: "Gyeon Certified Studio, *schaars in België*" },
+      { eyebrow: "Detailing", title: "Gyeon Certified Studio" },
       [
         "BVB Automotive is één van de weinige Gyeon Certified Studios in België. Voor u als klant betekent dat: als uw wagen onze showroom verlaat, is hij behandeld met producten die alleen gecertificeerde studio's mogen aanbrengen. Daarom zien onze wagens er na een jaar nog uit zoals op de dag van de aflevering.",
         "Certificering betekent dat we werken volgens de eigen protocollen van Gyeon en door Gyeon zelf zijn opgeleid. Dat hernieuwen we elke twee jaar.",
@@ -1305,7 +1306,7 @@ const contact = page(
   [
     hero(
       "Contact",
-      "Contact, *op afspraak in Geel*",
+      "Op afspraak in Geel",
       [
         "Een vraag over een wagen, een werkplaatsafspraak of een inruil? U krijgt Ian of Lucas rechtstreeks aan de lijn. Geen callcenter, geen ticketsysteem.",
       ],
@@ -1334,7 +1335,7 @@ const sell = page(
   [
     hero(
       "Verkoop uw wagen",
-      "Verkoop uw sportieve wagen, *rechtstreeks en zonder gedoe*",
+      "Verkoop uw wagen aan ons",
       [
         "We kopen sportieve VAG- en BMW-modellen rechtstreeks aan als ze bij ons profiel passen. Geen fotoshoot voor een advertentie, geen onbekenden op uw oprit, geen verloren tijd met proefritten. U stuurt foto's en info, binnen 48 uur hebt u een eerlijk bod, en u beslist.",
       ],
@@ -1368,7 +1369,7 @@ const sell = page(
       { layout: "Genummerd" },
     ),
     features(
-      { eyebrow: "Het verschil", title: "Een advertentie plaatsen of *gericht verkopen*" },
+      { eyebrow: "Het verschil", title: "Zelf adverteren of verkopen" },
       [
         {
           title: "Via een platform",
@@ -1413,7 +1414,7 @@ const sell = page(
     steps(
       {
         eyebrow: "Wat we nodig hebben",
-        title: "Voor een eerlijk bod *hebben we nodig*",
+        title: "Wat we nodig hebben",
         intro: ["Stuur alles via het formulier hieronder of via WhatsApp."],
       },
       [
@@ -1425,7 +1426,7 @@ const sell = page(
       "Donker",
     ),
     features(
-      { eyebrow: "Waarom ons", title: "Waarom verkopers *bij ons* terechtkomen" },
+      { eyebrow: "Waarom ons", title: "Waarom bij ons verkopen" },
       [
         { icon: "Vinkje", title: "Een rechtstreeks bod", text: "Zonder margetrucs." },
         { icon: "Vinkje", title: "Snel betaald", text: "Binnen 24 uur na ondertekening en levering." },
@@ -1455,7 +1456,7 @@ const finance = page(
   [
     hero(
       "Financiering",
-      "Financiering: *helder, snel en zonder verrassingen*",
+      "Helder gefinancierd",
       [
         "Een sportieve wagen kopen hoeft niet cash. We werken samen met een gespecialiseerde financieringspartner die snel beslist en geen verborgen kosten aanrekent. Hieronder ziet u per prijsklasse wat u ongeveer mag verwachten, zodat u al voor het gesprek weet waar u staat.",
       ],
@@ -1507,7 +1508,7 @@ const finance = page(
       { layout: "Lijst" },
     ),
     features(
-      { eyebrow: "Onze partner", title: "Waarom we met *onze partner* werken" },
+      { eyebrow: "Onze partner", title: "Waarom onze partner" },
       [
         { title: "Snelle beslissing", text: "Meestal binnen 48 uur een antwoord, vaak sneller." },
         { title: "Geen koppelverkoop", text: "U bent niet verplicht om extra verzekeringen af te sluiten." },

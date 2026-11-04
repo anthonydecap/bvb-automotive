@@ -19,7 +19,14 @@ type SectionHeadingProps = {
  * A section's title and its intro. "split" sets the title across seven columns and the intro
  * beside it, so the heading never leaves the right half of the screen empty.
  */
-export function SectionHeading({ title, intro, dark, align = "left", children, as = "h2" }: SectionHeadingProps) {
+export function SectionHeading({
+  title,
+  intro,
+  dark,
+  align = "left",
+  children,
+  as = "h2",
+}: SectionHeadingProps) {
   const hasIntro = isFilled.richText(intro) || children;
   if (!isFilled.richText(title) && !hasIntro) return null;
   const muted = dark ? "text-fog" : "";

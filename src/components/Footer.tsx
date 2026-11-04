@@ -1,12 +1,16 @@
+import { isFilled } from "@prismicio/client";
 import Link from "next/link";
 
 import { telHref, whatsappHref } from "@/lib/format";
 import { href, navigation, type Settings, siteInfo } from "@/lib/site";
 
-import { ArrowUpRight, Facebook, Instagram, Mail, MapPin, Phone, StarFilled, WhatsApp } from "./Icons";
-import { Logo } from "./Logo";
+import { Img } from "./Img";
 import { InlineRichText } from "./RichText";
 
+/**
+ * The close of every page: the back of the card. A chalk panel with a short sign-off and the address
+ * lines, a photograph as its stamp; under it the full menu, then the name.
+ */
 export function Footer({ settings }: { settings: Settings }) {
   const site = siteInfo(settings);
   const nav = navigation(settings);
@@ -15,176 +19,130 @@ export function Footer({ settings }: { settings: Settings }) {
   const extra = settings.data.footer_links
     .map((l) => ({ label: l.label, href: href(l.link) }))
     .filter((l): l is { label: string; href: string } => !!l.label && !!l.href);
+  const stamp = settings.data.meta_image;
+  const external = { target: "_blank", rel: "noopener noreferrer" };
 
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
-      <div className="grid-texture pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
-      <div className="container-x relative pt-20 pb-10 lg:pt-28">
-        <div className="grid gap-14 lg:grid-cols-12">
-          <div className="lg:col-span-4">
-            <Logo className="h-16 w-auto" />
-            <div className="mt-6 max-w-sm text-[0.9375rem] leading-relaxed text-mist">
+    <footer className="bg-ink pt-[var(--section)] pb-8 text-chalk">
+      <div className="frame">
+        <div className="grid gap-10 bg-chalk p-6 text-ink sm:p-10 lg:grid-cols-2 lg:gap-8 lg:p-14">
+          <div>
+            <h2 className="heading">Tot in Geel</h2>
+            <div className="mt-6 max-w-[40ch] space-y-4 text-body">
               <InlineRichText field={settings.data.footer_text} />
+              {site.hoursNote && <p>{site.hoursNote}</p>}
             </div>
-            {site.rating && (
-              <a
-                href={site.reviewsHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-3 rounded border border-white/10 px-4 py-3 transition-colors hover:border-gold/60"
-              >
-                <span className="flex text-gold">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <StarFilled key={i} size={15} />
-                  ))}
-                </span>
-                <span className="text-sm">
-                  <strong className="font-semibold">{site.rating}/5</strong>
-                  <span className="text-mist"> op {site.ratingSource}</span>
-                </span>
+            {site.rating && site.reviewsHref && (
+              <a href={site.reviewsHref} {...external} className="link mt-6 inline-block font-medium">
+                {site.rating}/5 op {site.ratingSource}
               </a>
             )}
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-3 lg:col-span-5">
-            {groups.map((group) => (
-              <div key={group.label}>
-                <p className="spec-label text-gold">{group.label}</p>
-                <ul className="mt-5 space-y-2.5 text-[0.9375rem]">
-                  {group.children.map((link) => (
-                    <li key={link.href + link.label}>
-                      <Link href={link.href} className="link-line text-white/75 hover:text-white">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            {singles.length > 0 && (
-              <div>
-                <p className="spec-label text-gold">BVB</p>
-                <ul className="mt-5 space-y-2.5 text-[0.9375rem]">
-                  {singles.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="link-line text-white/75 hover:text-white">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
-          <div className="lg:col-span-3">
-            <p className="spec-label text-gold">Contact</p>
-            <ul className="mt-5 space-y-4 text-[0.9375rem]">
-              <li>
-                <a
-                  href={site.mapsHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex gap-3 text-white/75 hover:text-white"
-                >
-                  <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
-                  <span>
-                    {site.street}
-                    <br />
-                    {site.city}
-                  </span>
-                </a>
-              </li>
+          <div className="flex items-start justify-between gap-6">
+            <ul className="grid gap-3 text-lead font-medium">
               {site.phone && (
                 <li>
-                  <a href={telHref(site.phone)} className="flex gap-3 text-white/75 hover:text-white">
-                    <Phone size={18} className="shrink-0 text-gold" />
-                    <span className="tabular">{site.phone}</span>
+                  <a href={telHref(site.phone)} className="link tabular">
+                    {site.phone}
                   </a>
                 </li>
               )}
               {site.whatsapp && (
                 <li>
-                  <a
-                    href={whatsappHref(site.whatsapp)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex gap-3 text-white/75 hover:text-white"
-                  >
-                    <WhatsApp size={18} className="shrink-0 text-gold" />
+                  <a href={whatsappHref(site.whatsapp)} {...external} className="link">
                     WhatsApp
                   </a>
                 </li>
               )}
               {site.email && (
                 <li>
-                  <a href={`mailto:${site.email}`} className="flex gap-3 text-white/75 hover:text-white">
-                    <Mail size={18} className="shrink-0 text-gold" />
+                  <a href={`mailto:${site.email}`} className="link break-all">
                     {site.email}
                   </a>
                 </li>
               )}
+              {site.street && (
+                <li>
+                  <a href={site.mapsHref} {...external} className="link">
+                    {site.street}, {site.city}
+                  </a>
+                </li>
+              )}
+              {(site.instagram || site.facebook) && (
+                <li className="flex gap-6">
+                  {site.instagram && (
+                    <a href={site.instagram} {...external} className="link">
+                      Instagram
+                    </a>
+                  )}
+                  {site.facebook && (
+                    <a href={site.facebook} {...external} className="link">
+                      Facebook
+                    </a>
+                  )}
+                </li>
+              )}
             </ul>
-            {site.hours.length > 0 && (
-              <dl className="mt-8 space-y-1.5 border-t border-white/10 pt-6 text-sm">
-                {site.hours.map((h) => (
-                  <div key={h.days} className="flex justify-between gap-4">
-                    <dt className="text-mist">{h.days}</dt>
-                    <dd className="tabular text-right">{h.hours}</dd>
-                  </div>
-                ))}
-              </dl>
+            {isFilled.image(stamp) && (
+              <div className="hidden shrink-0 bg-paper p-1.5 sm:block">
+                <div className="relative aspect-[3/4] w-20 overflow-hidden lg:w-24">
+                  <Img field={stamp} alt="" fill sizes="96px" className="object-cover" />
+                </div>
+              </div>
             )}
-            <div className="mt-8 flex gap-2">
-              {site.instagram && (
-                <a
-                  href={site.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="grid size-11 place-items-center rounded border border-white/15 transition-colors hover:border-gold hover:text-gold"
-                >
-                  <Instagram size={19} />
-                </a>
-              )}
-              {site.facebook && (
-                <a
-                  href={site.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="grid size-11 place-items-center rounded border border-white/15 transition-colors hover:border-gold hover:text-gold"
-                >
-                  <Facebook size={19} />
-                </a>
-              )}
-            </div>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-mist md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} {site.name}
-            {site.vatNumber ? ` · ${site.vatNumber}` : ""}
-          </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
-            {extra.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  {...(/^https?:/.test(l.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="inline-flex items-center gap-1 hover:text-white"
-                >
-                  {l.label}
-                  {/^https?:/.test(l.href) && <ArrowUpRight size={14} />}
-                </a>
-              </li>
-            ))}
-            <li>
-              Website door <span className="text-white/80">Anthony Decap</span>
-            </li>
-          </ul>
-        </div>
+        <nav aria-label="Voettekst" className="mt-16 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-4">
+          {groups.map((group) => (
+            <div key={group.label}>
+              <h2 className="text-body font-semibold">{group.label}</h2>
+              <ul className="mt-4 grid gap-2 text-body text-fog">
+                {group.children.map((link) => (
+                  <li key={link.href + link.label}>
+                    <Link href={link.href} className="transition-colors hover:text-gold">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {singles.length > 0 && (
+            <div>
+              <h2 className="text-body font-semibold">BVB</h2>
+              <ul className="mt-4 grid gap-2 text-body text-fog">
+                {singles.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="transition-colors hover:text-gold">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+                {extra.map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      {...(/^https?:/.test(l.href) ? external : {})}
+                      className="transition-colors hover:text-gold"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </nav>
+
+        <p className="display mt-20 text-display text-gold" aria-hidden="true">
+          BVB Automotive
+        </p>
+        <p className="mt-8 text-small text-fog">
+          © {new Date().getFullYear()} {site.name}
+          {site.vatNumber ? `, ${site.vatNumber}` : ""}. Website door Anthony Decap.
+        </p>
       </div>
     </footer>
   );
