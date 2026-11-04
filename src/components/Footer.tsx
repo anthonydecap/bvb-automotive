@@ -29,44 +29,86 @@ export function Footer({ settings }: { settings: Settings }) {
 
   return (
     <footer className="bg-night text-small text-mist">
-      <div className="frame grid gap-x-10 gap-y-12 py-16 md:grid-cols-2 lg:grid-cols-[1.6fr_repeat(4,1fr)] lg:py-20">
-        <div className="space-y-5">
-          <Logo className="h-12 w-auto" />
-          <div className="max-w-[34ch] space-y-3">
+      {/* First level: who we are and how to reach us. */}
+      <div className="frame grid gap-x-10 gap-y-10 pt-16 pb-14 lg:grid-cols-12 lg:pt-20">
+        <div className="space-y-5 lg:col-span-4">
+          <Logo className="h-14 w-auto" />
+          <div className="max-w-[34ch] space-y-3 text-body">
             <InlineRichText field={settings.data.footer_text} />
           </div>
-          <address className="grid gap-1 not-italic">
-            <a href={site.mapsHref} {...external} className={link}>
-              {site.street}, {site.city}
-            </a>
-            {site.contacts.map((c) => (
-              <a key={c.name} href={telHref(c.phone)} className={`tabular whitespace-nowrap ${link}`}>
-                {c.name}: {c.phone}
-              </a>
-            ))}
-            {site.email && (
-              <a href={`mailto:${site.email}`} className={`whitespace-nowrap ${link}`}>
-                {site.email}
-              </a>
-            )}
-          </address>
-          {site.hoursNote && <p>{site.hoursNote}</p>}
         </div>
-
-        {columns.map((col) => (
-          <nav key={col.label} aria-label={col.label}>
-            <h2 className="mb-4 font-semibold text-chalk">{col.label}</h2>
-            <ul className="grid gap-2.5">
-              {col.links.map((l) => (
-                <li key={l.href + l.label}>
-                  <Link href={l.href} className={link}>
-                    {l.label}
-                  </Link>
+        <address className="grid gap-8 not-italic sm:grid-cols-3 lg:col-span-8">
+          <div>
+            <h2 className="mb-3 font-semibold text-gold">Bellen</h2>
+            <ul className="grid gap-1.5">
+              {site.contacts.map((c) => (
+                <li key={c.name}>
+                  <a href={telHref(c.phone)} className="group block">
+                    <span className="tabular block text-lead font-semibold whitespace-nowrap text-chalk transition-colors group-hover:text-gold">
+                      {c.phone}
+                    </span>
+                    <span>{c.name}</span>
+                  </a>
                 </li>
               ))}
             </ul>
-          </nav>
-        ))}
+          </div>
+          <div>
+            <h2 className="mb-3 font-semibold text-gold">Bezoek</h2>
+            <a href={site.mapsHref} {...external} className="group block">
+              <span className="block text-lead font-semibold text-chalk transition-colors group-hover:text-gold">
+                {site.street}
+              </span>
+              <span className="block text-lead font-semibold text-chalk transition-colors group-hover:text-gold">
+                {site.city}
+              </span>
+            </a>
+            {site.hoursNote && <p className="mt-2">{site.hoursNote}</p>}
+          </div>
+          <div>
+            <h2 className="mb-3 font-semibold text-gold">Schrijf</h2>
+            <ul className="grid gap-1.5 text-lead font-semibold text-chalk">
+              {site.whatsapp && (
+                <li>
+                  <a
+                    href={whatsappHref(site.whatsapp)}
+                    {...external}
+                    className="transition-colors hover:text-gold"
+                  >
+                    WhatsApp
+                  </a>
+                </li>
+              )}
+              {site.email && (
+                <li>
+                  <a href={`mailto:${site.email}`} className="break-all transition-colors hover:text-gold">
+                    {site.email}
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+        </address>
+      </div>
+
+      {/* Second level: the menu, on a step lighter. */}
+      <div className="bg-navy/50">
+        <div className="frame grid grid-cols-2 gap-x-10 gap-y-10 py-12 md:grid-cols-4">
+          {columns.map((col) => (
+            <nav key={col.label} aria-label={col.label}>
+              <h2 className="mb-4 text-body font-semibold text-chalk">{col.label}</h2>
+              <ul className="grid gap-2.5">
+                {col.links.map((l) => (
+                  <li key={l.href + l.label}>
+                    <Link href={l.href} className={link}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
       </div>
 
       <div className="bg-carbon">
@@ -80,13 +122,6 @@ export function Footer({ settings }: { settings: Settings }) {
               <li>
                 <a href={site.reviewsHref} {...external} className={link}>
                   {site.rating}/5 op {site.ratingSource}
-                </a>
-              </li>
-            )}
-            {site.whatsapp && (
-              <li>
-                <a href={whatsappHref(site.whatsapp)} {...external} className={link}>
-                  WhatsApp
                 </a>
               </li>
             )}
