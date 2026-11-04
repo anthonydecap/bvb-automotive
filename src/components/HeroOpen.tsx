@@ -24,7 +24,9 @@ export function HeroOpen({
     const update = () => {
       const el = hero.current;
       if (!el || !stage.current) return;
-      const p = Math.max(0, Math.min(1, window.scrollY / (el.offsetHeight - window.innerHeight)));
+      // Measured against the stage (100svh), not innerHeight, which jumps as a phone's address bar hides.
+      const run = el.offsetHeight - stage.current.offsetHeight;
+      const p = Math.max(0, Math.min(1, window.scrollY / run));
       const eased = 1 - Math.pow(1 - p, 3);
       stage.current.style.setProperty("--c", (1 - eased).toFixed(4));
     };
@@ -36,6 +38,7 @@ export function HeroOpen({
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
+      cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };

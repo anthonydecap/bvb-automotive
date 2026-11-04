@@ -115,6 +115,9 @@
     text-transform: uppercase;
     letter-spacing: -0.02em;
     line-height: 0.9;
+    /* A single long Dutch word must break rather than push the page sideways on a phone. */
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   .speed em {
     font-style: italic;
@@ -333,6 +336,11 @@
     position: relative;
     height: 210svh;
   }
+  @media (max-width: 760px) {
+    .hero {
+      height: 165svh;
+    }
+  }
   .hero-stage {
     position: sticky;
     top: 0;
@@ -483,8 +491,10 @@
     transition: transform 1.2s var(--ease);
     pointer-events: none;
   }
-  .car:hover .car-photo img {
-    transform: scale(1.05);
+  @media (hover: hover) {
+    .car:hover .car-photo img {
+      transform: scale(1.05);
+    }
   }
   .car-photo .tag {
     position: absolute;
@@ -686,15 +696,33 @@
   .studio {
     --on: 0;
     position: relative;
-    background: rgb(calc(10 + var(--on) * 222) calc(11 + var(--on) * 223) calc(29 + var(--on) * 209));
+    background: var(--color-night);
     color: var(--color-chalk);
-    overflow: hidden;
+    overflow: clip;
+  }
+  /* The light comes up as a layer that only fades, so the browser never repaints the room. */
+  .studio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-studio);
+    opacity: var(--on);
+    pointer-events: none;
+  }
+  .studio > * {
+    position: relative;
   }
   .studio.lit {
     color: var(--color-studio-ink);
   }
   .studio-run {
     height: 150svh;
+  }
+  /* On a phone the light comes up over a longer stretch, so it does not flash on. */
+  @media (max-width: 760px) {
+    .studio-run {
+      height: 185svh;
+    }
   }
   .studio-room {
     position: sticky;
@@ -778,8 +806,10 @@
   .svc-photo img {
     transition: transform 1.2s var(--ease);
   }
-  .svc:hover .svc-photo img {
-    transform: scale(1.05);
+  @media (hover: hover) {
+    .svc:hover .svc-photo img {
+      transform: scale(1.05);
+    }
   }
   .svc h3 {
     margin-top: 1rem;
@@ -843,9 +873,11 @@
       filter 0.5s,
       transform 1.2s var(--ease);
   }
-  .past:hover .past-photo img {
-    filter: none;
-    transform: scale(1.05);
+  @media (hover: hover) {
+    .past:hover .past-photo img {
+      filter: none;
+      transform: scale(1.05);
+    }
   }
   .past-photo span {
     position: absolute;
@@ -871,8 +903,10 @@
     color: var(--color-mist);
     transition: color 0.3s;
   }
-  .past:hover figcaption {
-    color: var(--color-chalk);
+  @media (hover: hover) {
+    .past:hover figcaption {
+      color: var(--color-chalk);
+    }
   }
 
   /* Reviews: the rev counter. */

@@ -5,6 +5,8 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 type Review = { quote: string; name: string; date: string };
 
 /** Tick marks of a 0–5 dial over 270 degrees. */
+// Rounded, so the server and the browser draw exactly the same numbers (no hydration mismatch).
+const r2 = (n: number) => Math.round(n * 100) / 100;
 const ticks = Array.from({ length: 51 }, (_, k) => {
   const a = ((-135 + k * 5.4) * Math.PI) / 180;
   const big = k % 10 === 0;
@@ -12,12 +14,12 @@ const ticks = Array.from({ length: 51 }, (_, k) => {
   return {
     k,
     big,
-    x1: 200 + r1 * Math.sin(a),
-    y1: 200 - r1 * Math.cos(a),
-    x2: 200 + 186 * Math.sin(a),
-    y2: 200 - 186 * Math.cos(a),
-    tx: 200 + 150 * Math.sin(a),
-    ty: 206 - 150 * Math.cos(a),
+    x1: r2(200 + r1 * Math.sin(a)),
+    y1: r2(200 - r1 * Math.cos(a)),
+    x2: r2(200 + 186 * Math.sin(a)),
+    y2: r2(200 - 186 * Math.cos(a)),
+    tx: r2(200 + 150 * Math.sin(a)),
+    ty: r2(206 - 150 * Math.cos(a)),
   };
 });
 

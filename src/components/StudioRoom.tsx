@@ -28,27 +28,47 @@ export function StudioRoom({
       return;
     }
     let frame = 0;
+    let list: HTMLElement[] = [];
+    let lit = -1;
+    let last = "";
+    // The visible tubes (every other one is hidden on a phone), measured once and again on resize.
+    const measure = () => {
+      list = [...(tubes.current?.querySelectorAll<HTMLElement>(".tube") ?? [])].filter((t) => t.offsetParent);
+      lit = -1;
+    };
     const update = () => {
       const rect = r.getBoundingClientRect();
-      const lp = Math.max(
-        0,
-        Math.min(1, (-rect.top + innerHeight * 0.35) / (r.offsetHeight - innerHeight * 0.4)),
-      );
-      const list = [...(tubes.current?.querySelectorAll<HTMLElement>(".tube") ?? [])].filter(
-        (t) => t.offsetParent,
-      );
-      list.forEach((t, k) => t.classList.toggle("on", lp > (k + 1) / (list.length + 2)));
-      const on = Math.max(0, Math.min(1, (lp - 0.55) / 0.35));
-      sec.style.setProperty("--on", on.toFixed(3));
-      sec.classList.toggle("lit", on > 0.5);
+      const h = sec.querySelector<HTMLElement>(".studio-room")?.offsetHeight || innerHeight;
+      const lp = Math.max(0, Math.min(1, (-rect.top + h * 0.35) / (r.offsetHeight - h * 0.4)));
+      const count = list.filter((_, k) => lp > (k + 1) / (list.length + 2)).length;
+      if (count !== lit) {
+        list.forEach((t, k) => t.classList.toggle("on", k < count));
+        lit = count;
+      }
+      const on = Math.max(0, Math.min(1, (lp - 0.55) / 0.35)).toFixed(2);
+      if (on !== last) {
+        sec.style.setProperty("--on", on);
+        sec.classList.toggle("lit", +on > 0.5);
+        last = on;
+      }
     };
     const onScroll = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(update);
     };
+    const onResize = () => {
+      measure();
+      onScroll();
+    };
+    measure();
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   return (

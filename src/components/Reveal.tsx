@@ -21,14 +21,19 @@ export function Reveal({ as: Tag = "div", className, style, id, children }: Reve
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+    let frame = 0;
     const reveal = () => {
       node.classList.add("in");
       observer.disconnect();
       window.removeEventListener("scroll", check);
     };
-    // A jump from below a block to above it never intersects, so scrolling checks the position too.
+    // A jump from below a block to above it never intersects, so scrolling checks the position too,
+    // at most once per frame.
     const check = () => {
-      if (node.getBoundingClientRect().top < window.innerHeight * 0.9) reveal();
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (node.getBoundingClientRect().top < window.innerHeight * 0.9) reveal();
+      });
     };
     const observer = new IntersectionObserver(([entry]) => entry.isIntersecting && reveal(), {
       rootMargin: "0px 0px -10% 0px",
@@ -36,6 +41,7 @@ export function Reveal({ as: Tag = "div", className, style, id, children }: Reve
     observer.observe(node);
     window.addEventListener("scroll", check, { passive: true });
     return () => {
+      cancelAnimationFrame(frame);
       observer.disconnect();
       window.removeEventListener("scroll", check);
     };

@@ -13,26 +13,39 @@ export function Lanes({ cars }: { cars: Pick<CarSummary, "uid" | "href" | "title
   const hover = useRef(false);
 
   useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const la = a.current;
+    const lb = b.current;
+    if (!la || !lb || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const touch = matchMedia("(pointer: coarse)").matches;
     let x = 0;
     let lastY = window.scrollY;
     let velocity = 0;
     let frame = 0;
+    let wa = la.scrollWidth / 2;
+    let wb = lb.scrollWidth / 2;
     const tick = () => {
       const y = window.scrollY;
       velocity += (y - lastY - velocity) * 0.2;
       lastY = y;
-      x += (hover.current ? 0.15 : 0.6) + Math.min(30, Math.abs(velocity)) * 0.35;
-      if (a.current && b.current) {
-        const wa = a.current.scrollWidth / 2;
-        const wb = b.current.scrollWidth / 2;
-        a.current.style.transform = `translateX(${-(x % wa)}px)`;
-        b.current.style.transform = `translateX(${(x % wb) - wb}px)`;
-      }
+      x += (hover.current ? 0.15 : 0.6) + Math.min(touch ? 8 : 30, Math.abs(velocity)) * (touch ? 0.2 : 0.35);
+      la.style.transform = `translate3d(${-(x % wa)}px,0,0)`;
+      lb.style.transform = `translate3d(${(x % wb) - wb}px,0,0)`;
       frame = requestAnimationFrame(tick);
     };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
+    // Only run while the lanes are on screen.
+    const seen = new IntersectionObserver(([e]) => {
+      cancelAnimationFrame(frame);
+      if (!e.isIntersecting) return;
+      wa = la.scrollWidth / 2;
+      wb = lb.scrollWidth / 2;
+      lastY = window.scrollY;
+      frame = requestAnimationFrame(tick);
+    });
+    seen.observe(la.parentElement ?? la);
+    return () => {
+      seen.disconnect();
+      cancelAnimationFrame(frame);
+    };
   }, []);
 
   const half = Math.ceil(cars.length / 2);
@@ -58,8 +71,8 @@ export function Lanes({ cars }: { cars: Pick<CarSummary, "uid" | "href" | "title
   return (
     <div
       className="lanes"
-      onMouseEnter={() => (hover.current = true)}
-      onMouseLeave={() => (hover.current = false)}
+      onPointerEnter={(e) => e.pointerType === "mouse" && (hover.current = true)}
+      onPointerLeave={() => (hover.current = false)}
     >
       <div ref={a} className="lane">
         {lane(cars.slice(0, half), 0)}
