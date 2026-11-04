@@ -19,7 +19,7 @@ type ContactFormProps = {
 
 type State = "idle" | "sending" | "sent" | "unavailable" | "error";
 
-export function ContactForm({ site, defaultSubject, car, dark, title }: ContactFormProps) {
+export function ContactForm({ site, defaultSubject, car, title }: ContactFormProps) {
   const [subject, setSubject] = useState<Subject>(
     (subjects as readonly string[]).includes(defaultSubject ?? "")
       ? (defaultSubject as Subject)
@@ -48,13 +48,13 @@ export function ContactForm({ site, defaultSubject, car, dark, title }: ContactF
   };
 
   const field = "field peer";
-  const label = `pointer-events-none absolute top-2 left-4 text-small ${dark ? "text-fog" : "text-stone"}`;
+  const label = `pointer-events-none absolute top-2 left-4 text-small text-mist`;
   const extras = extraFields[subject] ?? [];
 
   if (state === "sent") {
     return (
       <div role="status">
-        <span className="grid size-14 place-items-center bg-gold text-ink">
+        <span className="grid size-14 place-items-center bg-gold text-night">
           <Check size={26} />
         </span>
         <h3 className="mt-6 text-lead font-semibold">Bedankt, uw bericht is verstuurd</h3>
@@ -174,7 +174,7 @@ export function ContactForm({ site, defaultSubject, car, dark, title }: ContactF
       </div>
 
       <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className={`max-w-md text-small ${dark ? "text-fog" : "text-stone"}`}>
+        <p className={`max-w-md text-small text-mist`}>
           We gebruiken uw gegevens alleen om uw vraag te beantwoorden. Foto&rsquo;s stuurt u het makkelijkst
           via WhatsApp.
         </p>

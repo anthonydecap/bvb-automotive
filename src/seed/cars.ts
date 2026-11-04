@@ -18,7 +18,9 @@ function description(car: SeedCar) {
     `Deze ${title}`,
     car.year ? ` uit ${car.year}` : "",
     car.mileage ? ` heeft ${formatKm(car.mileage)} op de teller` : "",
-    car.color ? `${car.mileage ? " en" : ""} is uitgevoerd in ${car.color.replace(/^(\w+) \((.+)\)$/, "$2 ($1)").replace(/\((\w)/, (_, c) => `(${c.toLowerCase()}`)}` : "",
+    car.color
+      ? `${car.mileage ? " en" : ""} is uitgevoerd in ${car.color.replace(/^(\w+) \((.+)\)$/, "$2 ($1)").replace(/\((\w)/, (_, c) => `(${c.toLowerCase()}`)}`
+      : "",
     ".",
   ].join("");
 

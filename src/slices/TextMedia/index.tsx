@@ -10,38 +10,35 @@ import { Section } from "@/components/Section";
 
 export type TextMediaProps = SliceComponentProps<Content.TextMediaSlice>;
 
-/** A story beside one large picture; without a picture the heading and text share the width. */
+/** A story beside one large photograph; without a photograph the title and text share the width. */
 const TextMedia = ({ slice }: TextMediaProps) => {
   const p = slice.primary;
-  const dark = p.tone === "Donker";
   const hasImage = isFilled.image(p.image);
   const left = p.image_position === "Links";
-  const muted = dark ? "text-fog" : "";
 
   const text = (
     <>
+      <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]" />
       {isFilled.richText(p.intro) && (
-        <div className={`text-lead ${muted}`}>
+        <div className="lead text-mist">
           <InlineRichText field={p.intro} />
         </div>
       )}
-      <RichText
-        field={p.text}
-        className={`prose-bvb text-body ${muted} ${dark ? "[&_strong]:text-chalk" : ""}`}
-      />
-      <ButtonRow buttons={p.buttons} className="pt-4" />
+      <RichText field={p.text} className="prose-bvb text-mist [&_strong]:text-chalk" />
+      <ButtonRow buttons={p.buttons} className="pt-2" />
     </>
   );
 
   if (!hasImage) {
     return (
       <Section slice={slice} tone={p.tone}>
-        <div className="frame grid gap-10 lg:grid-cols-12 lg:gap-8">
-          <Reveal className="lg:col-span-6">
-            <Title field={p.title} className="heading" />
-          </Reveal>
-          <Reveal className="space-y-6 lg:col-span-5 lg:col-start-8 lg:pt-3">{text}</Reveal>
-        </div>
+        <Reveal className="frame grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)] lg:col-span-6" />
+          <div className="space-y-6 lg:col-span-5 lg:col-start-8">
+            <RichText field={p.text} className="prose-bvb text-mist [&_strong]:text-chalk" />
+            <ButtonRow buttons={p.buttons} />
+          </div>
+        </Reveal>
       </Section>
     );
   }
@@ -50,15 +47,19 @@ const TextMedia = ({ slice }: TextMediaProps) => {
     <Section slice={slice} tone={p.tone}>
       <div className="frame grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
         <Reveal className={`space-y-6 lg:col-span-5 ${left ? "lg:order-2 lg:col-start-8" : ""}`}>
-          <Title field={p.title} className="heading" />
           {text}
         </Reveal>
         <div
-          className={`relative aspect-[4/3] overflow-hidden bg-graphite lg:col-span-7 lg:aspect-[5/4] ${
+          className={`group relative aspect-[4/3] overflow-hidden bg-navy lg:col-span-7 lg:aspect-[5/4] ${
             left ? "lg:order-1" : "lg:col-start-6"
           }`}
         >
-          <Img field={p.image} fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
+          <Img
+            field={p.image}
+            fill
+            sizes="(min-width: 1024px) 58vw, 100vw"
+            className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+          />
         </div>
       </div>
     </Section>

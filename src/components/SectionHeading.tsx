@@ -2,6 +2,7 @@ import type { RichTextField } from "@prismicio/client";
 import { isFilled } from "@prismicio/client";
 import type { ReactNode } from "react";
 
+import { Reveal } from "./Reveal";
 import { InlineRichText, Title } from "./RichText";
 
 type SectionHeadingProps = {
@@ -15,43 +16,34 @@ type SectionHeadingProps = {
   as?: "h1" | "h2";
 };
 
-/**
- * A section's title and its intro. "split" sets the title across seven columns and the intro
- * beside it, so the heading never leaves the right half of the screen empty.
- */
-export function SectionHeading({
-  title,
-  intro,
-  dark,
-  align = "left",
-  children,
-  as = "h2",
-}: SectionHeadingProps) {
+/** A section's title in the speed type, its intro beside it ("split") or under it. */
+export function SectionHeading({ title, intro, align = "split", children, as = "h2" }: SectionHeadingProps) {
   const hasIntro = isFilled.richText(intro) || children;
   if (!isFilled.richText(title) && !hasIntro) return null;
-  const muted = dark ? "text-fog" : "";
 
-  if (align === "split" && hasIntro) {
+  if (align === "split") {
     return (
-      <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">
-        <Title field={title} as={as} className="heading lg:col-span-7" />
-        <div className={`space-y-4 text-body lg:col-span-4 lg:col-start-9 ${muted}`}>
-          <InlineRichText field={intro} />
-          {children}
-        </div>
-      </div>
+      <Reveal className="sec-head">
+        <Title field={title} as={as} className="speed head" />
+        {hasIntro && (
+          <div className="lead space-y-4 text-mist">
+            <InlineRichText field={intro} />
+            {children}
+          </div>
+        )}
+      </Reveal>
     );
   }
 
   return (
-    <div className="max-w-4xl">
-      <Title field={title} as={as} className="heading" />
+    <Reveal className="max-w-4xl">
+      <Title field={title} as={as} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]" />
       {hasIntro && (
-        <div className={`mt-6 max-w-2xl space-y-4 text-body ${muted}`}>
+        <div className="lead mt-6 max-w-[40ch] space-y-4 text-mist">
           <InlineRichText field={intro} />
           {children}
         </div>
       )}
-    </div>
+    </Reveal>
   );
 }

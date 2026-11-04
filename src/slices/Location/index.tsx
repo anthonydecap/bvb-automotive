@@ -2,75 +2,83 @@ import type { Content } from "@prismicio/client";
 import { isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 
+import { Arrow } from "@/components/Icons";
 import { Img } from "@/components/Img";
 import { PrismicLink } from "@/components/PrismicLink";
 import { Reveal } from "@/components/Reveal";
 import { InlineRichText, Title } from "@/components/RichText";
-import { Section } from "@/components/Section";
+import { RouteMap } from "@/components/RouteMap";
 import type { SliceContext } from "@/lib/slice-context";
 import { siteInfo } from "@/lib/site";
 
 export type LocationProps = SliceComponentProps<Content.LocationSlice, SliceContext>;
 
-/** Where the lot is: the drive from each city in large type, beside the map of Winkelom. */
+/** The way to Geel: pick a city and watch the route; the last kilometre on the street map. */
 const Location = ({ slice, context }: LocationProps) => {
   const p = slice.primary;
   const site = siteInfo(context.settings);
+  const trips = p.travel
+    .filter((t) => t.from && t.time)
+    .map((t) => ({ from: t.from!, time: t.time!, route: t.route ?? "" }));
 
   return (
-    <Section slice={slice} tone="Donker">
-      <div className="frame grid gap-12 lg:grid-cols-12 lg:gap-8">
-        <Reveal className="lg:col-span-6">
-          <Title field={p.title} className="heading" />
-          {isFilled.richText(p.intro) && (
-            <div className="mt-6 max-w-[48ch] space-y-4 text-body text-fog">
-              <InlineRichText field={p.intro} />
-            </div>
-          )}
-          {p.travel.length > 0 && (
-            <dl className="mt-12 grid gap-y-5">
-              {p.travel.map((t, i) => (
-                <div key={i} className="grid grid-cols-[1fr_auto] items-baseline gap-x-6">
-                  <dt className="text-lead font-semibold">{t.from}</dt>
-                  <dd className="tabular text-lead font-semibold text-gold">{t.time}</dd>
-                  {t.route && <dd className="col-span-2 text-small text-mist">{t.route}</dd>}
-                </div>
-              ))}
-            </dl>
-          )}
-          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
-            {isFilled.link(p.button_link) && (
-              <PrismicLink field={p.button_link} className="btn btn-gold">
-                {p.button_label || "Plan uw route"}
-              </PrismicLink>
-            )}
-            <p className="text-body">
-              {site.street}, {site.city}
-            </p>
+    <section data-slice-type={slice.slice_type} className="sec bg-navy text-chalk" data-tone="navy">
+      <div className="frame">
+        <Reveal className="mb-12 grid gap-6 lg:mb-16 lg:grid-cols-12 lg:items-end lg:gap-12">
+          <div className="lg:col-span-5">
+            <Title field={p.title} className="speed text-[clamp(1.6rem,1rem+2vw,3rem)]" />
+          </div>
+          <div className="max-w-[46rem] space-y-4 text-mist lg:col-span-7">
+            <InlineRichText field={p.intro} />
           </div>
         </Reveal>
-        <a
-          href={site.mapsHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative block aspect-square overflow-hidden bg-graphite lg:col-span-6"
-          aria-label={`Open ${site.street}, ${site.city} in Google Maps`}
-        >
-          <Img
-            field={p.image}
-            fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover grayscale transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-          />
-          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full" aria-hidden="true">
-            <svg width="40" height="52" viewBox="0 0 44 56">
-              <path d="M22 55S3 34.5 3 21a19 19 0 1 1 38 0c0 13.5-19 34-19 34Z" fill="#cfae57" />
-              <circle cx="22" cy="21" r="7" fill="#111214" />
-            </svg>
-          </span>
-        </a>
+
+        <RouteMap
+          trips={trips}
+          inset={
+            isFilled.image(p.image) ? (
+              <a
+                href={site.mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 bg-night p-2 pr-5"
+                aria-label={`De laatste kilometer: open ${site.street} in Google Maps`}
+              >
+                <span className="relative block size-24 shrink-0 overflow-hidden">
+                  <Img
+                    field={p.image}
+                    fill
+                    sizes="16rem"
+                    className="object-cover grayscale transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <span
+                    className="absolute top-1/2 left-1/2 size-3 -translate-x-1/2 -translate-y-1/2 bg-gold"
+                    aria-hidden="true"
+                  />
+                </span>
+                <span className="block text-small">
+                  <span className="block font-semibold">De laatste kilometer</span>
+                  <span className="block text-mist">Afrit Geel-West, {site.street}</span>
+                  <span className="mt-1 block font-semibold text-gold">Open in Google Maps</span>
+                </span>
+              </a>
+            ) : undefined
+          }
+        />
+
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          {isFilled.link(p.button_link) && (
+            <PrismicLink field={p.button_link} className="btn btn-gold">
+              {p.button_label || "Plan uw route"}
+              <Arrow />
+            </PrismicLink>
+          )}
+          <p>
+            {site.street}, {site.city}
+          </p>
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

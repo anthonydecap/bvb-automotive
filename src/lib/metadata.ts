@@ -23,7 +23,14 @@ type Meta = {
   type?: "website" | "article";
 };
 
-export async function buildMetadata({ title, description, image, path, absolute, type = "website" }: Meta): Promise<Metadata> {
+export async function buildMetadata({
+  title,
+  description,
+  image,
+  path,
+  absolute,
+  type = "website",
+}: Meta): Promise<Metadata> {
   const settings = await getSettings();
   const siteName = settings.data.site_name ?? "BVB Automotive";
   const fullTitle = absolute || !title ? (title ?? siteName) : `${title} · ${siteName}`;

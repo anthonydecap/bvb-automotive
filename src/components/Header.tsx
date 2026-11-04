@@ -19,21 +19,28 @@ type HeaderProps = {
 const isActive = (pathname: string, href: string) =>
   href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
-/** A plain ink bar: monogram, the menu, the phone number and one action. */
+/** Transparent over the first screen, solid night once the page moves. */
 export function Header({ nav, cta, site }: HeaderProps) {
   const pathname = usePathname();
+  const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [dropdown, setDropdown] = useState<number | null>(null);
   const [expanded, setExpanded] = useState<number | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  // Close menus after navigation.
   const [menuPath, setMenuPath] = useState(pathname);
   if (menuPath !== pathname) {
     setMenuPath(pathname);
     setOpen(false);
     setDropdown(null);
   }
+
+  useEffect(() => {
+    const onScroll = () => setSolid(window.scrollY > 80);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     document.documentElement.style.overflow = open ? "hidden" : "";
@@ -54,29 +61,22 @@ export function Header({ nav, cta, site }: HeaderProps) {
     closeTimer.current = setTimeout(() => setDropdown(null), 140);
   };
 
-  const navLink = (active: boolean) =>
-    `flex items-center gap-1.5 px-3 py-2 font-medium transition-colors hover:text-gold ${active ? "text-gold" : "text-chalk"}`;
-
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-ink text-chalk">
-      <div className="frame flex h-[4.5rem] items-center justify-between gap-6 lg:h-20">
+    <header className={`site-header text-chalk ${solid || open ? "solid" : ""}`}>
+      <div className="frame flex h-20 items-center justify-between gap-6">
         <Link href="/" className="shrink-0" aria-label={`${site.name}, naar de homepagina`}>
-          <Logo className="h-10 w-auto lg:h-12" priority />
+          <Logo className="h-11 w-auto lg:h-12" priority />
         </Link>
 
         <nav aria-label="Hoofdmenu" className="hidden xl:block">
-          <ul className="flex items-center">
+          <ul className="flex items-center gap-8">
             {nav.map((item, i) => {
               const active =
                 isActive(pathname, item.href) || item.children.some((c) => isActive(pathname, c.href));
               if (!item.children.length) {
                 return (
                   <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className={navLink(active)}
-                      aria-current={isActive(pathname, item.href) ? "page" : undefined}
-                    >
+                    <Link href={item.href} className="nav-link" aria-current={active ? "page" : undefined}>
                       {item.label}
                     </Link>
                   </li>
@@ -91,9 +91,10 @@ export function Header({ nav, cta, site }: HeaderProps) {
                 >
                   <button
                     type="button"
-                    className={navLink(active)}
+                    className="nav-link flex items-center gap-1.5"
                     aria-expanded={dropdown === i}
                     aria-controls={`menu-${i}`}
+                    aria-current={active ? "page" : undefined}
                     onClick={() => setDropdown(dropdown === i ? null : i)}
                   >
                     {item.label}
@@ -104,18 +105,17 @@ export function Header({ nav, cta, site }: HeaderProps) {
                   </button>
                   <div
                     id={`menu-${i}`}
-                    className={`menu-drop absolute top-full left-0 w-72 pt-3 ${dropdown === i ? "block" : "hidden"}`}
+                    className={`menu-drop absolute top-full -left-4 w-72 pt-4 ${dropdown === i ? "block" : "hidden"}`}
                   >
-                    {/* A menu floats, so it may carry a shadow. */}
                     <ul
-                      className="bg-carbon p-2 shadow-2xl shadow-black/40" /* taste-skill-ignore: a floating menu */
+                      className="bg-carbon p-2 shadow-2xl shadow-black/50" /* taste-skill-ignore: a floating menu */
                     >
                       {item.children.map((child) => (
                         <li key={child.href + child.label}>
                           <Link
                             href={child.href}
-                            className={`block px-4 py-3 transition-colors hover:bg-graphite ${
-                              pathname === child.href ? "text-gold" : "text-chalk"
+                            className={`block px-4 py-3 font-medium transition-colors hover:bg-navy-2 ${
+                              pathname === child.href ? "text-gold" : ""
                             }`}
                             aria-current={pathname === child.href ? "page" : undefined}
                           >
@@ -132,14 +132,6 @@ export function Header({ nav, cta, site }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2">
-          {site.phone && (
-            <a
-              href={telHref(site.phone)}
-              className="tabular hidden px-3 py-2 font-medium transition-colors hover:text-gold 2xl:block"
-            >
-              {site.phone}
-            </a>
-          )}
           {cta && (
             <Link href={cta.href} className="btn btn-gold hidden sm:inline-flex">
               {cta.label}
@@ -148,7 +140,7 @@ export function Header({ nav, cta, site }: HeaderProps) {
           {site.phone && (
             <a
               href={telHref(site.phone)}
-              className="grid size-12 place-items-center bg-graphite xl:hidden"
+              className="grid size-12 place-items-center bg-navy xl:hidden"
               aria-label={`Bel ${site.phone}`}
             >
               <Phone size={19} />
@@ -156,7 +148,7 @@ export function Header({ nav, cta, site }: HeaderProps) {
           )}
           <button
             type="button"
-            className="grid size-12 place-items-center bg-graphite xl:hidden"
+            className="grid size-12 place-items-center bg-navy xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Menu sluiten" : "Menu openen"}
@@ -167,10 +159,9 @@ export function Header({ nav, cta, site }: HeaderProps) {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed inset-x-0 top-[4.5rem] bottom-0 overflow-y-auto bg-ink transition-[opacity,visibility] duration-300 lg:top-20 xl:hidden ${
+        className={`fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-night transition-[opacity,visibility] duration-300 xl:hidden ${
           open ? "visible opacity-100" : "invisible opacity-0"
         }`}
         inert={!open}
@@ -183,27 +174,25 @@ export function Header({ nav, cta, site }: HeaderProps) {
                   <>
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between py-3 text-left text-lead font-semibold"
+                      className="speed flex w-full items-center justify-between py-3 text-left text-[1.6rem]"
                       aria-expanded={expanded === i}
                       onClick={() => setExpanded(expanded === i ? null : i)}
                     >
                       {item.label}
                       <ChevronDown
-                        size={20}
+                        size={22}
                         className={`transition-transform duration-300 ${expanded === i ? "rotate-180" : ""}`}
                       />
                     </button>
                     <div
-                      className={`grid transition-[grid-template-rows] duration-300 ${
-                        expanded === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                      }`}
+                      className={`grid transition-[grid-template-rows] duration-300 ${expanded === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                     >
                       <ul className="overflow-hidden">
                         {item.children.map((child) => (
                           <li key={child.href + child.label}>
                             <Link
                               href={child.href}
-                              className={`block py-2.5 pl-4 ${pathname === child.href ? "text-gold" : "text-fog"}`}
+                              className={`block py-2.5 pl-4 ${pathname === child.href ? "text-gold" : "text-mist"}`}
                             >
                               {child.label}
                             </Link>
@@ -216,7 +205,7 @@ export function Header({ nav, cta, site }: HeaderProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block py-3 text-lead font-semibold ${isActive(pathname, item.href) ? "text-gold" : ""}`}
+                    className={`speed block py-3 text-[1.6rem] ${isActive(pathname, item.href) ? "text-gold" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -247,7 +236,7 @@ export function Header({ nav, cta, site }: HeaderProps) {
                 </a>
               )}
             </div>
-            <p className="pt-4 text-center text-small text-fog">
+            <p className="pt-4 text-center text-small text-mist">
               {[site.street, site.city].filter(Boolean).join(", ")}
             </p>
           </div>

@@ -1,0 +1,116 @@
+{
+  "id": "studio",
+  "type": "SharedSlice",
+  "name": "Studio",
+  "description": "De detailingstudio: de lampen gaan aan, daarna de foto en de diensten",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Standaard",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Studio met diensten",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titel",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Grote foto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Bijschrift bij de grote foto",
+            "placeholder": ""
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Diensten",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Foto",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Titel",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Tekst",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        },
+        "badge": {
+          "type": "Image",
+          "config": {
+            "label": "Logo (witte versie)",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "badge_text": {
+          "type": "Text",
+          "config": {
+            "label": "Tekst naast het logo",
+            "placeholder": ""
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Knoptekst",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Knoplink",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

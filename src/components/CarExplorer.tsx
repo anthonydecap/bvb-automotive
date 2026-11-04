@@ -7,7 +7,7 @@ import type { CarSummary } from "@/lib/cars";
 
 import { CarCard } from "./CarCard";
 import { Close, Sliders } from "./Icons";
-import { SoldLedger } from "./SoldLedger";
+import { Lanes } from "./Lanes";
 
 type CarExplorerProps = {
   cars: CarSummary[];
@@ -49,13 +49,7 @@ function sortBy(cars: CarSummary[], sort: string) {
 }
 
 /** Car grid with optional filters. Filter state is kept in the URL so results can be shared. */
-export function CarExplorer({
-  cars,
-  showFilters,
-  showSold,
-  dark,
-  contactHref = "/contact",
-}: CarExplorerProps) {
+export function CarExplorer({ cars, showFilters, showSold, contactHref = "/contact" }: CarExplorerProps) {
   const [filters, setFilters] = useState<Filters>(empty);
   const [panelOpen, setPanelOpen] = useState(false);
 
@@ -113,9 +107,8 @@ export function CarExplorer({
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23888' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")`,
     backgroundPosition: "right 1rem center",
   };
-  const label = "pointer-events-none absolute top-2 left-4 text-small text-stone";
+  const label = "pointer-events-none absolute top-2 left-4 text-small text-mist";
   // One double tile in every seven, once the stock is large enough to carry it.
-  const isLarge = (i: number) => forSale.length >= 6 && i % 7 === 0;
 
   return (
     <div>
@@ -134,7 +127,7 @@ export function CarExplorer({
                   onClick={() => update({ merk: brand })}
                   aria-pressed={on}
                   className={`flex h-12 shrink-0 items-center gap-2 px-5 font-medium transition-colors ${
-                    on ? "bg-ink text-chalk" : "bg-bone text-ink hover:bg-fog"
+                    on ? "bg-gold text-night" : "bg-navy text-chalk hover:bg-navy-2"
                   }`}
                 >
                   {brand || "Alle merken"}
@@ -154,7 +147,7 @@ export function CarExplorer({
             >
               <Sliders size={18} /> Filters{active ? ` (${active})` : ""}
             </button>
-            <p className="tabular text-small text-stone" aria-live="polite">
+            <p className="tabular text-small text-mist" aria-live="polite">
               {forSale.length} {forSale.length === 1 ? "wagen" : "wagens"}
             </p>
           </div>
@@ -232,7 +225,7 @@ export function CarExplorer({
             </button>
           </div>
 
-          <p className="tabular mt-5 hidden text-small text-stone lg:block" aria-live="polite">
+          <p className="tabular mt-5 hidden text-small text-mist lg:block" aria-live="polite">
             {forSale.length} {forSale.length === 1 ? "wagen" : "wagens"} beschikbaar
             {active ? " met deze filters" : ""}
           </p>
@@ -240,31 +233,25 @@ export function CarExplorer({
       )}
 
       {forSale.length > 0 ? (
-        <ul
-          className={
-            showFilters
-              ? "grid grid-flow-dense gap-x-[var(--gap)] gap-y-12 sm:grid-cols-2 xl:grid-cols-4"
-              : // Without filters, a phone gets the stock as a row to drag, ending at the page margin; larger screens get the grid.
-                "no-scrollbar flex snap-x snap-mandatory gap-[var(--gap)] overflow-x-auto sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-x-[var(--gap)] sm:gap-y-12 sm:overflow-visible xl:grid-cols-4"
-          }
-        >
+        <ul className="grid-cars grid gap-x-[clamp(0.75rem,1.5vw,1.5rem)] gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
           {forSale.map((car, i) => (
-            <li
-              key={car.uid}
-              className={`${showFilters ? "" : "w-[78vw] shrink-0 snap-start sm:w-auto"} ${isLarge(i) ? "sm:col-span-2 sm:row-span-2" : ""}`}
-            >
-              <CarCard car={car} dark={dark} priority={i < 2} large={isLarge(i)} />
+            <li key={car.uid}>
+              <CarCard
+                car={car}
+                priority={i < 2}
+                sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 92vw"
+              />
             </li>
           ))}
         </ul>
       ) : (
-        <div className={`p-8 sm:p-12 ${dark ? "bg-carbon" : "bg-bone"}`}>
-          <p className="text-lead font-semibold">
+        <div className="bg-navy p-8 sm:p-12">
+          <p className="speed text-[clamp(1.5rem,1rem+1.4vw,2.25rem)]">
             {active
               ? "Geen beschikbare wagens met deze filters."
               : "Alle wagens uit deze selectie zijn verkocht."}
           </p>
-          <p className={`mt-3 max-w-xl ${dark ? "text-fog" : "text-stone"}`}>
+          <p className="mt-4 max-w-xl text-mist">
             Elke week komen er nieuwe wagens binnen. Zoekt u iets specifieks, dan gaan we ook op zoek of
             importeren we op aanvraag.
           </p>
@@ -282,8 +269,14 @@ export function CarExplorer({
       )}
 
       {sold.length > 0 && (
-        <div className="mt-[var(--section)]">
-          <SoldLedger cars={sold} />
+        <div className="mt-[var(--section)] overflow-hidden">
+          <div className="sec-head">
+            <h2 className="speed head">Sleutels overhandigd</h2>
+            <p className="lead text-mist">
+              Deze wagens stonden ooit in onze showroom in Geel. Vandaag rijden ze bij een nieuwe eigenaar.
+            </p>
+          </div>
+          <Lanes cars={sold} />
         </div>
       )}
     </div>

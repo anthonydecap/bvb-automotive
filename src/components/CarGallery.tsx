@@ -74,7 +74,7 @@ export function CarGallery({ images, title }: CarGalleryProps) {
   if (!count) return <div className="aspect-[3/2] bg-graphite" />;
 
   const arrow =
-    "grid size-12 place-items-center bg-ink text-chalk transition-colors hover:bg-gold hover:text-ink";
+    "grid size-12 place-items-center bg-night text-chalk transition-colors hover:bg-gold hover:text-night";
 
   return (
     <div>
@@ -126,13 +126,13 @@ export function CarGallery({ images, title }: CarGalleryProps) {
           </>
         )}
         <div className="pointer-events-none absolute right-3 bottom-3 left-3 flex items-center justify-between">
-          <span className="tabular bg-ink px-3 py-1.5 text-small text-chalk">
+          <span className="tabular bg-night px-3 py-1.5 text-small text-chalk">
             {index + 1} / {count}
           </span>
           <button
             type="button"
             onClick={open}
-            className="pointer-events-auto flex items-center gap-2 bg-ink px-3 py-1.5 text-small text-chalk transition-colors hover:bg-gold hover:text-ink"
+            className="pointer-events-auto flex items-center gap-2 bg-night px-3 py-1.5 text-small text-chalk transition-colors hover:bg-gold hover:text-night"
           >
             <Expand size={14} /> Alle foto&rsquo;s
           </button>
@@ -163,7 +163,7 @@ export function CarGallery({ images, title }: CarGalleryProps) {
       <dialog
         ref={dialog}
         onClose={onClose}
-        className="m-0 h-dvh max-h-none w-screen max-w-none bg-ink p-0 text-chalk backdrop:bg-ink"
+        className="m-0 h-dvh max-h-none w-screen max-w-none bg-night p-0 text-chalk backdrop:bg-night"
         aria-label={`Foto's van de ${title}`}
       >
         <div className="flex h-full flex-col">

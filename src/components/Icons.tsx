@@ -255,3 +255,18 @@ export function NamedIcon({ name, ...props }: IconProps & { name: string | null 
   const Component = name ? byName[name as keyof typeof byName] : undefined;
   return Component ? <Component {...props} /> : null;
 }
+
+/** The arrow on the primary button. */
+export const Arrow = ({ size = 18 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.4"
+    aria-hidden="true"
+  >
+    <path d="M5 12h14M13 5l7 7-7 7" />
+  </svg>
+);

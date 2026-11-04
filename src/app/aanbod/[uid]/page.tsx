@@ -160,18 +160,14 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
   };
 
   const paint = paintOf(d.color);
-  const onPaint = paint.light ? "text-ink" : "text-chalk";
-  const softOnPaint = paint.light ? "text-ink" : "text-fog";
+  const softOnPaint = "text-mist";
 
   return (
     <Shell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* The car on a field of its own paint. */}
-      <section
-        className={`pt-28 pb-[var(--section)] lg:pt-32 ${onPaint}`}
-        style={{ backgroundColor: paint.hex }}
-      >
+      {/* The car, its price and its numbers. */}
+      <section className="bg-night pt-28 pb-[var(--section)] text-chalk lg:pt-32">
         <div className="frame">
           <nav aria-label="Kruimelpad" className={`mb-8 text-small ${softOnPaint}`}>
             <ol className="flex flex-wrap items-center gap-1.5">
@@ -208,7 +204,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
 
             <aside className="min-w-0 lg:col-span-4">
               <div>
-                <h1 className="heading">
+                <h1 className="speed text-[clamp(2rem,1rem+2.4vw,3.4rem)]">
                   <span className="sr-only">{d.brand} </span>
                   {d.model}
                 </h1>
@@ -221,7 +217,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 <div id="prijs" className="mt-8">
                   {sold ? (
                     <>
-                      <p className="heading">Verkocht</p>
+                      <p className="speed head text-gold">Verkocht</p>
                       <p className="mt-3 text-body">
                         Deze wagen heeft een nieuwe eigenaar gevonden. Zoekt u iets gelijkaardigs? We gaan
                         graag voor u op zoek.
@@ -229,7 +225,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                     </>
                   ) : (
                     <>
-                      <p className="heading tabular">
+                      <p className="speed head tabular text-gold">
                         {d.price ? formatPrice(d.price) : "Prijs op aanvraag"}
                       </p>
                       <p className={`mt-2 text-small ${softOnPaint}`}>
@@ -251,20 +247,20 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 {keySpecs.length > 0 && (
                   <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
                     {keySpecs.map((spec) => (
-                      <div key={spec.label}>
+                      <div key={spec.label} className="flex flex-col-reverse">
                         <dt className={`text-small ${softOnPaint}`}>{spec.label}</dt>
-                        <dd className="tabular text-body font-semibold">{spec.value}</dd>
+                        <dd className="tabular text-body font-bold [font-stretch:105%]">{spec.value}</dd>
                       </div>
                     ))}
                   </dl>
                 )}
 
                 <div className="mt-8 grid gap-2">
-                  <a href="#interesse" className="btn btn-gold w-full">
+                  <a href="#interesse" className="btn btn-gold w-full whitespace-normal text-center">
                     {sold ? "Laat ons een gelijkaardige wagen zoeken" : "Plan een bezichtiging of proefrit"}
                     <ArrowRight size={18} className="arrow" />
                   </a>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid gap-2 sm:grid-cols-2">
                     {site.phone && (
                       <a href={telHref(site.phone)} className="btn btn-ghost">
                         <Phone size={18} /> Bellen
@@ -298,23 +294,23 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
         </div>
       </section>
 
-      <section className="section bg-paper">
+      <section className="section bg-studio text-studio-ink">
         <div className="frame grid gap-16 lg:grid-cols-12 lg:gap-8">
           <Reveal className="lg:col-span-7">
-            <h2 className="heading">Over deze wagen</h2>
+            <h2 className="speed head text-studio-navy">Over deze wagen</h2>
             <RichText field={d.description} className="prose-bvb mt-8 text-body" />
 
             {isFilled.richText(d.extras) && (
-              <div className="mt-10 bg-chalk p-6 sm:p-8">
-                <h3 className="text-lead font-semibold">Goed om te weten</h3>
+              <div className="mt-10 bg-white p-6 sm:p-8">
+                <h3 className="text-lead font-semibold text-studio-navy">Goed om te weten</h3>
                 <RichText field={d.extras} className="prose-bvb mt-3 text-body" />
               </div>
             )}
 
             {options.length > 0 && (
               <div className="mt-16">
-                <h2 className="text-lead font-semibold">
-                  Uitrusting <span className="tabular text-stone">({options.length})</span>
+                <h2 className="text-lead font-semibold text-studio-navy">
+                  Uitrusting <span className="tabular text-[#5a5c72]">({options.length})</span>
                 </h2>
                 <ul className="prose-bvb mt-6 grid max-w-none gap-x-8 gap-y-2 text-body sm:grid-cols-2 [&>*+*]:mt-0">
                   {options.map((o) => (
@@ -327,15 +323,15 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
 
           <div className="lg:col-span-4 lg:col-start-9">
             <div className="lg:sticky lg:top-28">
-              <h2 className="text-lead font-semibold">Specificaties</h2>
+              <h2 className="text-lead font-semibold text-studio-navy">Specificaties</h2>
               <table className="tabular mt-6 w-full text-body">
                 <caption className="sr-only">Specificaties van de {title}</caption>
-                <tbody className="divide-y divide-bone" /* taste-skill-ignore: rows of a real table */>
+                <tbody className="divide-y divide-[#cfd2da]" /* taste-skill-ignore: rows of a real table */>
                   {specs
                     .filter(([, v]) => v !== null && v !== undefined && v !== "")
                     .map(([label, value]) => (
                       <tr key={label}>
-                        <th scope="row" className="py-3 pr-6 text-left font-normal text-stone">
+                        <th scope="row" className="py-3 pr-6 text-left font-normal text-[#5a5c72]">
                           {label}
                         </th>
                         <td className="py-3 text-right font-semibold">{value}</td>
@@ -348,7 +344,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                   href={href(d.autoscout_url)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link mt-6 inline-block font-medium"
+                  className="link mt-6 inline-block font-medium text-studio-navy hover:text-studio-ink"
                 >
                   Bekijk deze wagen op AutoScout24
                 </a>
@@ -361,7 +357,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
       {s.car_promise.length > 0 && (
         <section className="section bg-ink text-chalk">
           <div className="frame grid gap-10 lg:grid-cols-12 lg:gap-8">
-            <h2 className="heading lg:col-span-4">Bij elke wagen</h2>
+            <h2 className="speed head lg:col-span-4">Bij elke wagen</h2>
             <Reveal as="ul" className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-7 lg:col-start-6">
               {s.car_promise.map((item, i) => (
                 <li key={i}>
@@ -374,10 +370,10 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
         </section>
       )}
 
-      <section id="interesse" className="section scroll-mt-24 bg-paper">
+      <section id="interesse" className="section scroll-mt-24 bg-night">
         <div className="frame grid gap-12 lg:grid-cols-12 lg:gap-8">
           <Reveal className="lg:col-span-5">
-            <h2 className="heading">
+            <h2 className="speed head">
               {sold ? "We zoeken graag mee" : s.car_cta_title || "Interesse in deze wagen?"}
             </h2>
             <div className="mt-6 max-w-[46ch] space-y-4 text-body">
@@ -392,17 +388,17 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
             </div>
             <ContactButtons site={site} message={message} className="mt-8" phoneClassName="btn-ink" />
           </Reveal>
-          <div className="bg-chalk p-6 sm:p-10 lg:col-span-7">
+          <div className="bg-navy p-6 sm:p-10 lg:col-span-7">
             <ContactForm site={site} car={`${title}${d.year ? ` (${d.year})` : ""}`} />
           </div>
         </div>
       </section>
 
       {more.length > 0 && (
-        <section className="section bg-paper pt-0">
+        <section className="section bg-night pt-0">
           <div className="frame">
             <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <h2 className="heading">Ook in de showroom</h2>
+              <h2 className="speed head">Ook in de showroom</h2>
               <Link
                 href={collectionPage && similar.length ? collectionPage.href : "/aanbod"}
                 className="link font-medium"
@@ -410,7 +406,10 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
                 Bekijk {collectionPage && similar.length ? collectionPage.label : "het volledige aanbod"}
               </Link>
             </div>
-            <Reveal as="ul" className="grid gap-x-[var(--gap)] gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
+            <Reveal
+              as="ul"
+              className="grid-cols-cars grid-cars grid gap-x-[var(--gap)] gap-y-14 sm:grid-cols-2 xl:grid-cols-4"
+            >
               {more.map((c) => (
                 <li key={c.uid}>
                   <CarCard car={summarize(c)} />

@@ -14,9 +14,9 @@ const Gallery = ({ slice }: GalleryProps) => {
   const images = p.images.map((i) => i.image).filter((i) => isFilled.image(i));
 
   return (
-    <section data-slice-type={slice.slice_type} className="section overflow-hidden bg-ink text-chalk">
+    <section data-slice-type={slice.slice_type} className="section overflow-hidden bg-night text-chalk">
       <Reveal className="frame grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">
-        <Title field={p.title} className="heading lg:col-span-7" />
+        <Title field={p.title} className="speed head lg:col-span-7" />
         {isFilled.richText(p.intro) && (
           <div className="text-body text-fog lg:col-span-4 lg:col-start-9">
             <InlineRichText field={p.intro} />
@@ -31,7 +31,7 @@ const Gallery = ({ slice }: GalleryProps) => {
         {images.map((image, i) => (
           <li
             key={i}
-            className={`relative shrink-0 snap-start overflow-hidden bg-graphite ${
+            className={`relative shrink-0 snap-start overflow-hidden bg-navy ${
               i % 3 === 0 ? "aspect-[4/5] h-[58svh]" : "aspect-[3/2] h-[58svh]"
             } max-h-[34rem] max-sm:h-[44svh]`}
           >

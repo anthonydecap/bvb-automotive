@@ -9,18 +9,18 @@ type SectionProps = {
   children: ReactNode;
 };
 
+/** The CMS tones, on the night palette: "Licht" is night, "Donker" the brand navy, "Wit" one step between. */
 export const toneClass = (tone: SectionProps["tone"]) =>
-  tone === "Donker" ? "bg-ink text-chalk" : tone === "Wit" ? "bg-chalk text-ink" : "bg-paper text-ink";
+  tone === "Donker" ? "bg-navy" : tone === "Wit" ? "bg-carbon" : "bg-night";
 
-/** A full-width page section on the ground, the white step or the ink field. */
 export function Section({ tone = "Licht", className = "", id, slice, style, children }: SectionProps) {
   return (
     <section
       id={id}
       data-slice-type={slice?.slice_type}
       data-slice-variation={slice?.variation}
-      data-tone={tone === "Donker" ? "dark" : tone === "Wit" ? "white" : "light"}
-      className={`${toneClass(tone)} section relative ${className}`}
+      data-tone={tone === "Donker" ? "navy" : tone === "Wit" ? "carbon" : "night"}
+      className={`${toneClass(tone)} sec relative text-chalk ${className}`}
       style={style}
     >
       {children}

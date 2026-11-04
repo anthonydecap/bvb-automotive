@@ -15,7 +15,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid" }, { status: 400 });
   }
 
-  const value = (key: string, max = 300) => String(body[key] ?? "").trim().slice(0, max);
+  const value = (key: string, max = 300) =>
+    String(body[key] ?? "")
+      .trim()
+      .slice(0, max);
 
   // Bots fill in the hidden field.
   if (value("website")) return NextResponse.json({ ok: true });

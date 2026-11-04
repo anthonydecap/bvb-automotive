@@ -10,40 +10,41 @@ import { Section } from "@/components/Section";
 export type FeaturesProps = SliceComponentProps<Content.FeaturesSlice>;
 
 /**
- * Reasons, brands, services: the heading holds still on the left while the items pass on the right,
- * each a short title in large type over its explanation. No icons, no cards, no rules.
+ * Reasons, brands, services: the title holds on the left while the items pass on the right, each a
+ * slanted title over its explanation.
  */
 const Features = ({ slice }: FeaturesProps) => {
   const p = slice.primary;
-  const dark = p.tone === "Donker";
-  const muted = dark ? "text-fog" : "";
-  const many = p.items.length > 4;
   const titled = isFilled.richText(p.title) || isFilled.richText(p.intro);
 
   return (
     <Section slice={slice} tone={p.tone}>
-      <div className="frame grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div className="frame">
         {titled && (
-          <div className="lg:col-span-5">
-            <Reveal className={many ? "lg:sticky lg:top-32" : ""}>
-              <Title field={p.title} className="heading" />
-              {isFilled.richText(p.intro) && (
-                <div className={`mt-6 max-w-[42ch] space-y-4 text-body ${muted}`}>
-                  <InlineRichText field={p.intro} />
-                </div>
-              )}
-            </Reveal>
-          </div>
+          <Reveal className="sec-head">
+            <Title field={p.title} className="speed head" />
+            {isFilled.richText(p.intro) && (
+              <div className="lead space-y-4 text-mist">
+                <InlineRichText field={p.intro} />
+              </div>
+            )}
+          </Reveal>
         )}
         <ul
-          className={`grid gap-x-8 gap-y-12 lg:gap-y-16 ${titled ? `lg:col-span-6 lg:col-start-7 ${many ? "sm:grid-cols-2" : ""}` : "sm:grid-cols-2 lg:col-span-12 lg:grid-cols-3"}`}
+          className={`grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:gap-y-16 ${
+            p.items.length % 3 === 0 || p.items.length > 4
+              ? "lg:grid-cols-3"
+              : p.items.length === 4
+                ? "lg:grid-cols-4"
+                : ""
+          }`}
         >
           {p.items.map((item, i) => (
             <Reveal as="li" key={i}>
-              <h3 className="text-lead font-semibold tracking-[-0.01em]">{item.title}</h3>
-              <RichText field={item.text} className={`prose-bvb mt-3 text-body ${muted}`} />
+              <h3 className="speed-item">{item.title}</h3>
+              <RichText field={item.text} className="prose-bvb mt-4 text-mist" />
               {isFilled.link(item.link) && (
-                <PrismicLink field={item.link} className="link mt-4 inline-block font-medium">
+                <PrismicLink field={item.link} className="link mt-4 inline-block">
                   {item.link_label || "Meer info"}
                 </PrismicLink>
               )}

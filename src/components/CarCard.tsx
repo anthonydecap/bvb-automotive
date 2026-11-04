@@ -1,8 +1,7 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
 
 import type { CarSummary } from "@/lib/cars";
-import { formatKm, formatPrice } from "@/lib/format";
+import { formatNumber, formatPrice } from "@/lib/format";
 
 import { Img } from "./Img";
 
@@ -10,63 +9,60 @@ type CarCardProps = {
   car: CarSummary;
   dark?: boolean;
   priority?: boolean;
-  /** A double tile in the catalogue. */
   large?: boolean;
+  sizes?: string;
 };
 
-/** The facts under a tile: year, kilometres and the paint the car is mounted on. */
-export function carFacts(car: CarSummary) {
-  return [
-    car.year ? String(car.year) : null,
-    car.mileage ? formatKm(car.mileage) : null,
-    car.paint.name || null,
-  ]
-    .filter(Boolean)
-    .join(", ");
-}
-
-/**
- * A specimen: the car as photographed on the lot, mounted on a field of its own factory paint.
- * Name, price and facts sit under the tile, never on it.
- */
-export function CarCard({ car, dark, priority, large }: CarCardProps) {
+/** A car: the photograph with its paint as a tag, name and price, then the numbers like a dashboard. */
+export function CarCard({ car, priority, sizes = "(min-width: 1024px) 60vw, 84vw" }: CarCardProps) {
   const sold = car.status === "Verkocht";
-  const muted = dark ? "text-mist" : "text-stone";
-  const price = sold ? "Verkocht" : car.price ? formatPrice(car.price) : "Op aanvraag";
+  const dash = [
+    car.powerHp ? { v: String(car.powerHp), l: "pk" } : null,
+    car.mileage ? { v: formatNumber(car.mileage), l: "km" } : null,
+    car.year ? { v: String(car.year), l: "bouwjaar" } : null,
+    car.transmission ? { v: car.transmission === "Automaat" ? "Auto" : "Manueel", l: "transmissie" } : null,
+  ].filter((d): d is { v: string; l: string } => !!d);
 
   return (
-    <Link href={car.href} className="group relative block">
-      <div className="specimen" style={{ "--paint": car.paint.hex } as CSSProperties}>
-        <div className="specimen-photo">
-          <Img
-            field={car.image}
-            alt={car.title}
-            fill
-            priority={priority}
-            sizes={
-              large
-                ? "(min-width: 1024px) 50vw, 100vw"
-                : "(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
-            }
-            className={`object-cover ${sold ? "grayscale-[0.5]" : ""}`}
-          />
-        </div>
+    <Link href={car.href} className="car group" draggable={false}>
+      <div className="car-photo">
+        <Img
+          field={car.image}
+          alt={car.title}
+          fill
+          priority={priority}
+          sizes={sizes}
+          className="object-cover"
+        />
+        {sold ? (
+          <span className="tag sold">Verkocht</span>
+        ) : car.status === "Gereserveerd" ? (
+          <span className="tag sold">Gereserveerd</span>
+        ) : (
+          car.paint.name && <span className="tag">{car.paint.name}</span>
+        )}
       </div>
-      <div className="mt-4 flex items-baseline justify-between gap-4">
-        <h3 className={`${large ? "text-lead" : "text-body"} leading-tight font-semibold`}>
+      <div className="car-name">
+        <h3 className="speed">
           <span className="sr-only">{car.brand} </span>
           {car.model}
         </h3>
-        <p
-          className={`tabular shrink-0 ${large ? "text-lead" : "text-body"} font-semibold ${sold ? muted : ""}`}
-        >
-          {price}
+        <p className="speed price">
+          {sold ? "Verkocht" : car.price ? formatPrice(car.price) : "Op aanvraag"}
         </p>
       </div>
-      <p className={`mt-1 text-small ${muted}`}>
-        {car.status === "Gereserveerd" ? "Gereserveerd, " : ""}
-        {carFacts(car)}
-      </p>
+      {dash.length > 0 && (
+        <dl className="dash">
+          {dash.map((d) => (
+            <div key={d.l}>
+              <dt>{d.l}</dt>
+              <dd>
+                <b>{d.v}</b>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
     </Link>
   );
 }

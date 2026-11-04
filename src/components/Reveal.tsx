@@ -12,7 +12,7 @@ type RevealProps = {
 
 /**
  * Its children rise into place one after another, once, when the block scrolls into view.
- * The hidden state lives in CSS behind `html[data-js]` and `prefers-reduced-motion: no-preference`,
+ * The hidden state lives in CSS (`[data-in]`) behind `html[data-js]` and `prefers-reduced-motion: no-preference`,
  * so without script or with reduced motion everything is simply there.
  */
 export function Reveal({ as: Tag = "div", className, style, id, children }: RevealProps) {
@@ -22,7 +22,7 @@ export function Reveal({ as: Tag = "div", className, style, id, children }: Reve
     const node = ref.current;
     if (!node) return;
     const reveal = () => {
-      node.dataset.reveal = "visible";
+      node.classList.add("in");
       observer.disconnect();
       window.removeEventListener("scroll", check);
     };
@@ -42,7 +42,7 @@ export function Reveal({ as: Tag = "div", className, style, id, children }: Reve
   }, []);
 
   return (
-    <Tag ref={ref} id={id} data-reveal="" className={className} style={style}>
+    <Tag ref={ref} id={id} data-in="" className={className} style={style}>
       {children}
     </Tag>
   );

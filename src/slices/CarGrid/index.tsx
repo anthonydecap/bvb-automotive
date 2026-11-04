@@ -1,15 +1,18 @@
 import type { Content } from "@prismicio/client";
-import { asText, isFilled } from "@prismicio/client";
+import { isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
+import Link from "next/link";
 
 import { CarExplorer } from "@/components/CarExplorer";
-import { PrismicLink } from "@/components/PrismicLink";
 import { Reveal } from "@/components/Reveal";
 import { InlineRichText, Title } from "@/components/RichText";
 import { Section } from "@/components/Section";
-import { SoldLedger } from "@/components/SoldLedger";
+import { CarRow } from "@/components/CarRow";
+import { Arrow } from "@/components/Icons";
+import { Lanes } from "@/components/Lanes";
 import { type Car, isSold, summarize } from "@/lib/cars";
 import { getCars } from "@/lib/content";
+import { href } from "@/lib/site";
 
 export type CarGridProps = SliceComponentProps<Content.CarGridSlice>;
 
@@ -40,14 +43,70 @@ const CarGrid = async ({ slice }: CarGridProps) => {
     cars = sold ? cars.slice(0, p.limit) : [...forSale, ...cars.filter((c) => c.status === "Verkocht")];
   }
 
-  const heading = asText(p.title);
+  const moreHref = isFilled.link(p.button_link) ? href(p.button_link) : undefined;
 
+  // The sold cars, as two lanes passing in opposite directions.
   if (sold) {
     return (
-      <section data-slice-type={slice.slice_type} id="verkocht" className="bg-paper py-[var(--section)]">
-        <div className="frame">
-          <SoldLedger cars={cars} title={heading || "Al vertrokken"} />
-        </div>
+      <section
+        data-slice-type={slice.slice_type}
+        id="verkocht"
+        className="sec overflow-hidden bg-night text-chalk"
+      >
+        <Reveal className="frame sec-head">
+          {isFilled.richText(p.title) ? (
+            <Title field={p.title} className="speed head" />
+          ) : (
+            <h2 className="speed head">Sleutels overhandigd</h2>
+          )}
+          <div className="grid justify-items-start gap-6">
+            <div className="lead text-mist">
+              {isFilled.richText(p.intro) ? (
+                <InlineRichText field={p.intro} />
+              ) : (
+                <p>
+                  Al deze wagens stonden ooit op onze parking in Geel. Vandaag rijden ze bij een nieuwe
+                  eigenaar.
+                </p>
+              )}
+            </div>
+            <Link href={moreHref ?? "/contact"} className="btn btn-gold">
+              {p.button_label || "Zoekt u er zo één?"}
+              <Arrow />
+            </Link>
+          </div>
+        </Reveal>
+        <Lanes cars={cars} />
+      </section>
+    );
+  }
+
+  // Without filters: the stock as a row to drag, edge to edge.
+  if (!p.show_filters) {
+    return (
+      <section
+        data-slice-type={slice.slice_type}
+        id="wagens"
+        className="sec overflow-hidden bg-night text-chalk"
+      >
+        <Reveal className="frame sec-head">
+          <Title field={p.title} className="speed head" />
+          {isFilled.richText(p.intro) && (
+            <div className="lead text-mist">
+              <InlineRichText field={p.intro} />
+            </div>
+          )}
+        </Reveal>
+        <CarRow
+          cars={cars.filter((c) => c.status !== "Verkocht")}
+          moreHref={moreHref}
+          end={
+            <>
+              <p className="lead font-bold">Niet gevonden wat u zoekt?</p>
+              <p className="text-mist">We zoeken mee of importeren op aanvraag.</p>
+            </>
+          }
+        />
       </section>
     );
   }
@@ -55,21 +114,14 @@ const CarGrid = async ({ slice }: CarGridProps) => {
   return (
     <Section slice={slice} id="wagens" className={isFilled.richText(p.title) ? "" : "!pt-10 lg:!pt-14"}>
       <div className="frame">
-        {(isFilled.richText(p.title) || isFilled.link(p.button_link)) && (
-          <Reveal className="mb-12 grid gap-6 lg:mb-16 lg:grid-cols-12 lg:items-end lg:gap-8">
-            <Title field={p.title} className="heading lg:col-span-7" />
-            <div className="space-y-6 lg:col-span-4 lg:col-start-9">
-              {isFilled.richText(p.intro) && (
-                <div className="space-y-4 text-body">
-                  <InlineRichText field={p.intro} />
-                </div>
-              )}
-              {isFilled.link(p.button_link) && (
-                <PrismicLink field={p.button_link} className="link font-medium">
-                  {p.button_label || "Bekijk alles"}
-                </PrismicLink>
-              )}
-            </div>
+        {isFilled.richText(p.title) && (
+          <Reveal className="sec-head">
+            <Title field={p.title} className="speed head" />
+            {isFilled.richText(p.intro) && (
+              <div className="lead text-mist">
+                <InlineRichText field={p.intro} />
+              </div>
+            )}
           </Reveal>
         )}
         <CarExplorer cars={cars} showFilters={p.show_filters} showSold={p.show_sold} />

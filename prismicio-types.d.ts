@@ -468,7 +468,7 @@ interface CarDocumentData {
  */
 export type CarDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<CarDocumentData>, "car", Lang>;
 
-type PageDocumentDataSlicesSlice = HeroSlice | CarGridSlice | FeaturesSlice | StepsSlice | TextMediaSlice | ReviewsSlice | CtaBannerSlice | FaqSlice | LogoStripSlice | GallerySlice | FinanceTableSlice | ContactSlice | LocationSlice | QuoteSlice | StatsSlice | RichTextSlice
+type PageDocumentDataSlicesSlice = HeroSlice | CarGridSlice | FeaturesSlice | StepsSlice | TextMediaSlice | ReviewsSlice | CtaBannerSlice | FaqSlice | LogoStripSlice | GallerySlice | FinanceTableSlice | ContactSlice | LocationSlice | QuoteSlice | StatsSlice | RichTextSlice | StudioSlice
 
 /**
  * Content for Pagina documents
@@ -2807,6 +2807,16 @@ export interface StepsSliceDefaultPrimaryItemsItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	text: prismic.RichTextField;
+	
+	/**
+	 * Foto field in *Stappen → Standaard → Primary → Stappen*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: steps.default.primary.items[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
 }
 
 /**
@@ -2883,10 +2893,163 @@ type StepsSliceVariation = StepsSliceDefault
  * Stappen Shared Slice
  *
  * - **API ID**: `steps`
- * - **Description**: Genummerd stappenplan
+ * - **Description**: Stappenplan, met een foto per stap
  * - **Documentation**: https://prismic.io/docs/slices
  */
 export type StepsSlice = prismic.SharedSlice<"steps", StepsSliceVariation>;
+
+/**
+ * Item in *Studio → Standaard → Primary → Diensten*
+ */
+export interface StudioSliceDefaultPrimaryItemsItem {
+	/**
+	 * Foto field in *Studio → Standaard → Primary → Diensten*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.items[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * Titel field in *Studio → Standaard → Primary → Diensten*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.items[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Tekst field in *Studio → Standaard → Primary → Diensten*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.items[].text
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Studio → Standaard → Primary*
+ */
+export interface StudioSliceDefaultPrimary {
+	/**
+	 * Titel field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Intro field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.intro
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	intro: prismic.RichTextField;
+	
+	/**
+	 * Grote foto field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * Bijschrift bij de grote foto field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.caption
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	caption: prismic.KeyTextField;
+	
+	/**
+	 * Diensten field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.items[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	items: prismic.GroupField<Simplify<StudioSliceDefaultPrimaryItemsItem>>;
+	
+	/**
+	 * Logo (witte versie) field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.badge
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	badge: prismic.ImageField<never>;
+	
+	/**
+	 * Tekst naast het logo field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.badge_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	badge_text: prismic.KeyTextField;
+	
+	/**
+	 * Knoptekst field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.button_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	button_label: prismic.KeyTextField;
+	
+	/**
+	 * Knoplink field in *Studio → Standaard → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: studio.default.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	button_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Standaard variation for Studio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Studio met diensten
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type StudioSliceDefault = prismic.SharedSliceVariation<"default", Simplify<StudioSliceDefaultPrimary>, never>;
+
+/**
+ * Slice variation for *Studio*
+ */
+type StudioSliceVariation = StudioSliceDefault
+
+/**
+ * Studio Shared Slice
+ *
+ * - **API ID**: `studio`
+ * - **Description**: De detailingstudio: de lampen gaan aan, daarna de foto en de diensten
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type StudioSlice = prismic.SharedSlice<"studio", StudioSliceVariation>;
 
 /**
  * Item in *Tekst & beeld → Standaard → Primary → Knoppen*
@@ -3142,6 +3305,11 @@ declare module "@prismicio/client" {
 			StepsSliceDefaultPrimary,
 			StepsSliceVariation,
 			StepsSliceDefault,
+			StudioSlice,
+			StudioSliceDefaultPrimaryItemsItem,
+			StudioSliceDefaultPrimary,
+			StudioSliceVariation,
+			StudioSliceDefault,
 			TextMediaSlice,
 			TextMediaSliceDefaultPrimaryButtonsItem,
 			TextMediaSliceDefaultPrimary,

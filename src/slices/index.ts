@@ -15,6 +15,7 @@ import Reviews from "./Reviews";
 import RichText from "./RichText";
 import Stats from "./Stats";
 import Steps from "./Steps";
+import Studio from "./Studio";
 import TextMedia from "./TextMedia";
 
 export const components = {
@@ -33,5 +34,6 @@ export const components = {
   rich_text: RichText,
   stats: Stats,
   steps: Steps,
+  studio: Studio,
   text_media: TextMedia,
 };

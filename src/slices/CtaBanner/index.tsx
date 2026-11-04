@@ -1,8 +1,9 @@
 import type { Content } from "@prismicio/client";
 import { isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
+import type { CSSProperties } from "react";
 
-import { PhotoStrip } from "@/components/PhotoStrip";
+import { Img } from "@/components/Img";
 import { PrismicLink } from "@/components/PrismicLink";
 import { Reveal } from "@/components/Reveal";
 import { InlineRichText, Title } from "@/components/RichText";
@@ -14,71 +15,60 @@ import { siteInfo } from "@/lib/site";
 
 export type CtaBannerProps = SliceComponentProps<Content.CtaBannerSlice, SliceContext>;
 
-const cell =
-  "flex min-h-16 flex-col items-center justify-center px-4 py-3 text-center text-lead font-semibold transition-colors sm:min-h-24";
-
-/**
- * The close of a page: every car that stood on the lot drifts past on a field of monogram gold,
- * and the ways to reach BVB sit underneath as three cells of one bar.
- */
+/** The close: a field of monogram gold, the line, and the ways to reach BVB as cells of one bar. */
 const CtaBanner = async ({ slice, context }: CtaBannerProps) => {
   const p = slice.primary;
   const site = siteInfo(context.settings);
-  const images = (await getCars()).map(mainImage).filter((i) => i?.url);
+  const photos = (await getCars())
+    .map(mainImage)
+    .filter((i) => i?.url)
+    .slice(0, 24);
   const primary = p.buttons.find((b) => isFilled.link(b.link));
+  const first = site.contacts[0];
 
   const cells = [
     p.show_contact && site.phone && (
-      <a key="tel" href={telHref(site.phone)} className={`${cell} bg-black/10 hover:bg-black/20`}>
-        Bel {site.phone}
+      <a key="tel" href={telHref(first?.phone ?? site.phone)}>
+        {first ? `Bel ${first.name}` : "Bellen"}
       </a>
     ),
     p.show_contact && site.whatsapp && (
-      <a
-        key="wa"
-        href={whatsappHref(site.whatsapp)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${cell} bg-black/10 hover:bg-black/20`}
-      >
-        Stuur een WhatsApp
+      <a key="wa" href={whatsappHref(site.whatsapp)} target="_blank" rel="noopener noreferrer">
+        WhatsApp
       </a>
     ),
     primary && (
-      <PrismicLink
-        key="primary"
-        field={primary.link}
-        className={`${cell} bg-ink text-chalk hover:bg-graphite`}
-      >
+      <PrismicLink key="primary" field={primary.link} className="primary">
         {primary.label || primary.link.text}
       </PrismicLink>
-    ),
-    !primary && site.email && (
-      <a key="mail" href={`mailto:${site.email}`} className={`${cell} bg-ink text-chalk hover:bg-graphite`}>
-        Mail ons
-      </a>
     ),
   ].filter(Boolean);
 
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      className="overflow-hidden bg-gold pt-12 pb-[var(--section)] text-ink"
-    >
-      <PhotoStrip images={images} />
-      <Reveal className="frame mt-16 lg:mt-20">
-        <Title field={p.title} className="heading max-w-[24ch]" />
+    <section data-slice-type={slice.slice_type} className="sec overflow-hidden bg-gold !pt-6 text-night">
+      {photos.length > 3 && (
+        <div className="strip mb-[clamp(3rem,6vw,5rem)]" aria-hidden="true">
+          <div className="strip-track">
+            {[...photos, ...photos].map((image, i) => (
+              <div key={i}>
+                <Img field={image} alt="" fill sizes="13rem" className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      <Reveal className="frame">
+        <Title field={p.title} className="speed head max-w-[18ch]" />
         {isFilled.richText(p.intro) && (
-          <div className="mt-6 max-w-[52ch] text-body">
+          <div className="lead mt-6 max-w-[40rem]">
             <InlineRichText field={p.intro} />
           </div>
         )}
-        <div
-          className={`mt-10 grid gap-2 ${cells.length === 3 ? "sm:grid-cols-3" : cells.length === 2 ? "sm:grid-cols-2" : ""}`}
-        >
-          {cells}
-        </div>
-        {site.hoursNote && <p className="mt-4 text-small">{site.hoursNote}</p>}
+        {cells.length > 0 && (
+          <div className="cells" style={{ "--n": cells.length } as CSSProperties}>
+            {cells}
+          </div>
+        )}
       </Reveal>
     </section>
   );

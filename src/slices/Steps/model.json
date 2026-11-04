@@ -2,7 +2,7 @@
   "id": "steps",
   "type": "SharedSlice",
   "name": "Stappen",
-  "description": "Genummerd stappenplan",
+  "description": "Stappenplan, met een foto per stap",
   "variations": [
     {
       "id": "default",
@@ -69,6 +69,14 @@
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,strong,em,hyperlink"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Foto",
+                  "constraint": {},
+                  "thumbnails": []
                 }
               }
             }

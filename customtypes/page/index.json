@@ -82,6 +82,9 @@
             },
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "studio": {
+              "type": "SharedSlice"
             }
           }
         }
