@@ -206,7 +206,7 @@
         "type": "Text",
         "config": {
           "label": "Score",
-          "placeholder": "4,94"
+          "placeholder": "5"
         }
       },
       "rating_source": {

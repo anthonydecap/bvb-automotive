@@ -61,7 +61,7 @@ export function RevCounter({ score, label, reviews }: { score: number; label: st
   }, [current, reviews.length]);
 
   const review = reviews[current];
-  const scoreText = score.toLocaleString("nl-BE", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const scoreText = score.toLocaleString("nl-BE", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
   return (
     <div className="rev-grid">

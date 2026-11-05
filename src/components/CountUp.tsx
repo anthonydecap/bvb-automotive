@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-/** A figure such as "4,94", "100+" or "20 min" that counts up once when it comes into view. */
+/** A figure such as "4,5", "100+" or "20 min" that counts up once when it comes into view. */
 export function CountUp({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 

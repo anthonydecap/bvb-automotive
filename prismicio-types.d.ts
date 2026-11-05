@@ -912,7 +912,7 @@ interface SettingsDocumentData {
 	 * Score field in *Instellingen*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: 4,94
+	 * - **Placeholder**: 5
 	 * - **API ID Path**: settings.rating
 	 * - **Tab**: Reviews
 	 * - **Documentation**: https://prismic.io/docs/fields/text
@@ -2003,7 +2003,7 @@ export interface HeroSliceDefaultPrimaryStatsItem {
 	 * Waarde field in *Hero → Groot → Primary → Kerncijfers*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: 4,94/5
+	 * - **Placeholder**: 5/5
 	 * - **API ID Path**: hero.default.primary.stats[].value
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
@@ -2064,7 +2064,7 @@ export interface HeroSlicePagePrimaryStatsItem {
 	 * Waarde field in *Hero → Paginakop → Primary → Kerncijfers*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: 4,94/5
+	 * - **Placeholder**: 5/5
 	 * - **API ID Path**: hero.page.primary.stats[].value
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */

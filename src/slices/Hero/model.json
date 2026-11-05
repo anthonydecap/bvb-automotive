@@ -94,7 +94,7 @@
                 "type": "Text",
                 "config": {
                   "label": "Waarde",
-                  "placeholder": "4,94/5"
+                  "placeholder": "5/5"
                 }
               },
               "label": {
@@ -200,7 +200,7 @@
                 "type": "Text",
                 "config": {
                   "label": "Waarde",
-                  "placeholder": "4,94/5"
+                  "placeholder": "5/5"
                 }
               },
               "label": {

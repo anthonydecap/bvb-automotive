@@ -211,7 +211,7 @@ function carGrid(
 }
 
 const reviews = (
-  title = "*4,94/5* op AutoScout24",
+  title = "*5/5* op AutoScout24",
   intro = "Wat klanten na hun aankoop over ons schrijven.",
   items: { quote: string; name: string; date: string | null }[] = [],
 ) =>
@@ -322,7 +322,7 @@ const settings = document("settings", null, {
   facebook: web(links.facebook),
   vat_number: null,
 
-  rating: "4,94",
+  rating: "5",
   rating_source: "AutoScout24",
   reviews_link: web(links.autoscout),
   reviews: [
@@ -434,7 +434,7 @@ const home = page(
       { limit: 6, button: ["Volledig aanbod", "aanbod"] },
     ),
     stats([
-      ["4,94", "gemiddelde score op AutoScout24"],
+      ["5", "gemiddelde score op AutoScout24"],
       ["100+", "wagens afgeleverd uit Geel"],
       ["20", "minuten proefrit, ook op de autostrade"],
       ["48", "uur houden we een wagen voor u vast"],
@@ -530,7 +530,7 @@ const home = page(
   {
     title: "BVB Automotive · Sportieve VAG- en BMW-occasies in Geel",
     description:
-      "Geselecteerde sportieve VAG- en BMW-occasies in Geel. Technisch nagekeken, met Car-Pass en volledige detailing. 4,94/5 op AutoScout24.",
+      "Geselecteerde sportieve VAG- en BMW-occasies in Geel. Technisch nagekeken, met Car-Pass en volledige detailing. 5/5 op AutoScout24.",
   },
 );
 
@@ -644,7 +644,7 @@ const vag = page(
       images.firstGolf,
       { position: "Links", tone: "Donker", btns: buttons(["Meer over ons", "over-ons"]) },
     ),
-    reviews("*4,94/5* op AutoScout24", "Meestal geschreven door kopers van een VAG."),
+    reviews("*5/5* op AutoScout24", "Meestal geschreven door kopers van een VAG."),
     cta(
       "Een VAG gezien die u *wil rijden*?",
       "Bel of stuur een WhatsApp voor een bezichtiging of proefrit. We reserveren de wagen tot 48 uur voor u.",
@@ -786,7 +786,7 @@ const premium = page(
         },
         {
           icon: "Ster",
-          title: "4,94/5 op AutoScout24",
+          title: "5/5 op AutoScout24",
           text: "Geschreven door klanten die bij ons kochten, ook in deze prijsklasse.",
         },
         {
@@ -1128,7 +1128,7 @@ const service = page(
       ["VAG & BMW", "Onze monteurs zijn opgeleid op de modellen die we verkopen"],
       ["100+", "wagens voorbereid en afgeleverd"],
       ["Gyeon", "Certified Studio in dezelfde werkplaats"],
-      ["4,94/5", "op AutoScout24"],
+      ["5/5", "op AutoScout24"],
     ]),
     features(
       {
@@ -1420,7 +1420,7 @@ const about = page(
     stats(
       [
         ["Gyeon", "Certified Studio"],
-        ["4,94/5", "op AutoScout24"],
+        ["5/5", "op AutoScout24"],
         ["VAG & BMW", "als kern van onze voorraad"],
       ],
       "Licht",
