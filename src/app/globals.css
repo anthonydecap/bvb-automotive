@@ -34,20 +34,21 @@
   --font-sans: var(--font-archivo), system-ui, sans-serif;
 
   --text-small: 0.875rem;
-  --text-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
-  --text-lead: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
-  --text-head: clamp(1.55rem, 0.95rem + 3vw, 4rem);
-  --text-mega: clamp(2.9rem, 0.6rem + 8vw, 9rem);
+  --text-body: clamp(1.0625rem, 1rem + 0.25cqw, 1.1875rem);
+  --text-lead: clamp(1.2rem, 1.05rem + 0.6cqw, 1.5rem);
+  --text-head: clamp(1.55rem, 0.95rem + 3cqw, 4rem);
+  --text-mega: clamp(2.9rem, 0.6rem + 8cqw, 9rem);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   :root {
-    --margin: clamp(1rem, 2.4vw, 2.5rem);
-    --section: clamp(5rem, 10vw, 10rem);
+    --site-max: 120rem;
+    --margin: clamp(1rem, 2.4cqw, 2.5rem);
+    --section: clamp(5rem, 10cqw, 10rem);
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
-    --gap: clamp(0.5rem, 0.8vw, 0.75rem);
+    --gap: clamp(0.5rem, 0.8cqw, 0.75rem);
   }
   html {
     background: var(--color-night);
@@ -81,6 +82,14 @@
 }
 
 @layer components {
+  /* On ultra-wide screens the whole site stops at 1920px and sits centred, so full-bleed photos are
+     never stretched past their resolution. Lengths inside it are measured against it (cqw), not the screen. */
+  .site {
+    max-width: var(--site-max);
+    margin-inline: auto;
+    container-type: inline-size;
+    background: var(--color-night);
+  }
   .frame {
     width: 100%;
     max-width: 120rem;
@@ -95,7 +104,7 @@
   .sec-head {
     display: grid;
     gap: 1.5rem;
-    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: clamp(2.5rem, 5cqw, 4.5rem);
   }
   .sec-head > :last-child:not(:first-child) {
     max-width: 36rem;
@@ -130,7 +139,7 @@
     text-transform: uppercase;
     letter-spacing: -0.01em;
     line-height: 1;
-    font-size: clamp(1.25rem, 1rem + 0.7vw, 1.75rem);
+    font-size: clamp(1.25rem, 1rem + 0.7cqw, 1.75rem);
   }
   @media (max-width: 760px) {
     .speed {
@@ -301,6 +310,8 @@
   .site-header {
     position: fixed;
     inset: 0 0 auto;
+    max-width: var(--site-max);
+    margin-inline: auto;
     z-index: 50;
     transition: background-color 0.4s;
   }
@@ -386,7 +397,7 @@
   }
   @media (max-width: 760px) {
     .mega {
-      font-size: 11.2vw;
+      font-size: 11.2cqw;
     }
     .hero-photo {
       clip-path: inset(calc(var(--c) * 31%) calc(var(--c) * 4%) calc(var(--c) * 45%) calc(var(--c) * 4%));
@@ -401,11 +412,11 @@
 
   /* Page hero: the title over a photograph that drifts as you scroll. */
   .page-title {
-    font-size: clamp(2.1rem, 0.4rem + 6.6vw, 7.5rem);
+    font-size: clamp(2.1rem, 0.4rem + 6.6cqw, 7.5rem);
   }
   @media (max-width: 760px) {
     .page-title {
-      font-size: 8vw;
+      font-size: 8cqw;
     }
   }
   .page-hero {
@@ -446,7 +457,7 @@
     will-change: transform;
   }
   .ticker span {
-    font-size: clamp(1.25rem, 0.9rem + 1.5vw, 2.4rem);
+    font-size: clamp(1.25rem, 0.9rem + 1.5cqw, 2.4rem);
     white-space: nowrap;
   }
   .ticker i {
@@ -457,7 +468,7 @@
   /* Cars: drag through the stock. */
   .row {
     display: flex;
-    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+    gap: clamp(0.75rem, 1.5cqw, 1.5rem);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-inline: var(--margin);
@@ -473,7 +484,7 @@
     scroll-snap-type: none;
   }
   .row > .car {
-    flex: 0 0 min(64vw, 60rem);
+    flex: 0 0 min(64cqw, 60rem);
     scroll-snap-align: start;
   }
   .car {
@@ -521,11 +532,11 @@
   }
   .car-name h3,
   .car-name .price {
-    font-size: clamp(1.4rem, 1rem + 1.2vw, 2.1rem);
+    font-size: clamp(1.4rem, 1rem + 1.2cqw, 2.1rem);
   }
   .grid-cars .car-name h3,
   .grid-cars .car-name .price {
-    font-size: clamp(1.2rem, 1rem + 0.6vw, 1.6rem);
+    font-size: clamp(1.2rem, 1rem + 0.6cqw, 1.6rem);
   }
   .car-name .price {
     color: var(--color-gold);
@@ -542,14 +553,14 @@
   }
   .dash b {
     display: block;
-    font-size: clamp(1.5rem, 1rem + 1.4vw, 2.5rem);
+    font-size: clamp(1.5rem, 1rem + 1.4cqw, 2.5rem);
     line-height: 1;
     font-stretch: 120%;
     font-weight: 800;
     font-style: italic;
   }
   .grid-cars .dash b {
-    font-size: clamp(1.15rem, 1rem + 0.5vw, 1.5rem);
+    font-size: clamp(1.15rem, 1rem + 0.5cqw, 1.5rem);
   }
   .dash dt {
     color: var(--color-mist);
@@ -563,7 +574,7 @@
     flex-direction: column-reverse;
   }
   .row-end {
-    flex: 0 0 min(30vw, 24rem);
+    flex: 0 0 min(30cqw, 24rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -572,10 +583,10 @@
   }
   @media (max-width: 760px) {
     .row > .car {
-      flex-basis: 84vw;
+      flex-basis: 84cqw;
     }
     .row-end {
-      flex-basis: 70vw;
+      flex-basis: 70cqw;
     }
   }
 
@@ -595,7 +606,7 @@
     max-width: 16rem;
   }
   .numbers .n {
-    font-size: clamp(3rem, 1rem + 4.6vw, 6.25rem);
+    font-size: clamp(3rem, 1rem + 4.6cqw, 6.25rem);
   }
   @media (max-width: 900px) {
     .numbers dl {
@@ -606,7 +617,7 @@
 
   /* Process: a pinned stage that runs sideways. */
   .process {
-    height: calc(100svh + var(--run, 170vw));
+    height: calc(100svh + var(--run, 170cqw));
   }
   .process-stage {
     position: sticky;
@@ -619,19 +630,19 @@
   }
   .process-track {
     display: flex;
-    gap: 2.5vw;
+    gap: 2.5cqw;
     padding-left: var(--margin);
     will-change: transform;
   }
   .step {
-    flex: 0 0 58vw;
+    flex: 0 0 58cqw;
     display: grid;
     grid-template-columns: 1.35fr 1fr;
-    gap: 2.5vw;
+    gap: 2.5cqw;
     align-items: end;
   }
   .step.no-photo {
-    flex-basis: 34vw;
+    flex-basis: 34cqw;
     grid-template-columns: 1fr;
   }
   .step-photo {
@@ -641,12 +652,12 @@
     background: var(--color-navy);
   }
   .step h3 {
-    font-size: clamp(1.75rem, 1rem + 2vw, 3rem);
+    font-size: clamp(1.75rem, 1rem + 2cqw, 3rem);
   }
   .process-intro {
-    flex: 0 0 34vw;
+    flex: 0 0 34cqw;
     align-self: center;
-    padding-right: 2vw;
+    padding-right: 2cqw;
   }
   .progress {
     position: absolute;
@@ -739,7 +750,7 @@
     pointer-events: none;
   }
   .tube {
-    width: clamp(6px, 0.7vw, 12px);
+    width: clamp(6px, 0.7cqw, 12px);
     height: 100%;
     background: #22243c;
     transition:
@@ -813,7 +824,7 @@
   }
   .svc h3 {
     margin-top: 1rem;
-    font-size: clamp(1.35rem, 1rem + 0.9vw, 2rem);
+    font-size: clamp(1.35rem, 1rem + 0.9cqw, 2rem);
     color: var(--color-studio-navy);
   }
   .svc .prose-bvb {
@@ -849,17 +860,17 @@
   /* Keys handed over: two lanes of cars that already left. */
   .lanes {
     display: grid;
-    gap: clamp(0.75rem, 1.2vw, 1.25rem);
+    gap: clamp(0.75rem, 1.2cqw, 1.25rem);
   }
   .lane {
     display: flex;
-    gap: clamp(0.75rem, 1.2vw, 1.25rem);
+    gap: clamp(0.75rem, 1.2cqw, 1.25rem);
     width: max-content;
     will-change: transform;
   }
   .past {
     position: relative;
-    flex: 0 0 clamp(15rem, 22vw, 24rem);
+    flex: 0 0 clamp(15rem, 22cqw, 24rem);
   }
   .past-photo {
     position: relative;
@@ -913,7 +924,7 @@
   .rev-grid {
     display: grid;
     grid-template-columns: 5fr 7fr;
-    gap: clamp(2rem, 5vw, 6rem);
+    gap: clamp(2rem, 5cqw, 6rem);
     align-items: center;
   }
   .gauge {
@@ -944,7 +955,7 @@
   }
   .gauge-read b {
     display: block;
-    font-size: clamp(3rem, 2rem + 3vw, 5rem);
+    font-size: clamp(3rem, 2rem + 3cqw, 5rem);
     font-weight: 800;
     font-style: italic;
     font-stretch: 125%;
@@ -954,7 +965,7 @@
     min-height: 14rem;
   }
   .quote blockquote {
-    font-size: clamp(1.4rem, 1.1rem + 1vw, 2.25rem);
+    font-size: clamp(1.4rem, 1.1rem + 1cqw, 2.25rem);
     line-height: 1.25;
     font-weight: 600;
     transition:
@@ -1058,7 +1069,7 @@
   }
   .strip-track > div {
     position: relative;
-    height: clamp(5.5rem, 9vw, 8.5rem);
+    height: clamp(5.5rem, 9cqw, 8.5rem);
     aspect-ratio: 3 / 2;
     overflow: hidden;
     background: var(--color-navy);
@@ -1120,7 +1131,7 @@
 @keyframes rush {
   from {
     opacity: 0;
-    transform: translateX(-12vw) skewX(12deg);
+    transform: translateX(-12cqw) skewX(12deg);
   }
 }
 @keyframes ping {

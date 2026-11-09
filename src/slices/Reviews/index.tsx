@@ -29,7 +29,7 @@ const Reviews = ({ slice, context }: ReviewsProps) => {
       <div className="frame">
         <RevCounter score={score} label={`op ${s.rating_source ?? "AutoScout24"}`} reviews={reviews} />
         {isFilled.link(p.button_link) && (
-          <div className="mt-10 lg:ml-[calc(5/12*100%+clamp(2rem,5vw,6rem))]">
+          <div className="mt-10 lg:ml-[calc(5/12*100%+clamp(2rem,5cqw,6rem))]">
             <PrismicLink field={p.button_link} className="link">
               {p.button_label || "Alle reviews"}
             </PrismicLink>

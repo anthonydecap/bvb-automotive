@@ -204,7 +204,7 @@ export default async function CarPage({ params }: PageProps<"/aanbod/[uid]">) {
 
             <aside className="min-w-0 lg:col-span-4">
               <div>
-                <h1 className="speed text-[clamp(2rem,1rem+2.4vw,3.4rem)]">
+                <h1 className="speed text-[clamp(2rem,1rem+2.4cqw,3.4rem)]">
                   <span className="sr-only">{d.brand} </span>
                   {d.model}
                 </h1>

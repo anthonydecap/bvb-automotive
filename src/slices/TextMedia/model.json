@@ -59,10 +59,7 @@
           "config": {
             "label": "Foto",
             "placeholder": "",
-            "options": [
-              "Rechts",
-              "Links"
-            ],
+            "options": ["Rechts", "Links"],
             "default_value": "Rechts"
           }
         },
@@ -71,10 +68,7 @@
           "config": {
             "label": "Achtergrond",
             "placeholder": "",
-            "options": [
-              "Licht",
-              "Donker"
-            ],
+            "options": ["Licht", "Donker"],
             "default_value": "Licht"
           }
         },
@@ -107,10 +101,7 @@
                 "config": {
                   "label": "Stijl",
                   "placeholder": "",
-                  "options": [
-                    "Primair",
-                    "Secundair"
-                  ],
+                  "options": ["Primair", "Secundair"],
                   "default_value": "Primair"
                 }
               }

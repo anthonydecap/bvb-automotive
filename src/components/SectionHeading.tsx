@@ -37,7 +37,7 @@ export function SectionHeading({ title, intro, align = "split", children, as = "
 
   return (
     <Reveal className="max-w-4xl">
-      <Title field={title} as={as} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]" />
+      <Title field={title} as={as} className="speed text-[clamp(1.5rem,1rem+1.6cqw,2.6rem)]" />
       {hasIntro && (
         <div className="lead mt-6 max-w-[40ch] space-y-4 text-mist">
           <InlineRichText field={intro} />

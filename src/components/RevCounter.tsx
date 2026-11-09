@@ -120,7 +120,7 @@ export function RevCounter({ score, label, reviews }: { score: number; label: st
       </div>
 
       <div>
-        <h2 className="speed text-[clamp(2rem,1.2rem+2.6vw,3.75rem)]">Wat kopers zeggen</h2>
+        <h2 className="speed text-[clamp(2rem,1.2rem+2.6cqw,3.75rem)]">Wat kopers zeggen</h2>
         {review && (
           <figure className={`quote mt-8 ${swap ? "swap" : ""}`} aria-live="polite">
             <blockquote>{review.quote}</blockquote>

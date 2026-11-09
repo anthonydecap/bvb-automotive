@@ -47,7 +47,7 @@ const CtaBanner = async ({ slice, context }: CtaBannerProps) => {
   return (
     <section data-slice-type={slice.slice_type} className="sec overflow-hidden bg-gold !pt-6 text-night">
       {photos.length > 3 && (
-        <div className="strip mb-[clamp(3rem,6vw,5rem)]" aria-hidden="true">
+        <div className="strip mb-[clamp(3rem,6cqw,5rem)]" aria-hidden="true">
           <div className="strip-track">
             {[...photos, ...photos].map((image, i) => (
               <div key={i}>

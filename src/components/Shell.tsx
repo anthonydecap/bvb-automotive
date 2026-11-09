@@ -21,8 +21,10 @@ export async function Shell({ children }: { children: ReactNode }) {
         Naar de inhoud
       </a>
       <Header nav={navigation(settings)} cta={cta} site={siteInfo(settings)} />
-      <main id="main">{children}</main>
-      <Footer settings={settings} />
+      <div className="site">
+        <main id="main">{children}</main>
+        <Footer settings={settings} />
+      </div>
     </>
   );
 }

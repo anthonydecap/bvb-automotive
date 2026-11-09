@@ -35,7 +35,12 @@ const Gallery = ({ slice }: GalleryProps) => {
               i % 3 === 0 ? "aspect-[4/5] h-[58svh]" : "aspect-[3/2] h-[58svh]"
             } max-h-[34rem] max-sm:h-[44svh]`}
           >
-            <Img field={image} fill sizes="(min-width: 640px) 50vw, 90vw" className="object-cover" />
+            <Img
+              field={image}
+              fill
+              sizes="(min-width: 1920px) 960px, (min-width: 640px) 50vw, 90vw"
+              className="object-cover"
+            />
           </li>
         ))}
       </ul>

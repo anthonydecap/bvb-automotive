@@ -42,10 +42,7 @@
           "config": {
             "label": "Achtergrond",
             "placeholder": "",
-            "options": [
-              "Licht",
-              "Donker"
-            ],
+            "options": ["Licht", "Donker"],
             "default_value": "Licht"
           }
         },

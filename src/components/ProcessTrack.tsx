@@ -20,7 +20,7 @@ export function ProcessTrack({ children, label }: { children: ReactNode; label: 
     const size = () => {
       const pinned = window.innerWidth > 900 && !reduce;
       el.style.height = pinned
-        ? `${window.innerHeight + Math.max(0, tr.scrollWidth - window.innerWidth + 40)}px`
+        ? `${window.innerHeight + Math.max(0, tr.scrollWidth - el.clientWidth + 40)}px`
         : "";
     };
     const update = () => {
@@ -30,7 +30,7 @@ export function ProcessTrack({ children, label }: { children: ReactNode; label: 
       }
       const r = el.getBoundingClientRect();
       const p = Math.max(0, Math.min(1, -r.top / (el.offsetHeight - window.innerHeight)));
-      tr.style.transform = `translateX(${-p * (tr.scrollWidth - window.innerWidth + 40)}px)`;
+      tr.style.transform = `translateX(${-p * (tr.scrollWidth - el.clientWidth + 40)}px)`;
       bar.current?.style.setProperty("--p", p.toFixed(4));
     };
     const onScroll = () => {

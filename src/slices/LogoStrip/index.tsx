@@ -19,7 +19,7 @@ const LogoStrip = ({ slice }: LogoStripProps) => {
     <Section slice={slice} tone={p.tone} className="py-[calc(var(--section)*0.75)]">
       <div className="frame grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
         <Reveal className="lg:col-span-4">
-          <Title field={p.title} className="speed text-[clamp(1.4rem,1rem+1.1vw,2rem)]" />
+          <Title field={p.title} className="speed text-[clamp(1.4rem,1rem+1.1cqw,2rem)]" />
           {isFilled.richText(p.intro) && (
             <div className={`mt-3 text-body ${dark ? "text-fog" : ""}`}>
               <InlineRichText field={p.intro} />

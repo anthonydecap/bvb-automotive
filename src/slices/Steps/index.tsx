@@ -54,7 +54,12 @@ const Steps = ({ slice }: StepsProps) => {
           <article key={i} className={`step ${photo ? "" : "no-photo"}`}>
             {photo && (
               <div className="step-photo">
-                <Img field={step.image} fill sizes="(min-width: 900px) 34vw, 92vw" className="object-cover" />
+                <Img
+                  field={step.image}
+                  fill
+                  sizes="(min-width: 1920px) 653px, (min-width: 900px) 34vw, 92vw"
+                  className="object-cover"
+                />
               </div>
             )}
             <div>

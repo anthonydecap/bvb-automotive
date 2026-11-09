@@ -265,9 +265,12 @@ export function RouteMap({ trips, inset }: { trips: Trip[]; inset?: ReactNode })
         </svg>
 
         {trip && (
-          <figcaption className="absolute top-5 left-5 flex flex-col-reverse bg-night/90 px-4 py-3" aria-live="polite">
+          <figcaption
+            className="absolute top-5 left-5 flex flex-col-reverse bg-night/90 px-4 py-3"
+            aria-live="polite"
+          >
             <span className="mt-1 block text-small text-mist">vanuit {trip.from}</span>
-            <span className="tabular block text-[clamp(1.75rem,1.2rem+1.6vw,2.75rem)] leading-none font-extrabold text-gold italic [font-stretch:120%]">
+            <span className="tabular block text-[clamp(1.75rem,1.2rem+1.6cqw,2.75rem)] leading-none font-extrabold text-gold italic [font-stretch:120%]">
               {minutes ?? total} min
             </span>
           </figcaption>

@@ -23,7 +23,7 @@ const Stats = ({ slice }: StatsProps) => {
           <div key={i}>
             <dt className="lead">{item.label}</dt>
             <dd
-              className={`speed ${/^\D*\d/.test(item.value ?? "") ? "n" : "text-[clamp(1.6rem,1rem+1.8vw,3rem)]"}`}
+              className={`speed ${/^\D*\d/.test(item.value ?? "") ? "n" : "text-[clamp(1.6rem,1rem+1.8cqw,3rem)]"}`}
             >
               <CountUp value={item.value ?? ""} />
             </dd>

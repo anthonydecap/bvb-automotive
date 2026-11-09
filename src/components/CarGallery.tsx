@@ -98,7 +98,7 @@ export function CarGallery({ images, title }: CarGalleryProps) {
                 field={image}
                 fill
                 priority={i === 0}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                sizes="(min-width: 1920px) 1152px, (min-width: 1024px) 60vw, 100vw"
                 className="object-cover"
                 alt={image.alt || `${title}, foto ${i + 1}`}
               />

@@ -16,7 +16,7 @@ const Quote = ({ slice }: QuoteProps) => {
     <Section slice={slice} tone={p.tone} className="py-[calc(var(--section)*0.8)]">
       <Reveal className="frame grid lg:grid-cols-12">
         <figure className="lg:col-span-9 lg:col-start-3">
-          <blockquote className="text-[clamp(1.4rem,1.1rem+1.2vw,2.25rem)] leading-[1.25] font-semibold [font-stretch:105%]">
+          <blockquote className="text-[clamp(1.4rem,1.1rem+1.2cqw,2.25rem)] leading-[1.25] font-semibold [font-stretch:105%]">
             <InlineRichText field={p.quote} />
           </blockquote>
           {p.author && (

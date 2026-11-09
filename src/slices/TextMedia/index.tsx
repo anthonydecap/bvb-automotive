@@ -18,7 +18,7 @@ const TextMedia = ({ slice }: TextMediaProps) => {
 
   const text = (
     <>
-      <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]" />
+      <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6cqw,2.6rem)]" />
       {isFilled.richText(p.intro) && (
         <div className="lead text-mist">
           <InlineRichText field={p.intro} />
@@ -33,7 +33,7 @@ const TextMedia = ({ slice }: TextMediaProps) => {
     return (
       <Section slice={slice} tone={p.tone}>
         <Reveal className="frame grid gap-10 lg:grid-cols-12 lg:gap-8">
-          <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)] lg:col-span-6" />
+          <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6cqw,2.6rem)] lg:col-span-6" />
           <div className="space-y-6 lg:col-span-5 lg:col-start-8">
             <RichText field={p.text} className="prose-bvb text-mist [&_strong]:text-chalk" />
             <ButtonRow buttons={p.buttons} />
@@ -57,7 +57,7 @@ const TextMedia = ({ slice }: TextMediaProps) => {
           <Img
             field={p.image}
             fill
-            sizes="(min-width: 1024px) 58vw, 100vw"
+            sizes="(min-width: 1920px) 1114px, (min-width: 1024px) 58vw, 100vw"
             className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
           />
         </div>

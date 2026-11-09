@@ -74,10 +74,7 @@
                 "config": {
                   "label": "Stijl",
                   "placeholder": "",
-                  "options": [
-                    "Primair",
-                    "Secundair"
-                  ],
+                  "options": ["Primair", "Secundair"],
                   "default_value": "Primair"
                 }
               }
@@ -180,10 +177,7 @@
                 "config": {
                   "label": "Stijl",
                   "placeholder": "",
-                  "options": [
-                    "Primair",
-                    "Secundair"
-                  ],
+                  "options": ["Primair", "Secundair"],
                   "default_value": "Primair"
                 }
               }

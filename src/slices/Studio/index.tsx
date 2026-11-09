@@ -26,14 +26,24 @@ const Studio = ({ slice }: StudioProps) => {
       <div className="services">
         {isFilled.image(p.image) && (
           <Reveal as="figure" className="svc-hero">
-            <Img field={p.image} fill sizes="100vw" className="object-cover object-[50%_35%]" />
+            <Img
+              field={p.image}
+              fill
+              sizes="(min-width: 1920px) 1920px, 100vw"
+              className="object-cover object-[50%_35%]"
+            />
             {p.caption && <figcaption>{p.caption}</figcaption>}
           </Reveal>
         )}
         {p.items.map((item, i) => (
           <Reveal as="article" key={i} className={`svc ${wide(i) ? "wide" : ""}`}>
             <div className="svc-photo">
-              <Img field={item.image} fill sizes="(min-width: 900px) 40vw, 92vw" className="object-cover" />
+              <Img
+                field={item.image}
+                fill
+                sizes="(min-width: 1920px) 768px, (min-width: 900px) 40vw, 92vw"
+                className="object-cover"
+              />
             </div>
             <div>
               <h3 className="speed">{item.title}</h3>

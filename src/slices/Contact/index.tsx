@@ -127,7 +127,7 @@ const Contact = async ({ slice, context }: ContactProps) => {
         {p.show_form && (
           <div className="mt-[var(--section)] grid gap-12 lg:grid-cols-12 lg:gap-8">
             <Reveal className="lg:col-span-4">
-              <h3 className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]">
+              <h3 className="speed text-[clamp(1.5rem,1rem+1.6cqw,2.6rem)]">
                 {p.form_title || "Stuur ons een bericht"}
               </h3>
               <p className="mt-6 text-body">

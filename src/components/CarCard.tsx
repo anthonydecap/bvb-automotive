@@ -14,7 +14,11 @@ type CarCardProps = {
 };
 
 /** A car: the photograph with its paint as a tag, name and price, then the numbers like a dashboard. */
-export function CarCard({ car, priority, sizes = "(min-width: 1024px) 60vw, 84vw" }: CarCardProps) {
+export function CarCard({
+  car,
+  priority,
+  sizes = "(min-width: 1920px) 1152px, (min-width: 1024px) 60vw, 84vw",
+}: CarCardProps) {
   const sold = car.status === "Verkocht";
   const dash = [
     car.powerHp ? { v: String(car.powerHp), l: "pk" } : null,

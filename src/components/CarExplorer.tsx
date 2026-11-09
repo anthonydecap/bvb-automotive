@@ -233,20 +233,20 @@ export function CarExplorer({ cars, showFilters, showSold, contactHref = "/conta
       )}
 
       {forSale.length > 0 ? (
-        <ul className="grid-cars grid gap-x-[clamp(0.75rem,1.5vw,1.5rem)] gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid-cars grid gap-x-[clamp(0.75rem,1.5cqw,1.5rem)] gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
           {forSale.map((car, i) => (
             <li key={car.uid}>
               <CarCard
                 car={car}
                 priority={i < 2}
-                sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 92vw"
+                sizes="(min-width: 1920px) 634px, (min-width: 1280px) 33vw, (min-width: 640px) 50vw, 92vw"
               />
             </li>
           ))}
         </ul>
       ) : (
         <div className="bg-navy p-8 sm:p-12">
-          <p className="speed text-[clamp(1.5rem,1rem+1.4vw,2.25rem)]">
+          <p className="speed text-[clamp(1.5rem,1rem+1.4cqw,2.25rem)]">
             {active
               ? "Geen beschikbare wagens met deze filters."
               : "Alle wagens uit deze selectie zijn verkocht."}

@@ -42,11 +42,7 @@
           "config": {
             "label": "Weergave",
             "placeholder": "",
-            "options": [
-              "Kaarten",
-              "Lijst",
-              "Genummerd"
-            ],
+            "options": ["Kaarten", "Lijst", "Genummerd"],
             "default_value": "Kaarten"
           }
         },
@@ -55,11 +51,7 @@
           "config": {
             "label": "Kolommen",
             "placeholder": "",
-            "options": [
-              "2",
-              "3",
-              "4"
-            ],
+            "options": ["2", "3", "4"],
             "default_value": "4"
           }
         },
@@ -68,10 +60,7 @@
           "config": {
             "label": "Achtergrond",
             "placeholder": "",
-            "options": [
-              "Licht",
-              "Donker"
-            ],
+            "options": ["Licht", "Donker"],
             "default_value": "Licht"
           }
         },

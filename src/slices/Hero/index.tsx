@@ -39,7 +39,7 @@ const Hero = async ({ slice, index }: HeroProps) => {
     return (
       <>
         <HeroOpen
-          photo={<Img field={p.image} fill priority={first} sizes="100vw" />}
+          photo={<Img field={p.image} fill priority={first} sizes="(min-width: 1920px) 1920px, 100vw" />}
           caption={
             isFilled.keyText(p.eyebrow) ? (
               <p className="lead font-bold italic [font-stretch:115%] uppercase">{p.eyebrow}</p>
@@ -68,9 +68,17 @@ const Hero = async ({ slice, index }: HeroProps) => {
       data-slice-variation={slice.variation}
       className={`relative bg-night text-chalk ${hasImage ? "page-hero" : ""}`}
     >
-      {hasImage && <Img field={p.image} fill priority={first} sizes="100vw" className="object-cover" />}
+      {hasImage && (
+        <Img
+          field={p.image}
+          fill
+          priority={first}
+          sizes="(min-width: 1920px) 1920px, 100vw"
+          className="object-cover"
+        />
+      )}
       <div
-        className={`frame relative z-10 w-full pb-[clamp(3rem,7vw,6rem)] ${hasImage ? "pt-40" : "pt-40 lg:pt-48"}`}
+        className={`frame relative z-10 w-full pb-[clamp(3rem,7cqw,6rem)] ${hasImage ? "pt-40" : "pt-40 lg:pt-48"}`}
       >
         <Words text={title} as={Heading} className="speed page-title" />
         <Reveal className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
@@ -88,7 +96,7 @@ const Hero = async ({ slice, index }: HeroProps) => {
             {p.stats.map((stat, i) => (
               <div key={i} className="flex flex-col-reverse">
                 <dt className="mt-2 text-small text-mist">{stat.label}</dt>
-                <dd className="speed text-[clamp(1.75rem,1rem+2vw,3rem)] text-gold">{stat.value}</dd>
+                <dd className="speed text-[clamp(1.75rem,1rem+2cqw,3rem)] text-gold">{stat.value}</dd>
               </div>
             ))}
           </dl>

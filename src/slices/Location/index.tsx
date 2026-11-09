@@ -26,7 +26,7 @@ const Location = ({ slice, context }: LocationProps) => {
       <div className="frame">
         <Reveal className="mb-12 grid gap-6 lg:mb-16 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-5">
-            <Title field={p.title} className="speed text-[clamp(1.6rem,1rem+2vw,3rem)]" />
+            <Title field={p.title} className="speed text-[clamp(1.6rem,1rem+2cqw,3rem)]" />
           </div>
           <div className="max-w-[46rem] space-y-4 text-mist lg:col-span-7">
             <InlineRichText field={p.intro} />

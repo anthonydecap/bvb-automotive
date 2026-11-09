@@ -25,7 +25,7 @@ const Features = ({ slice }: FeaturesProps) => {
         <div className="frame grid gap-10 lg:grid-cols-12 lg:gap-12">
           {titled && (
             <Reveal className="space-y-5 lg:col-span-4">
-              <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6vw,2.6rem)]" />
+              <Title field={p.title} className="speed text-[clamp(1.5rem,1rem+1.6cqw,2.6rem)]" />
               {isFilled.richText(p.intro) && (
                 <div className="space-y-3 text-mist">
                   <InlineRichText field={p.intro} />
